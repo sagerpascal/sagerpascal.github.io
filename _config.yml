@@ -22,10 +22,10 @@ plugins:
 # Site settings
 url: 'https://mydomain.com'
 baseurl: ''
-title: 'My website'
-description: 'This is my new website'
+title: 'Pascal Sager - Github pages'
+description: 'My thoughts, my ideas, my projects - or at least a few of them'
 permalink: pretty
-logo: "https://www.gravatar.com/avatar/6c0377abcf4da91cdd35dea4554b2a4c?s=52"
+logo: "https://github.com/sagerpascal/sagerpascal.github.io/tree/master/blog/1967.jpg"
 
 # Pagination
 paginate: 5
