@@ -25,7 +25,7 @@ baseurl: ''
 title: 'Pascal Sager - Github pages'
 description: 'My thoughts, my ideas, my projects - or at least a few of them'
 permalink: pretty
-logo: "![1697](https://user-images.githubusercontent.com/46379095/65725204-608a7d00-e0b2-11e9-8965-33a9294e4f61.jpg)"
+logo: "https://user-images.githubusercontent.com/46379095/65725204-608a7d00-e0b2-11e9-8965-33a9294e4f61.jpg"
 
 # Pagination
 paginate: 5
