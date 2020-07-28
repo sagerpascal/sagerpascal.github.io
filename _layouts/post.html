@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div id="post" class="background-alt">
+    <div class="container blog-container">
+        <div class="row">
+            <div id="post-container" class="shadow-large">
+
+                <div id="post-head">
+                    <h2 id="heading">{{ page.title }}</h2>
+
+                    <div id="date">
+                        {% if page.modified %}
+                        Written on {{ page.date | date: '%B %e, %Y' }} (last modified: {{ page.modified | date: '%B %e,
+                        %Y'
+                        }})
+                        {% else %}
+                        {{ page.date | date: '%B %e, %Y' }}
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div id="entry">
+                    {{ content }}
+                </div>
+                <div id="disquis">
+                    {% include disqus.html %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}

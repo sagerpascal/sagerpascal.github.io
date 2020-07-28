@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<div id="blog" class="background-alt">
+    <div class="container blog-container">
+        <div class="row">
+            {% assign sorted_posts = site.posts | sort: "modified" | reverse %}
+            {% for post in sorted_posts %}
+            <div class="blog-post shadow-large">
+                <h2 class="heading"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+                <div class="date">
+                    {% assign date_modified = post.modified | date: '%B %d, %Y' %}
+                    {% assign date_created = post.date | date: '%B %d, %Y' %}
+                    {% if date_modified != date_created %}
+                    Updated {{ date_modified }} (created: {{ date_created }})
+                    {% else %}
+                    Created {{ date_created }}
+                    {% endif %}
+                </div>
+                <div class="entry">
+                    {{ post.content | strip_html | truncatewords: 50 }}
+                </div>
+
+                <div class="read-more">
+                    <a href="{{ site.baseurl }}{{ post.url }}">Read More</a>
+                </div>
+                <div id="categories">
+                    <ul>
+                        {% for cat in post.categories %}
+                        <li>{{ cat }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% include footer.html %}

@@ -1,0 +1,124 @@
+---
+---
+
+@import "main";
+
+
+/*
+    -------------------------------
+    --------- Blog Styles ---------
+    -------------------------------
+*/
+#blog {
+  padding: 100px 15px;
+  border-bottom: 1px solid $border;
+  text-align: center;
+
+  h2 {
+    color: $heading;
+    margin-bottom: 20px;
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.blog-post {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 4px;
+  padding: 0 20px;
+
+  .entry {
+    margin-bottom: 15px;
+  }
+  .date {
+    margin-bottom: 20px;
+    color: $text;
+  }
+  .read-more{
+    margin-bottom: 5px;
+  }
+
+}
+
+
+/*
+    -------------------------------
+    ---- Blog Category Styles ----
+    -------------------------------
+*/
+
+#categories {
+  padding: 5px 15px;
+  text-align: center;
+
+  ul {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 800px;
+  }
+
+  li {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    color: $heading;
+    background: darken($background-alt, 5%);
+    list-style: none;
+    cursor: default;
+    font-size: 0.8em;
+  }
+}
+
+/*
+    -------------------------------
+    --------- Post Styles ---------
+    -------------------------------
+*/
+
+#post {
+  padding: 100px 15px 30px;
+  border-bottom: 1px solid $border;
+  text-align: center;
+}
+
+#post-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 4px;
+
+  #post-head{
+    position: absolute;
+    width: 100%;
+    background: $base-color;
+    color: #fff;
+    padding: 5px 20px 30px;
+
+    h2 {
+      color: #fff;
+
+      a:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  #entry{
+    text-align: left;
+    margin-top: 110px;
+    padding: 10px 20px;
+  }
+
+  #disquis{
+    padding: 20px;
+  }
+}
