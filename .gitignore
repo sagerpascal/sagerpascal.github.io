@@ -1,0 +1,19 @@
+######################
+# Project Specific
+######################
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+######################
+# Intellij
+######################
+.idea/
+*.iml
+*.iws
+*.ipr
+*.ids
+*.orig
+classes/
+out/
