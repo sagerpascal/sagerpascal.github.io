@@ -1,29 +1,12 @@
 ---
 layout: post
-title:  "My new Webpage"
-date: 2013-07-18
-modified: 2013-07-18
-categories: education teaching
+title:  Redesign Webpage
+date: 2020-07-27
+modified: 2020-07-27
+categories: english
 comments: true
+summary: I have updated the design of my website. I hope you like it!
 ---
 
 # Welcome
-
-**Hello world**, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage.
-
-**Hello world**, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage.
-
-**Hello world**, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage.
-
-**Hello world**, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage.
-
-**Hello world**, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage.
-
-**Hello world**, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage.
-
-**Hello world**, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage.
-
-**Hello world**, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage, today I redesign my webpage.
-
-
-I hope you like it!
+I created this website during my bachelor studies because I had to do it as homework. But I didn't take enough time back then and was not really satisfied with the result. Therefore I recently decided to redesign this site. Even though not everything is finished yet, I think the site looks much better now. You are welcome to tell me what you think of this page!
