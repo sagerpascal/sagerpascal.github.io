@@ -5,7 +5,7 @@ This Repository contains the Github-Page from [sagerpascal](sagerpascal@github.i
 - https://github.com/itsron717/ParticleGround-Portfolio
 
 # Installation
-1. Install (Ruby environment)[https://jekyllrb.com/docs/installation/]
+1. Install [Ruby environment](https://jekyllrb.com/docs/installation/)
 2. Install Jekyll and bundler gems:
    ```
    gem install jekyll bundler
@@ -14,4 +14,4 @@ This Repository contains the Github-Page from [sagerpascal](sagerpascal@github.i
    ```
    bundle exec jekyll serve
    ```
-4. Browse to (http://localhost:4000)[http://localhost:4000]
+4. Browse to [http://localhost:4000](http://localhost:4000)
