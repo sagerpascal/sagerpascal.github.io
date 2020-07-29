@@ -80,7 +80,7 @@
 
       document.addEventListener('mousemove', function(e) {
         mouseX = e.pageX;
-        mouseY = e.pageY;
+        mouseY = Math.min(e.pageY,  window.innerHeight);
       }, false);
 
       if (orientationSupport && !desktop) {
@@ -100,8 +100,7 @@
      */
     function styleCanvas() {
       canvas.width = element.offsetWidth;
-      canvas.height = window.innerHeight; //element.offsetHeight;
-      console.log(canvas.height);
+      canvas.height = window.innerHeight;
       ctx.fillStyle = options.dotColor;
       ctx.strokeStyle = options.lineColor;
       ctx.lineWidth = options.lineWidth;
