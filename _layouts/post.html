@@ -24,9 +24,11 @@ layout: default
                 <div id="entry">
                     {{ content }}
                 </div>
+                {% if page.comments %}
                 <div id="disquis">
                     {% include disqus.html %}
                 </div>
+                {% endif %}
             </div>
         </div>
     </div>
