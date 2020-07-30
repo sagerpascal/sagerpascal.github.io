@@ -1,5 +1,4 @@
-# Set theme
-remote_theme: daviddarnes/alembic
+markdown: kramdown
 
 # File excludes
 exclude:
@@ -7,37 +6,9 @@ exclude:
 - Gemfile
 - Gemfile.lock
 
-# Set plugins
-plugins:
-- jekyll-sitemap
-- jekyll-mentions
-- jekyll-paginate
-- jekyll-seo-tag
-- jekyll-redirect-from
-- jekyll-default-layout
-- jekyll-feed
-- jemoji
-- jekyll-remote-theme
-
 # Site settings
 url: 'https://sagerpascal.github.io'
 baseurl: ''
 title: 'Pascal Sager'
 description: 'My thoughts, my ideas, my projects - or at least a few of them'
 permalink: pretty
-
-
-# Pagination
-paginate: 5
-paginate_path: blog/page:num
-
-#
-## Collections
-#collections:
-#  posts:
-#    title: Posts
-#    output: true
-#    description: "My thoughts and ideas"
-#    feature_text: |
-#      Welcome to my blog
-#    feature_image: "https://picsum.photos/2560/600?image=866"

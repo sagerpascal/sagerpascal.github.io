@@ -38,7 +38,7 @@ Ein weiteres Beispiel wäre ein System welches Schach spielen kann. Würden beis
 
 Es reicht nicht aus, einfach nur ein paar tausend kluge Algorithmen mit viel Rechenleistung und Speicherkapazität zu kombinieren. Die Maschine bräuchten ein grundsätzliches Verständnis für die Funktion der Welt so wie wir Menschen. Donald Knuth sagte einst:
 
-> Die AI hat bisher fast alles erlernen können was denken erfordert - Jedoch fast nichts, was Menschen und Tiere ohne Nachdenken erledigen. (Donald Knuth, ehem. Professor an Stanford)
+> Die AI hat bisher fast alles erlernen können was denken erfordert - Jedoch fast nichts, was Menschen und Tiere ohne Nachdenken erledigen. <br>*(Donald Knuth, ehem. Professor an Stanford)*
 
 Für mich persönlich stellt sich auch die Frage, ob ein System je im gleichen Sinne wie wir Menschen intelligent sein kann. Wir können zwar dem System beibringen, wie ein Auto aussieht oder dass sich dieses bewegen kann. Ob das System das Wort "fahren" jedoch so begreifen wird wie wir, daran zweifle ich, da das System diese Erfahrung des Autofahrens nie so mit allen Sinnen erleben kann wie wir Menschen.
 

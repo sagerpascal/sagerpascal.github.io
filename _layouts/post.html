@@ -1,37 +1,76 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html class="no-js" lang="en">
 
-<div id="post" class="background-alt">
-    <div class="container blog-container">
-        <div class="row">
-            <div id="post-container" class="shadow-large">
+<head>
+    {% include base-head.html %}
+    <link href="/assets/css/default.css" rel="stylesheet">
+    <link href="/assets/css/markdown-extension.css" rel="stylesheet">
+</head>
 
-                <div id="post-head">
-                    <h2 id="heading">{{ page.title }}</h2>
+<body>
 
-                    <div id="date">
-                        {% if page.modified %}
-                        Written on {{ page.date | date: '%B %e, %Y' }} (last modified: {{ page.modified | date: '%B %e,
-                        %Y'
-                        }})
-                        {% else %}
-                        {{ page.date | date: '%B %e, %Y' }}
-                        {% endif %}
+{% include minimal-navbar.html %}
+
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function(){
+        function stripcdata(x) {
+            if (x.startsWith('% <![CDATA[') && x.endsWith('%]]>'))
+                return x.substring(11,x.length-4);
+            return x;
+        }
+        document.querySelectorAll("script[type='math/tex']").forEach(function(el){
+            el.outerHTML = "\\(" + stripcdata(el.textContent) + "\\)";
+        });
+        document.querySelectorAll("script[type='math/tex; mode=display']").forEach(function(el){
+            el.outerHTML = "\\[" + stripcdata(el.textContent) + "\\]";
+        });
+        var script = document.createElement('script');
+        script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js";
+        document.head.appendChild(script);
+    }, false);
+</script>
+
+
+<section>
+    <div id="post" class="background-alt">
+        <div class="container blog-container">
+            <div class="row">
+                <div id="post-container" class="shadow-large">
+
+                    <div id="post-head">
+                        <h2 id="heading">{{ page.title }}</h2>
+
+                        <div id="date">
+                            {% if page.modified %}
+                            Written on {{ page.date | date: '%B %e, %Y' }} (last modified: {{ page.modified | date: '%B
+                            %e,
+                            %Y'
+                            }})
+                            {% else %}
+                            {{ page.date | date: '%B %e, %Y' }}
+                            {% endif %}
+                        </div>
                     </div>
-                </div>
 
-                <div id="entry">
-                    {{ content }}
+                    <div id="entry">
+                        {{ content }}
+                    </div>
+                    {% if page.comments %}
+                    <div id="disquis">
+                        {% include disqus.html %}
+                    </div>
+                    {% endif %}
                 </div>
-                {% if page.comments %}
-                <div id="disquis">
-                    {% include disqus.html %}
-                </div>
-                {% endif %}
             </div>
         </div>
     </div>
-</div>
 
-{% include footer.html %}
+    {% include footer.html %}
+</section>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+</body>
+
+</html>
