@@ -1,6 +1,6 @@
 markdown: kramdown
 
-# File excludes
+# File exclusions
 exclude:
 - README.md
 - Gemfile
