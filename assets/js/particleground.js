@@ -99,8 +99,8 @@
      * Style the canvas
      */
     function styleCanvas() {
-      canvas.width = element.offsetWidth;
-      canvas.height = window.innerHeight;
+      canvas.width = $("#lead-overlay").width();
+      canvas.height = $("#lead-overlay").height();
       ctx.fillStyle = options.dotColor;
       ctx.strokeStyle = options.lineColor;
       ctx.lineWidth = options.lineWidth;
