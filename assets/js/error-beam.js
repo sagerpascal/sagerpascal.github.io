@@ -1,14 +1,14 @@
-function setBeam(event) {
+function setBeam(x, y) {
     $('.torch').css({
-        'top': event.pageY,
-        'left': event.pageX
+        'left': x,
+        'top': y
     });
 }
 
 $(document).mousemove(function (event) {
-    setBeam(event);
+    setBeam(event.pageX, event.pageY);
 });
 
 $(document).touchmove(function (event) {
-    setBeam(event);
+    setBeam(event.touches[0].clientX, event.touches[0].clientY);
 });
