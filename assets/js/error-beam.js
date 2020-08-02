@@ -9,6 +9,6 @@ $(document).mousemove(function (event) {
     setBeam(event.pageX, event.pageY);
 });
 
-document.ontouchmove(function (event) {
+$(document).ontouchmove(function (event) {
     setBeam(event.touches[0].clientX, event.touches[0].clientY);
 });
