@@ -142,14 +142,22 @@
 #about {
     padding: 75px 15px;
     border-bottom: 1px solid $border;
+    text-align: center;
 
     h2 {
         color: $heading;
+        text-align: center;
     }
 
     p {
         color: $text;
         margin: 0;
+        text-align: left;
+    }
+
+    #sage {
+        width: 70%;
+        border-radius: 50%;
     }
 }
 
@@ -567,6 +575,7 @@
 // Medium Devices
 @media only screen and (max-width : 1260px) {
 
+
     #lead-content {
         h1 {
             font-size: 3em;
@@ -580,6 +589,10 @@
     #about {
         text-align: center;
 
+        h2 {
+            text-align: center;
+        }
+
         p {
             text-align: left;
         }
@@ -587,8 +600,24 @@
 
 }
 
+@media only screen and (max-width : 991px) {
+    #about{
+        #sage {
+            width: 30%;
+        }
+    }
+
+}
+
 // Small Devices
 @media only screen and (max-width : 768px) {
+
+    #about{
+        #sage {
+            width: 30%;
+        }
+    }
+
     #lead-content {
         h1 {
             font-size: 2em;
