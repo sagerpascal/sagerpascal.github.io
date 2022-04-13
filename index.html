@@ -134,15 +134,71 @@ id: index
     <h2 class="heading">Projects</h2>
     <div class="container">
         <div class="row">
+            <div class="project-image">
+                    <img src="/assets/images/ICU_Cockpit.png"/>
+                </div>
+                <div class="project-info">
+                    <h3>AUTODIDACT – Automated Video Data Annotation to Empower the ICU Cockpit Platform for Clinical Decision Support</h3>
+                    <p>
+                        Monitoring diverse sensor signals of patients in intensive care can be key to detect potentially fatal emergencies.
+                        But in order to perform the monitoring automatically, the monitoring system has to know what is currently happening to the patient:
+                        if the patient is for example currently being moved by medical staff, this would explain a sudden peak in the heart rate and would thus not
+                        be a sign of an emergency. To create such annotations to the data automatically, the ZHAW group of Computer Vision, Perception and Cognition
+                        has teamed up with University Hospital Zurich’s Intensive Care Unit (ICU) to equip the ICU Cockpit software with video analysis capabilities:
+                        based on cameras in the patient room that deliver a constant, privacy-reserving video stream from the patient’s bed
+                        (i.e., no person can be identified based on the video resolution), the location of patient and medical staff shall be
+                        automatically detected and tracked to extract simple movement patterns. Based on these patterns, it shall be classified if and what
+                        medical intervention is currently performed on the patient. The research challenge in this project is to realize such a system without
+                        access to many labels, i.e., to learn the detection, tracking and classification in mainly un- and self-supervised ways.
+                    </p>
+                    <a href="https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/5230/" target="_blank">View Project</a>
+                </div>
+            </div>
+            <div class="project shadow-large">
+                <div class="project-image">
+                    <img src="/assets/images/bca.PNG"/>
+                </div>
+                <div class="project-info">
+                    <h3>MSc. Project Thesis 2: End-to-End Pipeline for Body Composition Analysis and Sarcopenia Detection without Target Labels</h3>
+                    <p>
+                    Body composition analysis can improve patient prognostication and contribute to higher safety,
+                    efficiency and quality of the patient journey. This analysis is often neglected due to the high manual
+                    effort or the lack of labels to develop a system for automatic processing. This project thesis proposes
+                    an automated method for body composition analysis that can be carried out on computer tomographic
+                    (CT) scans without labels and with limited computational resources.
 
+                    An existing method for detecting and identifying vertebrae is extended with domain adaptation by
+                    adding a domain-specific loss function. Thereby, no assumptions about the visible vertebrae within
+                    the 3D volume are made. With this extension, a 2D slice at the level of a predefined vertebra can be
+                    extracted without the use of labels of the target domain. This slice is subsequently segmented in spine,
+                    muscle, subcutaneous adipose tissue (SAT), visceral adipose tissue (VAT), intramuscular adipose
+                    tissue (IMAT), skin, and others using classical computer vision methods. The semantic segmentation
+                    is also carried out without labels. Instead, anatomical assumptions about the structure of the body are
+                    incorporated.
 
-
-
-
-
-
-
-
+                    Without using labels from the target domain, we were able to identify vertebra centroids with an
+                    accuracy of 72.8%. Adding only ten labels during training, the accuracy increased to 89.2%, which
+                    is in line with the current state-of-the-art. The quality of the segmentation masks was evaluated by
+                    predicting sarcopenia, using the tissue composition. A support vector machine (SVM) detected this
+                    syndrome with an accuracy of 96%, which demonstrates the eectiveness of the proposed method for
+                    body composition analysis.
+                    </p>
+                    <a href="https://sagerpascal.github.io/mse-vt2/" target="_blank">View Project</a>
+                </div>
+            </div>
+            <div class="project-image">
+                    <img src="/assets/images/realscore.png"/>
+                </div>
+                <div class="project-info">
+                    <h3>RealScore - Scanning of Real-World Sheet Music for a Digital Music Stand</h3>
+                    <p>
+                        In a previous <a href="https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/1836/" target="_blank">project</a>, a
+                        solution to translate printed music scores into machine-readable music sheets was developed. However, it only works for high quality input.
+                        To scale up business, it should work as well for smartphone pictures, used sheets etc. Project RealScore enhances the successful predecessor project by making deep learning adapt to unseen data through unsupervised learning.
+                    </p>
+                    <a href="https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/3005/" target="_blank">View Project</a>
+                </div>
+            </div>
             <div class="project shadow-large">
                 <div class="project-image">
                     <img src="/assets/images/speech-prediction.PNG"/>
