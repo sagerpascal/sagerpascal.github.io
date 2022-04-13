@@ -144,12 +144,8 @@ id: index
                         Monitoring diverse sensor signals of patients in intensive care can be key to detect potentially fatal emergencies.
                         But in order to perform the monitoring automatically, the monitoring system has to know what is currently happening to the patient:
                         if the patient is for example currently being moved by medical staff, this would explain a sudden peak in the heart rate and would thus not
-                        be a sign of an emergency. To create such annotations to the data automatically, the ZHAW group of Computer Vision, Perception and Cognition
-                        has teamed up with University Hospital Zurich’s Intensive Care Unit (ICU) to equip the ICU Cockpit software with video analysis capabilities:
-                        based on cameras in the patient room that deliver a constant, privacy-reserving video stream from the patient’s bed
-                        (i.e., no person can be identified based on the video resolution), the location of patient and medical staff shall be
-                        automatically detected and tracked to extract simple movement patterns. Based on these patterns, it shall be classified if and what
-                        medical intervention is currently performed on the patient. The research challenge in this project is to realize such a system without
+                        be a sign of an emergency. Therefore, the system is extended with video analysis capabilities and movements of the patient and the medical staff are detected.
+                         The research challenge in this project is to realize such a system without
                         access to many labels, i.e., to learn the detection, tracking and classification in mainly un- and self-supervised ways.
                     </p>
                     <a href="https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/5230/" target="_blank">View Project</a>
@@ -169,20 +165,10 @@ id: index
                     (CT) scans without labels and with limited computational resources.
 
                     An existing method for detecting and identifying vertebrae is extended with domain adaptation by
-                    adding a domain-specific loss function. Thereby, no assumptions about the visible vertebrae within
-                    the 3D volume are made. With this extension, a 2D slice at the level of a predefined vertebra can be
+                    adding a domain-specific loss function. With this extension, a 2D slice at the level of a predefined vertebra can be
                     extracted without the use of labels of the target domain. This slice is subsequently segmented in spine,
                     muscle, subcutaneous adipose tissue (SAT), visceral adipose tissue (VAT), intramuscular adipose
-                    tissue (IMAT), skin, and others using classical computer vision methods. The semantic segmentation
-                    is also carried out without labels. Instead, anatomical assumptions about the structure of the body are
-                    incorporated.
-
-                    Without using labels from the target domain, we were able to identify vertebra centroids with an
-                    accuracy of 72.8%. Adding only ten labels during training, the accuracy increased to 89.2%, which
-                    is in line with the current state-of-the-art. The quality of the segmentation masks was evaluated by
-                    predicting sarcopenia, using the tissue composition. A support vector machine (SVM) detected this
-                    syndrome with an accuracy of 96%, which demonstrates the eectiveness of the proposed method for
-                    body composition analysis.
+                    tissue (IMAT), skin, and others using classical computer vision methods.
                     </p>
                     <a href="https://sagerpascal.github.io/mse-vt2/" target="_blank">View Project</a>
                 </div>
