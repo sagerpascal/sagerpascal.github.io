@@ -321,3 +321,24 @@ footer {
     text-align: center;
   }
 }
+
+/*
+    ----------------------------------
+    ------- sage Scroll effects ------
+    ----------------------------------
+*/
+
+@keyframes wipe-enter {
+	0% {
+		transform: scale(0, .25);
+	}
+	50% {
+		transform: scale(1, .25);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .square-animation {
+    animation: wipe-enter 1s 1;
+  }
+}
