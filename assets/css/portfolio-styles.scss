@@ -99,7 +99,7 @@
   width: 100%;
   text-align: center;
   z-index: 10;
-  bottom: 15px;
+  bottom: 35px;
   color: #fff;
 
   span {
@@ -108,15 +108,18 @@
     margin: 0 auto;
     width: 35px;
     height: 35px;
-    border-radius: 50%;
-    border: 3px solid lighten($base-color, 25%);
+    // border-radius: 50%;
+    // border: 3px solid lighten($base-color, 25%);
     text-align: center;
   }
 
-  i {
+  div {
     animation: pulsate 1.5s ease;
     animation-iteration-count: infinite;
-    padding-top: 5px;;
+    padding-top: 5px;
+    &:hover {
+      color: $border;
+    }
   }
 }
 
