@@ -117,6 +117,7 @@
     animation: pulsate 1.5s ease;
     animation-iteration-count: infinite;
     padding-top: 5px;
+
     &:hover {
       color: $border;
     }
@@ -347,14 +348,18 @@
   }
 }
 
+// see https://www.proglobalbusinesssolutions.com/css-hover-effects/
 .publication {
+  cursor: pointer;
   position: relative;
   max-width: 700px;
   margin: 0 auto 30px auto;
   overflow: hidden;
-  border: 1px solid $border;
   text-align: left;
   padding: 25px;
+  background: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15);
+  border: 0 solid #fff;
 
   a {
     text-align: center;
@@ -395,6 +400,52 @@
 
   ul {
     padding: 0 0 0 15px;
+  }
+}
+
+
+/* Publications hover on big screen */
+@media only screen and (min-width: 768px) {
+  .publication {
+    box-shadow: none;
+    border: 0 solid #fff;
+    transition: all 1s;
+
+    &:after, &:before {
+      content: " ";
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      border: 0 solid #fff;
+      transition: all 1s;
+    }
+
+    &:after {
+      top: -1px;
+      left: -1px;
+      border-top: 3px solid $border;
+      border-left: 3px solid $border;
+    }
+
+    &:before {
+      bottom: -1px;
+      right: -1px;
+      border-bottom: 3px solid $border;
+      border-right: 3px solid $border;
+    }
+
+    &:hover {
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+      // background:rgba(0,0,0,.5);
+      // color:white;
+      &:before, &:after {
+
+        width: 100%;
+        height: 100%;
+        // border-color:white;
+      }
+    }
   }
 }
 

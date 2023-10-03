@@ -120,7 +120,7 @@ new TypeIt("#myJobs", {
     .pause(500)
     .move(-10, { delay: 400 })
     .delete(4, { delay: 400 })
-    .type("<strong>AI</strong> ", { delay: 400 })
+    .type("AI ", { delay: 400 })
     .pause(500)
     .move(10, { delay: 400 })
     .delete(10, { delay: 400 })
@@ -142,6 +142,9 @@ new TypeIt("#myJobs", {
 new TypeIt("#disclaimer", {
     speed: 90,
     startDelay: 3000,
+    loop: true,
 })
   .type("<i>(Disclaimer: I shouldn't tell, but I'm an AI writing this text for Pascal &#x1F609;)</i>", { delay: 800 })
+    .pause(10000)
+
   .go();
