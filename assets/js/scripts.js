@@ -107,3 +107,41 @@ $(document).ready(function() {
         'margin-top': -($('#intro').height() / 2)
     });
 });
+
+new TypeIt("#myJobs", {
+    speed: 90,
+    startDelay: 900,
+    loop: true,
+})
+  .type("PhD Student", { delay: 400 })
+    .pause(500)
+    .delete(7, { delay: 400 })
+    .type("Researcher", { delay: 400 })
+    .pause(500)
+    .move(-10, { delay: 400 })
+    .delete(4, { delay: 400 })
+    .type("<strong>AI</strong> ", { delay: 400 })
+    .pause(500)
+    .move(10, { delay: 400 })
+    .delete(10, { delay: 400 })
+    .type("Engineer", { delay: 400 })
+    .pause(500)
+    .move(-8, { delay: 400 })
+    .delete(3, { delay: 400 })
+    .type("Data ", { delay: 400 })
+    .pause(500)
+    .move(8, { delay: 400 })
+    .delete(8, { delay: 400 })
+    .type("Scientist", { delay: 400 })
+    .pause(500)
+    .delete(14, { delay: 400 })
+    .type("PhD Student | AI Researcher | Data Scientist", { delay: 400 })
+    .pause(2000)
+  .go();
+
+new TypeIt("#disclaimer", {
+    speed: 90,
+    startDelay: 3000,
+})
+  .type("<i>(Disclaimer: I shouldn't tell, but I'm an AI writing this text for Pascal &#x1F609;)</i>", { delay: 800 })
+  .go();

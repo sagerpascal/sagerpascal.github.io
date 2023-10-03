@@ -8,8 +8,7 @@ id: index
         <div id="lead-content">
             <h1>Pascal Sager</h1>
             <hr style="width: 100%; background-color: #ffffff; border-color: #ffffff;">
-            <h2>AI Researcher, Software Engineer</h2>
-            <!--                        <a href="#" class="btn-rounded-white">Download Resume</a>-->
+            <h2 id="myJobs"></h2>
         </div>
         <div id="lead-overlay"></div>
         <div id="lead-down">
@@ -26,154 +25,115 @@ id: index
     <h2 class="heading reveal2">About Me</h2>
     <div class="container reveal2">
         <div class="row">
-            <div class="col-md-3">
-                <img src="assets/images/sage.jpg" id="sage" alt="Pascal Sager">
+            <div class="col-md-4">
+                <div class="row" style="display: block;">
+                    <img src="assets/images/sage.jpg" id="sage" alt="Pascal Sager">
+                </div>
+                <br>
+                <div class="row">
+                    <div class="social" style="text-align: center; width: 100%;">
+                <ul>
+                    <li>
+                        <a href="https://github.com/sagerpascal" target="_blank"><i class="fa-brands fa-github fa-xl"
+                                                                                    aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://ch.linkedin.com/in/pascal-sager-3b7403168" target="_blank"><i
+                                class="fa-brands fa-linkedin fa-xl" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.researchgate.net/profile/Pascal_Sager" target="_blank"><i
+                                class="fa-brands fa-researchgate fa-xl" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+                </div>
+
             </div>
             <div class="col-md-8">
                 <p>
-                    Welcome to my personal website. I'm a MSc. student at the Zurich University of Applied Sciences.
-                    At the same time, I work at the university’s recently founded <a
-                        href="https://www.zhaw.ch/en/engineering/institutes-centres/cai/">Centre for Artificial
-                    Intelligence (CAI)</a> as a researcher in deep learning and AI.
-                    Thereby, I focus on pattern recognition in the field of computer vision.
+                    Greetings and welcome to my personal homepage. My name is <strong>Pascal Sager</strong>, and
+                    I specialize in the fascinating field of AI and deep learning. I am currently pursuing a PhD degree
+                    focusing on Natural Intelligence.
+                    My academic background is a fusion of electrical engineering, computer science, and data science.
+                    I work as a researcher, project leader, and Head of AI demonstrators at the Centre for Artificial Intelligence of the Zurich University of Applied Sciences.
+                    Beyond the technical sphere, my commitment to responsible technology is underscored by my participation as a Board member in the university's Sustainable Impact Program. Additionally, I work as a Senior Data Scientist at Alpine AI, contributing my expertise to the development of SwissGPT.
                 </p>
+                <br>
                 <p>
-                    I'm interested in finding new principles to efficiently learn good representation of high dimensional data.
-                    Good representations allow systems to perform actions and to do reasoning while beeing robust.
-                    Therefore, I am currently working on integrating findings from neuroscience into computer algorithms.
+                    The forthcoming chapter of my academic journey promises to be equally intriguing. My doctoral studies will focus on the intricacies of natural intelligence, merging my keen interest in neuroscience with the possibilities offered by artificial intelligence. The intention behind this endeavor is to unravel the mysteries underlying the intelligence exhibited by living organisms and transpose these insights into the realm of advanced AI systems.
                 </p>
-                <p>
-                    Besides research, I'm responsible for our computing infrastructure (i.e. several DGX servers) and demonstrators to showcase the capability of AI.
-                    I have a background in electrical engineering and computer science and have 5+ years of experience
-                    as a software engineer.
-                </p>
+                <br>
+                <p id="disclaimer"></p>
             </div>
         </div>
     </div>
 </div>
 
-<div>
-<!--<div id="experience" class="background-alt">
-    <h2 class="heading">Experience</h2>
-    <div id="experience-timeline">
-        <div data-date="since Sept 2020">
-            <h3>Zurich University of Applied Sciences</h3>
-            <h4>Scientific Assistant AI/ML</h4>
-            <p>
-                Currently, I'm working as a research assistant at the <a
-                    href="https://www.zhaw.ch/en/engineering/institutes-centres/cai/">Centre for Artificial
-                Intelligence</a> of the Zurich University of
-                Applied Sciences. The main focus of my research lies on pattern recognition using deep learning. <a
-                    href="https://www.zhaw.ch/de/ueber-uns/person/sage/">Read
-                more...</a>
-            </p>
-        </div>
-
-        <div data-date="Sept 2018 – Aug 2020">
-            <h3>Spühl GmbH</h3>
-            <h4>Software Engineer</h4>
-            <p>
-                As a software engineer at Spühl GmbH, I worked on the acquisition, aggregation and evaluation of data
-                from different machine control units. The data was used to optimize processes and increase the
-                production efficiency. Thereby, I used different technologies and programming languages such as Java,
-                Python, Docker, Azure IoT, database systems (SQL and NoSQL) and web technologies.
-            </p>
-        </div>
-        <div data-date="Jul 2015 – Aug 2018">
-            <h3>L. Kellenberger & Co. AG</h3>
-            <h4>Software Engineer PLC</h4>
-            <p>
-                The company Kellenberger manufactures grinding machines. As part of the software engineering team, I
-                worked on programming PLCs (Fanuc), optimising motor parameters and calculating the machine safety level
-                according to ISO-13849.
-
-            </p>
-        </div>
-        <div data-date="Aug 2013 – Jun 2015">
-            <h3>Spühl GmbH</h3>
-            <h4>Hardware Design Engineer</h4>
-            <p>
-                As hardware design engineer, I planned the electrical control units of machines. This included the
-                selection of components, the drawing up of electrical diagrams, the definition of the control cabinet
-                layout as well as ensuring
-                correct installation with regard to regulations and security. Additionally, I supervised apprentices and
-                advised them during their final project work from school (LAP).
-            </p>
-        </div>
-        <div data-date="Aug 2009 – Jul 2013">
-            <h3>Spühl GmbH</h3>
-            <h4>Apprenticeship Automation Engineer</h4>
-            <p>
-                I worked in different departments during my apprenticeship. First, I was taught the mechanical
-                foundations for machine manufacturers such as
-                filing, drilling, turning and milling. Afterwards, I wired and tested electrical control cabinets. At
-                the end of my apprenticeship, I assisted the hardware development engineers by drawing electrical
-                diagrams.
-            </p>
+<div class="modal fade" id="udaModal" tabindex="-1" role="dialog" aria-labelledby="udaModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="max-width: 1100px">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="udaModalLabel">Unsupervised Domain Adaptation for Vertebrae Detection and Identification in 3D CT Volumes Using a Domain Sanity Loss</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="https://www.mdpi.com/2313-433X/8/8/222" target="_blank"><img src="/assets/images/uda.png" style="width:100%"/></a>
+                    </div>
+                    <div class="col-md-8">
+                        A variety of medical computer vision applications analyze 2D slices of computed tomography (CT) scans, whereas axial slices from the body trunk region are usually identified based on their relative position to the spine. A limitation of such systems is that either the correct slices must be extracted manually or labels of the vertebrae are required for each CT scan to develop an automated extraction system. In this paper, we propose an unsupervised domain adaptation (UDA) approach for vertebrae detection and identification based on a novel Domain Sanity Loss (DSL) function. With UDA the model’s knowledge learned on a publicly available (source) data set can be transferred to the target domain without using target labels, where the target domain is defined by the specific setup (CT modality, study protocols, applied pre- and processing) at the point of use (e.g., a specific clinic with its specific CT study protocols). With our approach, a model is trained on the source and target data set in parallel. The model optimizes a supervised loss for labeled samples from the source domain and the DSL loss function based on domain-specific “sanity checks” for samples from the unlabeled target domain. Without using labels from the target domain, we are able to identify vertebra centroids with an accuracy of 72.8%. By adding only ten target labels during training the accuracy increases to 89.2%, which is on par with the current state-of-the-art for full supervised learning, while using about 20 times less labels. Thus, our model can be used to extract 2D slices from 3D CT scans on arbitrary data sets fully automatically without requiring an extensive labeling effort, contributing to the clinical adoption of medical imaging by hospitals.
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="text-align: left">
+                <a href="https://www.mdpi.com/2313-433X/8/8/222" target="_blank">View Publication</a>
+            </div>
         </div>
     </div>
 </div>
 
-<div id="education">
-    <h2 class="heading">Education</h2>
-    <div class="education-block">
-        <h3>Zurich University of Applied Sciences</h3>
-        <span class="education-date">Sept 2020 - March 2023</span>
-        <h4>Master of Science in Data Science</h4>
-        Currently I am studying Data Science at the Zurich University of Applied Sciences.
-        I'm supervised by <a href="https://stdm.github.io/">Prof. Dr.
-        Thilo Stadelmann</a>, Director of the <a href="https://www.zhaw.ch/en/engineering/institutes-centres/cai/">Centre
-        for Artificial Intelligence</a>.
-        I study in a part-time model and <a href="#experience">work at the university's research institute</a> at the
-        same time. The focus of this study program is on different areas of machine learning, deep learning and AI in
-        general.
+<div class="modal fade" id="sdsModal" tabindex="-1" role="dialog" aria-labelledby="sdsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="max-width: 1100px">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="sdsModalLabel">A Survey of Un-, Weakly-, and Semi-Supervised Learning Methods for Noisy, Missing and Partial Labels in Industrial Vision Applications</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="https://ieeexplore.ieee.org/document/9474624" target="_blank"><img src="/assets/images/sds.png" style="width:100%"/></a>
+                    </div>
+                    <div class="col-md-8">
+                        When applying deep learning methods in an industrial vision application, they often fall short of the performance shown in a clean and controlled lab environment due to data quality issues. Few would consider the actual labels as a driving factor, yet inaccurate label data can impair model performance significantly. However, being able to mitigate inaccurate or incomplete labels might also be a cost-saver for real-world projects. Here, we survey state-of-the-art deep learning approaches to resolve such missing labels, noisy labels, and partially labeled data in the prospect of an industrial vision application. We systematically present un-, weakly, and semi-supervised approaches from 'A' like anomaly detection to 'Z' like zero-shot classification to resolve these challenges by embracing them.
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="text-align: left">
+                <a href="https://ieeexplore.ieee.org/document/9474624" target="_blank">View Publication</a>
+            </div>
+        </div>
     </div>
-    <div class="education-block">
-        <h3>Zurich University of Applied Sciences</h3>
-        <span class="education-date">Sept 2017 - Aug 2020</span>
-        <h4>Bachelor of Science in Computer Science</h4>
-        I have a BSc. degree in Computer Science from the Zurich University of Applied Sciences. During my studies, I
-        mainly focused on software development, software architecture, algorithms and AI.
-        Although I studied in a full-time model, I found spare time to work as a software engineer and gain experience
-        in the industry.<br>
-
-        In 2020, I successfully graduated with grade A (5.72).
-    </div>
-    <div class="education-block">
-        <h3>ZbW (Zentrum für berufliche Weiterbildung)</h3>
-        <span class="education-date">Sept 2013 - Aug 2016</span>
-        <h4>Advanced Federal Diploma of Higher Education in Electrical Engineering (Techniker HF)</h4>
-        In 2016, after three years of further education, I received the title "Dipl. Techniker HF", which corresponds to
-        the internationally known degree "Professional Bachelor".
-        Thereby, I specialised in electrical engineering and increased my expertise in various fields such as motor
-        controlling, PLC development, HMI design, robotics and programming microcontrollers.<br>
-        I successfully completed this further education with the best grade of 2016 (5.7).
-    </div>
-    <div class="education-block">
-        <h3>GBSSG (Gewebrliches Berufszentrum St. Gallen)</h3>
-        <span class="education-date">Sept 2009 - Aug 2013</span>
-        <h4>Federal Diploma of Vocational Education and Training in Automation Engineering (Automatiker EFZ)</h4>
-        I completed an apprenticeship as an automation engineer during 4 years. The theoretical education took place
-        alongside my practical training at Spühl GmbH.
-        I was able to acquire various skills, including understanding mechanical and electrical basics, wiring and
-        testing control units, programming PLCs and drawing electrical diagrams.
-    </div>
-</div>-->
 </div>
 
 <div id="publications">
     <h2 class="heading reveal2">Publications</h2>
-    <div class="container">
+    <div>
         <div class="publication shadow-large reveal">
             <div class="publication-info">
                 <h3>Unsupervised Domain Adaptation for Vertebrae Detection and Identification in 3D CT Volumes Using a Domain Sanity Loss</h3>
                 <div class="citation">
                     P. Sager <i>et al.</i>, "Unsupervised Domain Adaptation for Vertebrae Detection and Identification in 3D CT Volumes Using a Domain Sanity Loss", <i>Journal of Imaging</i>. 2022; 8(8):222. <a href="https://www.mdpi.com/2313-433X/8/8/222" target="_blank">doi: 10.3390/jimaging8080222.</a>
                 </div>
-                <p>
-                    A variety of medical computer vision applications analyze 2D slices of computed tomography (CT) scans, whereas axial slices from the body trunk region are usually identified based on their relative position to the spine. A limitation of such systems is that either the correct slices must be extracted manually or labels of the vertebrae are required for each CT scan to develop an automated extraction system. In this paper, we propose an unsupervised domain adaptation (UDA) approach for vertebrae detection and identification based on a novel Domain Sanity Loss (DSL) function. With UDA the model’s knowledge learned on a publicly available (source) data set can be transferred to the target domain without using target labels, where the target domain is defined by the specific setup (CT modality, study protocols, applied pre- and processing) at the point of use (e.g., a specific clinic with its specific CT study protocols). With our approach, a model is trained on the source and target data set in parallel. The model optimizes a supervised loss for labeled samples from the source domain and the DSL loss function based on domain-specific “sanity checks” for samples from the unlabeled target domain. Without using labels from the target domain, we are able to identify vertebra centroids with an accuracy of 72.8%. By adding only ten target labels during training the accuracy increases to 89.2%, which is on par with the current state-of-the-art for full supervised learning, while using about 20 times less labels. Thus, our model can be used to extract 2D slices from 3D CT scans on arbitrary data sets fully automatically without requiring an extensive labeling effort, contributing to the clinical adoption of medical imaging by hospitals.
-                </p>
-                <a href="https://www.mdpi.com/2313-433X/8/8/222" target="_blank">View Publication</a>
+                <button type="button" class="btn" data-toggle="modal" data-target="#udaModal">
+                    Show more...
+                </button>
             </div>
         </div>
         <div class="publication shadow-large reveal">
@@ -182,15 +142,15 @@ id: index
                 <div class="citation">
                     N. Simmler <i>et al.</i>, "A Survey of Un-, Weakly-, and Semi-Supervised Learning Methods for Noisy, Missing and Partial Labels in Industrial Vision Applications", <i>2021 8th Swiss Conference on Data Science (SDS)</i>. 2021, pp. 26-31, <a href="https://ieeexplore.ieee.org/document/9474624" target="_blank">doi: 10.1109/SDS51136.2021.00012.</a>
                 </div>
-                <p>
-                    When applying deep learning methods in an industrial vision application, they often fall short of the performance shown in a clean and controlled lab environment due to data quality issues. Few would consider the actual labels as a driving factor, yet inaccurate label data can impair model performance significantly. However, being able to mitigate inaccurate or incomplete labels might also be a cost-saver for real-world projects. Here, we survey state-of-the-art deep learning approaches to resolve such missing labels, noisy labels, and partially labeled data in the prospect of an industrial vision application. We systematically present un-, weakly, and semi-supervised approaches from 'A' like anomaly detection to 'Z' like zero-shot classification to resolve these challenges by embracing them.
-                </p>
-                <a href="https://ieeexplore.ieee.org/document/9474624" target="_blank">View Publication</a>
+                <button type="button" class="btn" data-toggle="modal" data-target="#sdsModal">
+                    Show more...
+                </button>
             </div>
         </div>
     </div>
 </div>
-
+<!-- Projects to add: GiB, MSc. Thesis, Robodog, Text to image, Alpine AI Doc Search, -->
+<!-- TODO: Only show image and title (when hover) -> Make bigger and show info after click -->
 <div id="projects" class="background-alt">
     <h2 class="heading reveal2">Projects</h2>
     <div class="container">
@@ -300,7 +260,7 @@ id: index
                 <img src="/assets/images/Lunar.PNG"/>
             </div>
             <div class="project-info">
-                <h3>ZHAW Hackathon: Deep Reinforcment Learning</h3>
+                <h3>ZHAW Hackathon: Deep Reinforcement Learning</h3>
                 <p>
                     I took a course about Reinforcement Learning course at the Zurich University of Applied Sciences.
                     Instead of an exam, we had a graded 3-day hackathon at the end. I achieved very good
@@ -353,7 +313,7 @@ id: index
                 <img src="/assets/images/PA.png"/>
             </div>
             <div class="project-info">
-                <h3>Bsc. Project Thesis (5th semester Bsc.)</h3>
+                <h3>Bsc. Project Thesis (5th semester BSc.)</h3>
                 <p>
                     In this project thesis, I developed a solution for data acquisition together
                     with a fellow student. The application is based on Azure IoT. Different docker containers
@@ -374,6 +334,7 @@ id: index
         <li class="reveal2">Python</li>
         <li class="reveal2">Deep Learning</li>
         <li class="reveal2">Computer Vision</li>
+        <li class="reveal2">Neuroscience</li>
         <li class="reveal2">Docker</li>
         <li class="reveal2">Java</li>
         <li class="reveal2">Spring Boot</li>

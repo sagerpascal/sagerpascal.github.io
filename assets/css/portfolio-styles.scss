@@ -405,8 +405,7 @@
   .publication {
     display: inline-block;
     margin: 20px;
-    width: 700px;
-    height: 550px;
+    max-width: 1100px;
   }
 
   #publications > .heading {
