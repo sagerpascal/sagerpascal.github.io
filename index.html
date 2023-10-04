@@ -149,13 +149,15 @@ id: index
         </button>
     </div>
 </div>
-<!-- Projects to add: GiB, MSc. Thesis, Robodog, Text to image, Alpine AI Doc Search, -->
-<!-- TODO: Only show image and title (when hover) -> Make bigger and show info after click -->
-<div id="projects" class="background-alt">
-    <h2 class="heading reveal2">Projects</h2>
-    <div class="container">
-        <div class="project shadow-large reveal">
-            <div class="project-image">
+
+
+
+
+<div class="proj-modals">
+    <div class="modal fade" id="autodidactModal" tabindex="-1" role="dialog" aria-labelledby="autodidactModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="project shadow-large reveal">
+            <div class="project-image-detail">
                 <img src="/assets/images/ICU_Cockpit.png"/>
             </div>
             <div class="project-info">
@@ -173,9 +175,13 @@ id: index
                 <a href="https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/5230/"
                    target="_blank">View Project</a>
             </div>
+          </div>
         </div>
-        <div class="project shadow-large reveal">
-            <div class="project-image">
+    </div>
+    <div class="modal fade" id="vt2Modal" tabindex="-1" role="dialog" aria-labelledby="vt2ModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="project shadow-large reveal">
+            <div class="project-image-detail">
                 <img src="/assets/images/bca.PNG"/>
             </div>
             <div class="project-info">
@@ -192,9 +198,14 @@ id: index
                 </p>
                 <a href="https://sagerpascal.github.io/mse-vt2/" target="_blank">View Project</a>
             </div>
+          </div>
         </div>
-        <div class="project shadow-large reveal">
-            <div class="project-image">
+    </div>
+
+    <div class="modal fade" id="realscoreModal" tabindex="-1" role="dialog" aria-labelledby="realscoreModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="project shadow-large reveal">
+            <div class="project-image-detail">
                 <img src="/assets/images/realscore.png"/>
             </div>
             <div class="project-info">
@@ -212,9 +223,14 @@ id: index
                 <a href="https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/3005/"
                    target="_blank">View Project</a>
             </div>
+          </div>
         </div>
-        <div class="project shadow-large reveal">
-            <div class="project-image">
+    </div>
+
+    <div class="modal fade" id="vt1Modal" tabindex="-1" role="dialog" aria-labelledby="vt1ModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="project shadow-large reveal">
+            <div class="project-image-detail">
                 <img src="/assets/images/speech-prediction.PNG"/>
             </div>
             <div class="project-info">
@@ -236,9 +252,14 @@ id: index
                 </p>
                 <a href="https://sagerpascal.github.io/speech-prediction/" target="_blank">View Project</a>
             </div>
+          </div>
         </div>
-        <div class="project shadow-large reveal">
-            <div class="project-image">
+    </div>
+
+    <div class="modal fade" id="fwaModal" tabindex="-1" role="dialog" aria-labelledby="fwaModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="project shadow-large reveal">
+            <div class="project-image-detail">
                 <img src="https://www.zhaw.ch/typo3temp/assets/_processed_/2/3/csm_kitro1a_a8073e487c.png"
                      style="width: 300px; height: 300px;"/>
             </div>
@@ -254,9 +275,14 @@ id: index
                 <a href="https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/3006/"
                    target="_blank">Read More</a>
             </div>
+          </div>
         </div>
-        <div class="project shadow-large reveal">
-            <div class="project-image">
+    </div>
+
+    <div class="modal fade" id="hackathonModal" tabindex="-1" role="dialog" aria-labelledby="hackathonModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="project shadow-large reveal">
+            <div class="project-image-detail">
                 <img src="/assets/images/Lunar.PNG"/>
             </div>
             <div class="project-info">
@@ -270,9 +296,14 @@ id: index
                 </p>
                 <a href="https://sagerpascal.github.io/rl-bootcamp-hackathon/" target="_blank">View Project</a>
             </div>
+          </div>
         </div>
-        <div class="project shadow-large reveal">
-            <div class="project-image">
+    </div>
+
+    <div class="modal fade" id="bscModal" tabindex="-1" role="dialog" aria-labelledby="bscModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="project shadow-large reveal">
+            <div class="project-image-detail">
                 <img src="/assets/images/BA.PNG"/>
             </div>
             <div class="project-info">
@@ -292,9 +323,14 @@ id: index
                 <a class="btn disabled" href="#" style="text-decoration: line-through">View Project</a><br>
                 (not possible due to a non-disclosure agreement)
             </div>
+          </div>
         </div>
-        <div class="project shadow-large reveal">
-            <div class="project-image">
+    </div>
+
+    <div class="modal fade" id="hatespeechModal" tabindex="-1" role="dialog" aria-labelledby="hatespeechModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="project shadow-large reveal">
+            <div class="project-image-detail">
                 <img src="/assets/images/hate-speech.PNG"/>
             </div>
             <div class="project-info">
@@ -307,9 +343,14 @@ id: index
                 </p>
                 <a href="https://github.com/sagerpascal/HateSpeechDetection" target="_blank">View Project</a>
             </div>
+          </div>
         </div>
-        <div class="project shadow-large reveal">
-            <div class="project-image">
+    </div>
+
+    <div class="modal fade" id="paModal" tabindex="-1" role="dialog" aria-labelledby="paModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="project shadow-large reveal">
+            <div class="project-image-detail">
                 <img src="/assets/images/PA.png"/>
             </div>
             <div class="project-info">
@@ -323,9 +364,92 @@ id: index
                 <a class="btn disabled" href="#" style="text-decoration: line-through">View Project</a><br>
                 (not possible due to a non-disclosure agreement)
             </div>
+          </div>
         </div>
     </div>
 </div>
+
+
+
+
+<!-- Projects to add: GIB, ML-BCA, MSc. Thesis, Robodog, Text to image, Alpine AI Doc Search, -->
+<div id="projects" class="background-alt">
+    <h2 class="heading reveal2">Projects</h2>
+    <div>
+        <button type="button" class="reveal" data-toggle="modal" data-target="#autodidactModal" style="outline: none;">
+            <div class="proj_container">
+                <div class="project-image">
+                    <img src="/assets/images/ICU_Cockpit.png"/>
+                </div>
+                <h2 class="titleProject">Autodidact</h2>
+            </div>
+        </button>
+        <button type="button" class="reveal" data-toggle="modal" data-target="#vt2Modal" style="outline: none;">
+            <div class="proj_container">
+                <div class="project-image">
+                    <img src="/assets/images/bca.PNG"/>
+                </div>
+                <h2 class="titleProject">Sarcopenia Detection</h2>
+            </div>
+        </button>
+        <button type="button" class="reveal" data-toggle="modal" data-target="#realscoreModal" style="outline: none;">
+            <div class="proj_container">
+                <div class="project-image">
+                    <img src="/assets/images/realscore.png"/>
+                </div>
+                <h2 class="titleProject">Real Score</h2>
+            </div>
+        </button>
+        <button type="button" class="reveal" data-toggle="modal" data-target="#vt1Modal" style="outline: none;">
+            <div class="proj_container">
+                <div class="project-image">
+                    <img src="/assets/images/speech-prediction.PNG"/>
+                </div>
+                <h2 class="titleProject">Speech Prediction</h2>
+            </div>
+        </button>
+        <button type="button" class="reveal" data-toggle="modal" data-target="#fwaModal" style="outline: none;">
+            <div class="proj_container">
+                <div class="project-image">
+                    <img src="https://www.zhaw.ch/typo3temp/assets/_processed_/2/3/csm_kitro1a_a8073e487c.png"
+                         style="width: 300px; height: 300px;"/>
+                </div>
+                <h2 class="titleProject">Food Waste Analysis</h2>
+            </div>
+        </button>
+        <button type="button" class="reveal" data-toggle="modal" data-target="#hackathonModal" style="outline: none;">
+            <div class="proj_container">
+                <div class="project-image">
+                    <img src="/assets/images/Lunar.PNG"/>
+                </div>
+                <h2 class="titleProject">ZHAW Hackathon</h2>
+            </div>
+        </button>
+        <button type="button" class="reveal" data-toggle="modal" data-target="#bscModal" style="outline: none;">
+            <div class="proj_container">
+                <div class="project-image">
+                    <img src="/assets/images/BA.PNG"/>
+                </div>
+                <h2 class="titleProject">Bachelor Thesis</h2>
+            </div>
+        </button>
+        <button type="button" class="reveal" data-toggle="modal" data-target="#hatespeechModal" style="outline: none;">
+            <div class="proj_container">
+                <div class="project-image">
+                    <img src="/assets/images/hate-speech.PNG"/>
+                </div>
+                <h2 class="titleProject">Hate Speech Detection</h2>
+            </div>
+        </button>
+        <button type="button" class="reveal" data-toggle="modal" data-target="#paModal" style="outline: none;">
+            <div class="proj_container">
+                <div class="project-image">
+                    <img src="/assets/images/PA.png"/>
+                </div>
+                <h2 class="titleProject">Industrial IoT</h2>
+            </div>
+        </button>
+    </div>
 </div>
 
 <div id="skills">
@@ -335,9 +459,9 @@ id: index
         <li class="reveal2">Deep Learning</li>
         <li class="reveal2">Computer Vision</li>
         <li class="reveal2">Neuroscience</li>
+        <li class="reveal2">NLP</li>
         <li class="reveal2">Docker</li>
         <li class="reveal2">Java</li>
-        <li class="reveal2">Spring Boot</li>
         <li class="reveal2">HTML</li>
         <li class="reveal2">CSS</li>
         <li class="reveal2">React</li>

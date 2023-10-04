@@ -348,7 +348,7 @@
   }
 }
 
-// see https://www.proglobalbusinesssolutions.com/css-hover-effects/
+
 .publication {
   cursor: pointer;
   position: relative;
@@ -405,6 +405,8 @@
 
 
 /* Publications hover on big screen */
+
+// see https://www.proglobalbusinesssolutions.com/css-hover-effects/
 @media only screen and (min-width: 768px) {
   .publication {
     box-shadow: none;
@@ -477,12 +479,75 @@
 
 #projects {
   padding: 50px 15px;
-  border-bottom: 1px solid $border;
   text-align: center;
 
   h2 {
     color: $heading;
     margin-bottom: 50px;
+  }
+
+  button {
+    background: $background-alt;
+    border: 0 solid $border;
+    padding: 0;
+    margin: 15px;
+    box-shadow: 10px 5px 9px rgba(0, 0, 0, 0.25), 0 5px 9px rgba(0, 0, 0, 0.30);
+
+    .proj_container {
+      position: relative;
+      text-align: center;
+      color: white;
+      width: 300px;
+      height: 300px;
+    }
+
+    img {
+      object-fit: fill;
+    }
+
+    .proj_container:hover .project-image {
+      filter: blur(6px);
+      -webkit-filter: blur(6px);
+      transition: all 0.5s;
+      transition: 0.5s -webkit-filter linear;
+    }
+
+    .titleProject {
+      display: none;
+      filter: none;
+      -webkit-filter: none;
+      color: $base-color;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: fadeIn 1500ms;
+    }
+
+    .project-image:hover + .titleProject {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .titleProject:hover {
+      display: block;
+    }
+
+  }
+}
+
+.proj-modals {
+  .modal-dialog {
+    max-width: 900px;
+    top: 20%;
   }
 }
 
@@ -501,6 +566,10 @@
 }
 
 .project-image {
+  float: left;
+}
+
+.project-image-detail {
   float: left;
 }
 
@@ -809,7 +878,7 @@
     }
   }
 
-  .project-image {
+  .project-image-detail {
     display: none;
   }
 
