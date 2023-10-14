@@ -522,6 +522,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       animation: fadeIn 1500ms;
+      text-shadow: 0px 0px 15px white;
     }
 
     .project-image:hover + .titleProject {
@@ -549,6 +550,17 @@
     max-width: 900px;
     top: 20%;
   }
+
+  .modal {
+    margin: 0;
+  }
+
+  .modal-content {
+    flex-direction: row;
+    background-color: transparent;
+    border: none;
+  }
+
 }
 
 .project {
