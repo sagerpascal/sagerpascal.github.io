@@ -1,0 +1,15 @@
+<button type="button" class="publication reveal" data-toggle="modal" data-target={{ include.modalName }}
+        style="outline: none;">
+    <div class="publication-info">
+        <h3>{{ include.title }}</h3>
+        <div class="citation">
+            {{ include.author }}{% if include.useEtAl %}<i>et al.</i>{% endif %}, "{{ include.title }}", <i>{{
+            include.journal }}</i>. {{ include.year }}; {{ include.pages }}. <a
+                href={{ include.doi_link }} target="_blank">doi: {{ include.doi }}.</a>
+
+        </div>
+        <p>
+            <strong>Show more...</strong>
+        </p>
+    </div>
+</button>

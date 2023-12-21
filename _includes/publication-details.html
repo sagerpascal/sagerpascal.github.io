@@ -1,0 +1,27 @@
+<div class="modal fade" id={{ include.modalId }} tabindex="-1" role="dialog" aria-labelledby={{ include.modalLabel }}
+     aria-hidden="true">
+    <div class="modal-dialog" role="document" style="max-width: 1100px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id={{ include.modalLabel }}>{{ include.title }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href={{ include.url }} target="_blank"><img
+                                src={{ include.imagePath }} style="width:100%"/></a>
+                    </div>
+                    <div class="col-md-8">
+                        {{ include.abstract }}
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer" style="text-align: left">
+                <a href={{ include.url }} target="_blank">View Publication</a>
+            </div>
+        </div>
+    </div>
+</div>

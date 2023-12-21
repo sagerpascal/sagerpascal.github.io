@@ -1,0 +1,21 @@
+<div class="modal fade" id={{ include.modalId }} tabindex="-1" role="dialog" aria-labelledby={{ include.modalLabel }}
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="project shadow-large reveal">
+                <div class="project-image-detail">
+                    <img src={{ include.imagePath }} width="300" height="300"/>
+                </div>
+                <div class="project-info">
+                    <h3>{{ include.title }}</h3>
+                    <p>
+                        {{ include.description }}
+                    </p>
+                    {% if include.showLink %}
+                    <a href={{ include.url }} target="_blank">View Project</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -21,729 +21,252 @@ id: index
     </div>
 </div>
 
-<div id="about" class="background-alt">
-    <h2 class="heading reveal2">About Me</h2>
-    <div class="container reveal2">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="row" style="display: block;">
-                    <img src="assets/images/sage.jpg" id="sage" alt="Pascal Sager">
-                </div>
-                <br>
-                <div class="row">
-                    <div class="social" style="text-align: center; width: 100%;">
-                        <ul>
-                            <li>
-                                <a href="https://github.com/sagerpascal" target="_blank"><i
-                                        class="fa-brands fa-github fa-xl"
-                                        aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://ch.linkedin.com/in/pascal-sager-3b7403168" target="_blank"><i
-                                        class="fa-brands fa-linkedin fa-xl" aria-hidden="true"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://www.researchgate.net/profile/Pascal_Sager" target="_blank"><i
-                                        class="fa-brands fa-researchgate fa-xl" aria-hidden="true"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+{% include about-me.html %}
 
-            </div>
-            <div class="col-md-8">
-                <p>
-                    Greetings and welcome to my personal homepage. My name is <strong>Pascal Sager</strong>, and
-                    I specialize in the fascinating field of AI and deep learning. I am currently pursuing a PhD degree
-                    focusing on Natural Intelligence.
-                    My academic background is a fusion of electrical engineering, computer science, and data science.
-                    I work as a researcher, project leader, and Head of AI demonstrators at the Centre for Artificial
-                    Intelligence of the Zurich University of Applied Sciences.
-                    Beyond the technical sphere, my commitment to responsible technology is underscored by my
-                    participation as a Board member in the university's Sustainable Impact Program. Additionally, I work
-                    as a Senior Data Scientist at Alpine AI, contributing my expertise to the development of SwissGPT.
-                </p>
-                <br>
-                <p>
-                    The forthcoming chapter of my academic journey promises to be equally intriguing. My doctoral
-                    studies will focus on the intricacies of natural intelligence, merging my keen interest in
-                    neuroscience with the possibilities offered by artificial intelligence. The intention behind this
-                    endeavor is to unravel the mysteries underlying the intelligence exhibited by living organisms and
-                    transpose these insights into the realm of advanced AI systems.
-                </p>
-                <br>
-                <p id="disclaimer"></p>
-            </div>
-        </div>
-    </div>
-</div>
+{% include publication-details.html modalId="udaModal" modalLabel="udaModalLabel" title="Unsupervised Domain Adaptation for Vertebrae Detection and Identification in 3D CT Volumes Using a Domain Sanity Loss"
+url="https://www.mdpi.com/2313-433X/8/8/222" imagePath="/assets/images/uda.png" abstract="A variety of medical computer vision applications analyze 2D slices of computed tomography (CT)
+scans, whereas axial slices from the body trunk region are usually identified based on their
+relative position to the spine. A limitation of such systems is that either the correct slices
+must be extracted manually or labels of the vertebrae are required for each CT scan to develop
+an automated extraction system. In this paper, we propose an unsupervised domain adaptation
+(UDA) approach for vertebrae detection and identification based on a novel Domain Sanity Loss
+(DSL) function. With UDA the model’s knowledge learned on a publicly available (source) data set
+can be transferred to the target domain without using target labels, where the target domain is
+defined by the specific setup (CT modality, study protocols, applied pre- and processing) at the
+point of use (e.g., a specific clinic with its specific CT study protocols). With our approach,
+a model is trained on the source and target data set in parallel. The model optimizes a
+supervised loss for labeled samples from the source domain and the DSL loss function based on
+domain-specific “sanity checks” for samples from the unlabeled target domain. Without using
+labels from the target domain, we are able to identify vertebra centroids with an accuracy of
+72.8%. By adding only ten target labels during training the accuracy increases to 89.2%, which
+is on par with the current state-of-the-art for full supervised learning, while using about 20
+times less labels. Thus, our model can be used to extract 2D slices from 3D CT scans on
+arbitrary data sets fully automatically without requiring an extensive labeling effort,
+contributing to the clinical adoption of medical imaging by hospitals."%}
 
-<div class="modal fade" id="udaModal" tabindex="-1" role="dialog" aria-labelledby="udaModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document" style="max-width: 1100px">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="udaModalLabel">Unsupervised Domain Adaptation for Vertebrae Detection and
-                    Identification in 3D CT Volumes Using a Domain Sanity Loss</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-3">
-                        <a href="https://www.mdpi.com/2313-433X/8/8/222" target="_blank"><img
-                                src="/assets/images/uda.png" style="width:100%"/></a>
-                    </div>
-                    <div class="col-md-8">
-                        A variety of medical computer vision applications analyze 2D slices of computed tomography (CT)
-                        scans, whereas axial slices from the body trunk region are usually identified based on their
-                        relative position to the spine. A limitation of such systems is that either the correct slices
-                        must be extracted manually or labels of the vertebrae are required for each CT scan to develop
-                        an automated extraction system. In this paper, we propose an unsupervised domain adaptation
-                        (UDA) approach for vertebrae detection and identification based on a novel Domain Sanity Loss
-                        (DSL) function. With UDA the model’s knowledge learned on a publicly available (source) data set
-                        can be transferred to the target domain without using target labels, where the target domain is
-                        defined by the specific setup (CT modality, study protocols, applied pre- and processing) at the
-                        point of use (e.g., a specific clinic with its specific CT study protocols). With our approach,
-                        a model is trained on the source and target data set in parallel. The model optimizes a
-                        supervised loss for labeled samples from the source domain and the DSL loss function based on
-                        domain-specific “sanity checks” for samples from the unlabeled target domain. Without using
-                        labels from the target domain, we are able to identify vertebra centroids with an accuracy of
-                        72.8%. By adding only ten target labels during training the accuracy increases to 89.2%, which
-                        is on par with the current state-of-the-art for full supervised learning, while using about 20
-                        times less labels. Thus, our model can be used to extract 2D slices from 3D CT scans on
-                        arbitrary data sets fully automatically without requiring an extensive labeling effort,
-                        contributing to the clinical adoption of medical imaging by hospitals.
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer" style="text-align: left">
-                <a href="https://www.mdpi.com/2313-433X/8/8/222" target="_blank">View Publication</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="sdsModal" tabindex="-1" role="dialog" aria-labelledby="sdsModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document" style="max-width: 1100px">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="sdsModalLabel">A Survey of Un-, Weakly-, and Semi-Supervised Learning
-                    Methods for Noisy, Missing and Partial Labels in Industrial Vision Applications</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-md-3">
-                        <a href="https://ieeexplore.ieee.org/document/9474624" target="_blank"><img
-                                src="/assets/images/sds.png" style="width:100%"/></a>
-                    </div>
-                    <div class="col-md-8">
-                        When applying deep learning methods in an industrial vision application, they often fall short
-                        of the performance shown in a clean and controlled lab environment due to data quality issues.
-                        Few would consider the actual labels as a driving factor, yet inaccurate label data can impair
-                        model performance significantly. However, being able to mitigate inaccurate or incomplete labels
-                        might also be a cost-saver for real-world projects. Here, we survey state-of-the-art deep
-                        learning approaches to resolve such missing labels, noisy labels, and partially labeled data in
-                        the prospect of an industrial vision application. We systematically present un-, weakly, and
-                        semi-supervised approaches from 'A' like anomaly detection to 'Z' like zero-shot classification
-                        to resolve these challenges by embracing them.
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer" style="text-align: left">
-                <a href="https://ieeexplore.ieee.org/document/9474624" target="_blank">View Publication</a>
-            </div>
-        </div>
-    </div>
-</div>
+{% include publication-details.html modalId="sdsModal" modalLabel="sdsModalLabel" title="A Survey of Un-, Weakly-, and Semi-Supervised Learning
+Methods for Noisy, Missing and Partial Labels in Industrial Vision Applications"
+url="https://ieeexplore.ieee.org/document/9474624" imagePath="/assets/images/sds.png" abstract="When applying deep learning methods in an industrial vision application, they often fall short
+of the performance shown in a clean and controlled lab environment due to data quality issues.
+Few would consider the actual labels as a driving factor, yet inaccurate label data can impair
+model performance significantly. However, being able to mitigate inaccurate or incomplete labels
+might also be a cost-saver for real-world projects. Here, we survey state-of-the-art deep
+learning approaches to resolve such missing labels, noisy labels, and partially labeled data in
+the prospect of an industrial vision application. We systematically present un-, weakly, and
+semi-supervised approaches from 'A' like anomaly detection to 'Z' like zero-shot classification
+to resolve these challenges by embracing them."%}
 
 <div id="publications">
     <h2 class="heading reveal2">Publications</h2>
     <div>
-        <button type="button" class="publication reveal" data-toggle="modal" data-target="#udaModal"
-                style="outline: none;">
-            <div class="publication-info">
-                <h3>Unsupervised Domain Adaptation for Vertebrae Detection and Identification in 3D CT Volumes Using a
-                    Domain Sanity Loss</h3>
-                <div class="citation">
-                    P. Sager <i>et al.</i>, "Unsupervised Domain Adaptation for Vertebrae Detection and Identification
-                    in 3D CT Volumes Using a Domain Sanity Loss", <i>Journal of Imaging</i>. 2022; 8(8):222. <a
-                        href="https://www.mdpi.com/2313-433X/8/8/222" target="_blank">doi: 10.3390/jimaging8080222.</a>
-                </div>
-                <p>
-                    <strong>Show more...</strong>
-                </p>
-            </div>
-        </button>
-        <button type="button" class="publication reveal" data-toggle="modal" data-target="#sdsModal"
-                style="outline: none;">
-            <div class="publication-info">
-                <h3>A Survey of Un-, Weakly-, and Semi-Supervised Learning Methods for Noisy, Missing and Partial Labels
-                    in Industrial Vision Applications</h3>
-                <div class="citation">
-                    N. Simmler <i>et al.</i>, "A Survey of Un-, Weakly-, and Semi-Supervised Learning Methods for Noisy,
-                    Missing and Partial Labels in Industrial Vision Applications", <i>2021 8th Swiss Conference on Data
-                    Science (SDS)</i>. 2021, pp. 26-31, <a href="https://ieeexplore.ieee.org/document/9474624"
-                                                           target="_blank">doi: 10.1109/SDS51136.2021.00012.</a>
-                </div>
-                <p>
-                    <strong>Show more...</strong>
-                </p>
-            </div>
-        </button>
+        {% include publication.html modalName="#udaModal" title="Unsupervised Domain Adaptation for Vertebrae Detection
+        and Identification in 3D CT Volumes Using a Domain Sanity Loss" citation="Cte"
+        author="P. Sager" useEtAl=true journal="Journal of Imaging" year="2022" pages="8(8):222"
+        doi_link="https://www.mdpi.com/2313-433X/8/8/222" doi="10.3390/jimaging8080222" %}
+
+        {% include publication.html modalName="#sdsModal" title="A Survey of Un-, Weakly-, and Semi-Supervised Learning
+        Methods for Noisy, Missing and Partial Labels
+        in Industrial Vision Applications" author="N. Simmler" useEtAl=true journal="2021 8th Swiss Conference on Data
+        Science (SDS)" year="2021" pages="pp. 26-31" doi_link="https://ieeexplore.ieee.org/document/9474624"
+        doi="10.1109/SDS51136.2021.00012" %}
     </div>
 </div>
 
 
 <div class="proj-modals">
-    <div class="modal fade" id="gibModal" tabindex="-1" role="dialog" aria-labelledby="gibModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="project shadow-large reveal">
-                    <div class="project-image-detail">
-                        <img src="/assets/images/GIB.png" width="300" height="300"/>
-                    </div>
-                    <div class="project-info">
-                        <h3>AIMS: AI Infrastructure Manager for Sustainability</h3>
-                        <p>
-                            Dedicated to fostering a culture of sustainability, I initiated and lead the project AIMS -
-                            AI Infrastructure Manager for Sustainability.
-                            This initiative, designed to address the environmental impact of our university's AI
-                            operations, embodies a holistic approach.
-                            We're implementing an energy consumption monitoring system, introducing an efficient job
-                            queue system through Slurm, and look for ways to ingeniously repurposing dissipated heat.
-                            These measures aren't merely elevating standards within the Centre for Artificial
-                            Intelligence (CAI); they're sparking a broader transformation across the entire ZHAW
-                            community, as we collectively champion responsible resource utilization and eco-conscious
-                            practices.
-                        </p>
-                        <!-- <a href="xxxx" target="_blank">View Project</a> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="mlbcaModal" tabindex="-1" role="dialog" aria-labelledby="mlbcaModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="project shadow-large reveal">
-                    <div class="project-image-detail">
-                        <img src="/assets/images/ml-bca.jpeg" width="300" height="300"/>
-                    </div>
-                    <div class="project-info">
-                        <h3>ML-BCA: Machine Learning für Body Composition Analysis</h3>
-                        <p>
-                            In my second project thesis during my master's program, I laid the foundations for machine
-                            learning-driven body composition analysis at the Cantonal Hospital of Aarau (KSA).
-                            This thesis not only lead to a publication but also to a funded research project.
-                            The ML-BCA project is bringing the findings of my project thesis to life as a practical
-                            product for KSA.
-                            Our primary objective in this endeavor is to develop a robust application for facilitating
-                            medical validation and prospective studies, and to disseminate our collective scientific
-                            contributions to the broader community.
-                        </p>
-                        <a href="https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/6501/"
-                           target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="mscModal" tabindex="-1" role="dialog" aria-labelledby="mscModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="project shadow-large reveal">
-                    <div class="project-image-detail">
-                        <img src="/assets/images/msc_thesis.png" width="300" height="300"/>
-                    </div>
-                    <div class="project-info">
-                        <h3>Self-Organisation in a Biologically Inspired Learning Framework Based on Bernoulli
-                            Neurons</h3>
-                        <p>
-                            In my Master's thesis, I introduce an innovative learning framework by combining insights
-                            from neuroscience. While deep learning excels in automated image analysis, it faces issues
-                            like noise sensitivity, limited object recognition adaptability, and a constant need for
-                            extensive training data. In contrast, the human brain excels in holistic, non-linear image
-                            feature processing through self-organization and local learning. This thesis pioneers an
-                            image-processing approach inspired by the brain's operations. Empirical results, including
-                            Hebbian-trained lateral connections, demonstrate remarkable robustness and the ability to
-                            recover occluded objects.
-                        </p>
-                        <a href="https://sagerpascal.github.io/lateral-connections/index.html"
-                           target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="dogModal" tabindex="-1" role="dialog" aria-labelledby="dogModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="project shadow-large reveal">
-                    <div class="project-image-detail">
-                        <img src="/assets/images/unitree_a1.jpg" width="300" height="300"/>
-                    </div>
-                    <div class="project-info">
-                        <h3>Autonomous Robodog</h3>
-                        <p>
-                            In my role as Head of AI Demonstrators, my primary mission is to develop compelling
-                            showcases of AI's prowess, and a standout amongst these is our autonomous robodog. This
-                            remarkable creation undergoes continuous enhancement through collaboration with our talented
-                            students, who engage in project work and Bachelor's theses. Equipped with a camera and a
-                            LIDAR sensor, the robodog processes this data to navigate its surroundings safely. It's not
-                            just a marvel of technology; it's a responsive companion, capable of recognizing gestures,
-                            planning actions, and executing them with autonomy.
-                        </p>
-                        <!-- <a href="xxxx" target="_blank">View Project</a> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="txtimgModal" tabindex="-1" role="dialog" aria-labelledby="txtimgModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="project shadow-large reveal">
-                    <div class="project-image-detail">
-                        <img src="/assets/images/speech_to_img.jpg" width="300" height="300"/>
-                    </div>
-                    <div class="project-info">
-                        <h3>Speech-2-Image</h3>
-                        <p>
-                            In my role as Head of AI Demonstrators, my primary responsibility involves developing
-                            cutting-edge AI showcases. Among these, we developed a remarkable Swiss-German
-                            speech-to-image generator, a multi-user web application. It effortlessly transcribes
-                            Swiss-German speech to text, refines the text into a polished prompt, and subsequently
-                            generates an image that corresponds to the prompt. Take a glance at the left, and you'll
-                            discover the result for the intriguing phrase, "Älien Pflanze" which translates to "alien
-                            plant."
-                        </p>
-                        <a href="https://cai.cloudlab.zhaw.ch/pages/cai_demos.html#swiss-german-to-image-generative-ai"
-                           target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="alpineModal" tabindex="-1" role="dialog" aria-labelledby="alpineModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="project shadow-large reveal">
-                    <div class="project-image-detail">
-                        <img src="/assets/images/swiss_gpt.png" width="300" height="300"/>
-                    </div>
-                    <div class="project-info">
-                        <h3>SwissGPT PoC for AlpineAI</h3>
-                        <p>
-                            AlpineAI pioneers the utilization of Language Model (LLM) technology to create exceptional
-                            value for businesses, prioritizing the utmost data security and privacy. I spearheaded the
-                            research and development of SwissGPT, a cutting-edge LLM designed to securely access
-                            sensitive corporate data, thereby unlocking the full potential of your company's knowledge
-                            through the power of AI.
-                        </p>
-                        <a href="https://alpineai.ch/products/" target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="autodidactModal" tabindex="-1" role="dialog" aria-labelledby="autodidactModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="project shadow-large reveal">
-                    <div class="project-image-detail">
-                        <img src="/assets/images/ICU_Cockpit.png"/>
-                    </div>
-                    <div class="project-info">
-                        <h3>AUTODIDACT – Automated Video Data Annotation for Clinical Decision Support</h3>
-                        <p>
-                            Monitoring diverse sensor signals of patients in intensive care can be key to detect
-                            potentially fatal emergencies. But in order to perform the monitoring automatically, the
-                            monitoring system has to know what is currently happening to the patient: if the patient is
-                            for example currently being moved by medical staff, this would explain a sudden peak in the
-                            heart rate and would thus not be a sign of an emergency. Therefore, the system is extended
-                            with video analysis capabilities and movements of the patient and the medical staff are
-                            detected.
-                        </p>
-                        <a href="https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/5230/"
-                           target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="vt2Modal" tabindex="-1" role="dialog" aria-labelledby="vt2ModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="project shadow-large reveal">
-                    <div class="project-image-detail">
-                        <img src="/assets/images/bca.PNG"/>
-                    </div>
-                    <div class="project-info">
-                        <h3>MSc. Project Thesis 2: End-to-End Pipeline for Body Composition Analysis and Sarcopenia
-                            Detection without Target Labels</h3>
-                        <p>
-                            Body composition analysis can improve patient prognostication and contribute to higher
-                            safety, efficiency and quality of the patient journey. This analysis is often neglected due
-                            to the high manual effort or the lack of labels to develop a system for automatic
-                            processing. This project thesis proposes an automated method for body composition analysis
-                            that can be carried out on 3D computer tomographic (CT) scans without labels and with
-                            limited computational resources.
-                        </p>
-                        <a href="https://sagerpascal.github.io/mse-vt2/" target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="modal fade" id="realscoreModal" tabindex="-1" role="dialog" aria-labelledby="realscoreModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="project shadow-large reveal">
-                    <div class="project-image-detail">
-                        <img src="/assets/images/realscore.png"/>
-                    </div>
-                    <div class="project-info">
-                        <h3>RealScore - Scanning of Real-World Sheet Music for a Digital Music Stand</h3>
-                        <p>
-                            In a previous <a
-                                href="https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/1836/"
-                                target="_blank">project</a>, a solution to translate printed music scores into
-                            machine-readable music sheets was developed. However, it only works for high quality input.
-                            To scale up business, it should work as well for smartphone pictures, used sheets etc.
-                            Project RealScore enhances the successful predecessor project by making deep learning adapt
-                            to unseen data through unsupervised learning.
-                        </p>
-                        <a href="https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/3005/"
-                           target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include project-details.html modalId="gibModal" modalLabel="gibModalLabel" imagePath="/assets/images/GIB.png"
+    title="AIMS: AI Infrastructure Manager for Sustainability" description="Dedicated to fostering a culture of
+    sustainability, I initiated and lead the project AIMS - AI Infrastructure Manager for Sustainability. This
+    initiative, designed to address the environmental impact of our university's AI operations, embodies a holistic
+    approach. We're implementing an energy consumption monitoring system, introducing an efficient job queue system
+    through Slurm, and look for ways to ingeniously repurposing dissipated heat. These measures aren't merely
+    elevating standards within the Centre for Artificial Intelligence (CAI); they're sparking a broader
+    transformation across the entire ZHAW community, as we collectively champion responsible resource utilization
+    and eco-conscious practices." showLink=false url=""
+    %}
 
-    <div class="modal fade" id="vt1Modal" tabindex="-1" role="dialog" aria-labelledby="vt1ModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="project shadow-large reveal">
-                    <div class="project-image-detail">
-                        <img src="/assets/images/speech-prediction.PNG"/>
-                    </div>
-                    <div class="project-info">
-                        <h3>MSc. Project Thesis 1: Prediction of Subsequent Frames of Mel-spectrograms</h3>
-                        <p>
-                            This thesis demonstrates the effectiveness of Gated Recurrent Units (GRU) in predicting
-                            speech frames up to a single word's length. Our model, trained on the TIMIT dataset,
-                            predicts subsequent frames of a Mel-spectrogram from a limited set of initial frames.
-                            We provide insights into the ideal number of input frames, frame-level, and phoneme-level
-                            prediction accuracy. As a pioneering work in this field, we emphasize the lessons learned
-                            and suggest potential enhancements for future research endeavors.
-                        </p>
-                        <a href="https://sagerpascal.github.io/speech-prediction/" target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="fwaModal" tabindex="-1" role="dialog" aria-labelledby="fwaModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="project shadow-large reveal">
-                    <div class="project-image-detail">
-                        <img src="https://www.zhaw.ch/typo3temp/assets/_processed_/2/3/csm_kitro1a_a8073e487c.png"
-                             style="width: 300px; height: 300px;"/>
-                    </div>
-                    <div class="project-info">
-                        <h3>FWA: Visual Food Waste Analysis for Sustainable Kitchens</h3>
-                        <p>
-                            FWA is a project funded by Innosuisse, that focuses on automating food waste classification.
-                            When food is discarded, an instant photo is captured, enabling us to calculate the
-                            difference from the previous state. We meticulously segment and estimate the weight of the
-                            discarded items. This data empowers kitchens to refine menu planning, thereby reducing food
-                            waste and enhancing sustainability
-                        </p>
-                        <a href="https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/3006/"
-                           target="_blank">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include project-details.html modalId="mlbcaModal" modalLabel="mlbcaModalLabel"
+    imagePath="/assets/images/ml-bca.jpeg" title="ML-BCA: Machine Learning für Body Composition Analysis"
+    description="In my second project thesis during my master's program, I laid the foundations for machine
+    learning-driven body composition analysis at the Cantonal Hospital of Aarau (KSA). This thesis not only lead to a
+    publication but also to a funded research project. The ML-BCA project is bringing the findings of my project thesis
+    to life as a practical product for KSA. Our primary objective in this endeavor is to develop a robust application
+    for facilitating medical validation and prospective studies, and to disseminate our collective scientific
+    contributions to the broader community." showLink=true
+    url="https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/6501/" %}
 
-    <div class="modal fade" id="hackathonModal" tabindex="-1" role="dialog" aria-labelledby="hackathonModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="project shadow-large reveal">
-                    <div class="project-image-detail">
-                        <img src="/assets/images/Lunar.PNG"/>
-                    </div>
-                    <div class="project-info">
-                        <h3>ZHAW Hackathon: Deep Reinforcement Learning</h3>
-                        <p>
-                            I successfully completed a Reinforcement Learning course at Zurich University of Applied
-                            Sciences, culminating in a challenging 3-day hackathon where I excelled and earned the top
-                            grade of 6.0. I've shared the code<a
-                                href="https://github.com/sagerpascal/rl-bootcamp-hackathon" target="_blank">here</a>,
-                            featuring highly efficient algorithms for Lunar Lander, yielding outstanding results in
-                            sample effectiveness, training duration, and average reward. Furthermore, I've meticulously
-                            documented the project for your reference.
-                        </p>
-                        <a href="https://sagerpascal.github.io/rl-bootcamp-hackathon/" target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include project-details.html modalId="mscModal" modalLabel="mscModalLabel"
+    imagePath="/assets/images/msc_thesis.png" title="Self-Organisation in a Biologically Inspired Learning Framework
+    Based on Bernoulli Neurons" description="In my Master's thesis, I introduce an innovative learning framework by
+    combining insights from neuroscience. While deep learning excels in automated image analysis, it faces issues like
+    noise sensitivity, limited object recognition adaptability, and a constant need for extensive training data. In
+    contrast, the human brain excels in holistic, non-linear image feature processing through self-organization and
+    local learning. This thesis pioneers an image-processing approach inspired by the brain's operations. Empirical
+    results, including Hebbian-trained lateral connections, demonstrate remarkable robustness and the ability to recover
+    occluded objects." showLink=true url="https://sagerpascal.github.io/lateral-connections/index.html" %}
 
-    <div class="modal fade" id="bscModal" tabindex="-1" role="dialog" aria-labelledby="bscModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="project shadow-large reveal">
-                    <div class="project-image-detail">
-                        <img src="/assets/images/BA.PNG"/>
-                    </div>
-                    <div class="project-info">
-                        <h3>Bachelor Thesis</h3>
-                        <p>
-                            In my bachelor thesis, the digitalization of the products of the company Spühl GmbH is
-                            examined on the basis of different aspects. The existing processes are critically
-                            scrutinized in order to minimize the project and product risk and to involve the customer
-                            more closely into the development process. The proposed concept for new processes is
-                            validated with the development of a new software product. The application enriches the
-                            already captured machine data with data from the production process. The application
-                            consists of a Java backend (with spring boot), a swagger interface and a React frontend.
-                            However, details cannot be provided due to a non-disclosure agreement. The Bachelor thesis
-                            was graded with the highest grade 6.0.
-                        </p>
-                        <!-- <a class="btn disabled" href="#" style="text-decoration: line-through">View Project</a><br> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include project-details.html modalId="dogModal" modalLabel="dogModalLabel"
+    imagePath="/assets/images/unitree_a1.jpg" title="Autonomous Robodog" description="In my role as Head of AI
+    Demonstrators, my primary mission is to develop compelling showcases of AI's prowess, and a standout amongst these
+    is our autonomous robodog. This remarkable creation undergoes continuous enhancement through collaboration with our
+    talented students, who engage in project work and Bachelor's theses. Equipped with a camera and a LIDAR sensor, the
+    robodog processes this data to navigate its surroundings safely. It's not just a marvel of technology; it's a
+    responsive companion, capable of recognizing gestures, planning actions, and executing them with autonomy."
+    showLink=false url="" %}
 
-    <div class="modal fade" id="hatespeechModal" tabindex="-1" role="dialog" aria-labelledby="hatespeechModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="project shadow-large reveal">
-                    <div class="project-image-detail">
-                        <img src="/assets/images/hate-speech.PNG"/>
-                    </div>
-                    <div class="project-info">
-                        <h3>Hate Speech Detection</h3>
-                        <p>
-                            This my first deep learning projects in the field of NLP and therefore futured on my
-                            homepage. According to this <a
-                                href="https://developers.google.com/machine-learning/guides/text-classification/step-2-5?hl=hi">guide</a>,
-                            I trained a sepCNN model on about 150'000 Twitter posts. In the end, the trained model
-                            predicted with an accuracy of 96% if a given text is hate speech.
-                        </p>
-                        <a href="https://github.com/sagerpascal/HateSpeechDetection" target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include project-details.html modalId="txtimgModal" modalLabel="txtimgModalLabel"
+    imagePath="/assets/images/speech_to_img.jpg" title="Speech-2-Image" description="In my role as Head of AI
+    Demonstrators, my primary responsibility involves developing cutting-edge AI showcases. Among these, we developed a
+    remarkable Swiss-German speech-to-image generator, a multi-user web application. It effortlessly transcribes
+    Swiss-German speech to text, refines the text into a polished prompt, and subsequently generates an image that
+    corresponds to the prompt. Take a glance at the left, and you'll discover the result for the intriguing phrase,
+    'Älien Pflanze' which translates to 'alien plant'." showLink=true
+    url="https://cai.cloudlab.zhaw.ch/pages/cai_demos.html#swiss-german-to-image-generative-ai" %}
 
-    <div class="modal fade" id="paModal" tabindex="-1" role="dialog" aria-labelledby="paModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="project shadow-large reveal">
-                    <div class="project-image-detail">
-                        <img src="/assets/images/PA.png"/>
-                    </div>
-                    <div class="project-info">
-                        <h3>Bsc. Project Thesis (5th semester BSc.)</h3>
-                        <p>
-                            In the project thesis during my Bachelor's studies, I developed a solution for data
-                            acquisition of machines from the company Spühl GmbH together with a fellow student. The
-                            application is based on Azure IoT. Different docker containers collect various data, then
-                            this data is optimized with Stream-Analytics, sent to the cloud and optionally stored in a
-                            database or visualized using PowerBI.
-                        </p>
-                        <!-- <a class="btn disabled" href="#" style="text-decoration: line-through">View Project</a><br> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include project-details.html modalId="alpineModal" modalLabel="alpineModalLabel"
+    imagePath="/assets/images/swiss_gpt.png" title="SwissGPT PoC for AlpineAI" description="AlpineAI pioneers the
+    utilization of Language Model (LLM) technology to create exceptional value for businesses, prioritizing the utmost
+    data security and privacy. I spearheaded the research and development of SwissGPT, a cutting-edge LLM designed to
+    securely access sensitive corporate data, thereby unlocking the full potential of your company's knowledge through
+    the power of AI." showLink=true url="https://alpineai.ch/products/"
+    %}
+
+
+    {% include project-details.html modalId="autodidactModal" modalLabel="autodidactModalLabel"
+    imagePath="/assets/images/ICU_Cockpit.png" title="AUTODIDACT – Automated Video Data Annotation for Clinical Decision
+    Support" description="Monitoring diverse sensor signals of patients in intensive care can be key to detect
+    potentially fatal emergencies. But in order to perform the monitoring automatically, the monitoring system has to
+    know what is currently happening to the patient: if the patient is for example currently being moved by medical
+    staff, this would explain a sudden peak in the heart rate and would thus not be a sign of an emergency. Therefore,
+    the system is extended with video analysis capabilities and movements of the patient and the medical staff are
+    detected." showLink=true url="https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/5230/"
+    %}
+
+    {% include project-details.html modalId="vt2Modal" modalLabel="vt2ModalLabel" imagePath="/assets/images/bca.PNG"
+    title="MSc. Project Thesis 2: End-to-End Pipeline for Body Composition Analysis and Sarcopenia Detection without
+    Target Labels" description="Body composition analysis can improve patient prognostication and contribute to higher
+    safety, efficiency and quality of the patient journey. This analysis is often neglected due to the high manual
+    effort or the lack of labels to develop a system for automatic processing. This project thesis proposes an automated
+    method for body composition analysis that can be carried out on 3D computer tomographic (CT) scans without labels
+    and with limited computational resources." showLink=true url="https://sagerpascal.github.io/mse-vt2/"
+    %}
+
+    {% include project-details.html modalId="realscoreModal" modalLabel="realscoreModalLabel"
+    imagePath="/assets/images/realscore.png" title="RealScore - Scanning of Real-World Sheet Music for a Digital Music
+    Stand" description="In a previous project, a solution to translate printed music scores into machine-readable music
+    sheets was developed. However, it only works for high quality input. To scale up business, it should work as well
+    for smartphone pictures, used sheets etc. Project RealScore enhances the successful predecessor project by making
+    deep learning adapt to unseen data through unsupervised learning." showLink=true
+    url="https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/3005/"
+    %}
+
+
+    {% include project-details.html modalId="vt1Modal" modalLabel="vt1ModalLabel"
+    imagePath="/assets/images/speech-prediction.PNG" title="MSc. Project Thesis 1: Prediction of Subsequent Frames of
+    Mel-spectrograms" description="This thesis demonstrates the effectiveness of Gated Recurrent Units (GRU) in
+    predicting speech frames up to a single word's length. Our model, trained on the TIMIT dataset, predicts subsequent
+    frames of a Mel-spectrogram from a limited set of initial frames. We provide insights into the ideal number of input
+    frames, frame-level, and phoneme-level prediction accuracy. As a pioneering work in this field, we emphasize the
+    lessons learned and suggest potential enhancements for future research endeavors." showLink=true
+    url="https://sagerpascal.github.io/speech-prediction/"
+    %}
+
+    {% include project-details.html modalId="fwaModal" modalLabel="fwaModalLabel"
+    imagePath="https://www.zhaw.ch/typo3temp/assets/_processed_/2/3/csm_kitro1a_a8073e487c.png" title="FWA: Visual Food
+    Waste Analysis for Sustainable Kitchens" description="FWA is a project funded by Innosuisse, that focuses on
+    automating food waste classification. When food is discarded, an instant photo is captured, enabling us to calculate
+    the difference from the previous state. We meticulously segment and estimate the weight of the discarded items. This
+    data empowers kitchens to refine menu planning, thereby reducing food waste and enhancing sustainability."
+    showLink=true url="https://www.zhaw.ch/en/research/research-database/project-detailview/projektid/3006/"
+    %}
+
+    {% include project-details.html modalId="hackathonModal" modalLabel="hackathonModalLabel"
+    imagePath="/assets/images/Lunar.PNG" title="ZHAW Hackathon: Deep Reinforcement Learning" description=" I
+    successfully completed a Reinforcement Learning course at Zurich University of Applied Sciences, culminating in a
+    challenging 3-day hackathon where I excelled and earned the top grade of 6.0. I've shared the code at
+    https://github.com/sagerpascal/rl-bootcamp-hackathon, featuring highly efficient algorithms for Lunar Lander,
+    yielding outstanding results in sample effectiveness, training duration, and average reward. Furthermore, I've
+    meticulously documented the project for your reference." showLink=true
+    url="https://sagerpascal.github.io/rl-bootcamp-hackathon/"
+    %}
+
+
+    {% include project-details.html modalId="bscModal" modalLabel="bscModalLabel" imagePath="/assets/images/BA.PNG"
+    title="Bachelor Thesis" description="In my bachelor thesis, the digitalization of the products of the company Spühl
+    GmbH is examined on the basis of different aspects. The existing processes are critically scrutinized in order to
+    minimize the project and product risk and to involve the customer more closely into the development process. The
+    proposed concept for new processes is validated with the development of a new software product. The application
+    enriches the already captured machine data with data from the production process. The application consists of a Java
+    backend (with spring boot), a swagger interface and a React frontend. However, details cannot be provided due to a
+    non-disclosure agreement. The Bachelor thesis was graded with the highest grade 6.0." showLink=false url=""
+    %}
+
+
+    {% include project-details.html modalId="hatespeechModal" modalLabel="hatespeechModalLabel"
+    imagePath="/assets/images/hate-speech.PNG" title="Hate Speech Detection" description="This my first deep learning
+    projects in the field of NLP and therefore futured on my homepage. According to a guide at
+    (https://developers.google.com/machine-learning/guides/text-classification/step-2-5?hl=hi), I trained a sepCNN model
+    on about 150'000 Twitter posts. In the end, the trained model predicted with an accuracy of 96% if a given text is
+    hate speech." showLink=true url="https://github.com/sagerpascal/HateSpeechDetection"
+    %}
+
+    {% include project-details.html modalId="paModal" modalLabel="paModalLabel" imagePath="/assets/images/PA.png"
+    title="Bsc. Project Thesis (5th semester BSc.)" description="In the project thesis during my Bachelor's studies, I
+    developed a solution for data acquisition of machines from the company Spühl GmbH together with a fellow student.
+    The application is based on Azure IoT. Different docker containers collect various data, then this data is optimized
+    with Stream-Analytics, sent to the cloud and optionally stored in a database or visualized using PowerBI."
+    showLink=false url="" %}
+
 </div>
 
 
 <div id="projects" class="background-alt">
     <h2 class="heading reveal2">Projects</h2>
     <div>
-        <button type="button" class="reveal" data-toggle="modal" data-target="#gibModal" style="outline: none;">
-            <div class="proj_container">
-                <div class="project-image">
-                    <img src="/assets/images/GIB.png" width="300" height="300"/>
-                </div>
-                <h2 class="titleProject">Sustainable GPU-Cluster</h2>
-            </div>
-        </button>
-        <button type="button" class="reveal" data-toggle="modal" data-target="#mlbcaModal" style="outline: none;">
-            <div class="proj_container">
-                <div class="project-image">
-                    <img src="/assets/images/ml-bca.jpeg" width="300" height="300"/>
-                </div>
-                <h2 class="titleProject">ML-BCA</h2>
-            </div>
-        </button>
-        <button type="button" class="reveal" data-toggle="modal" data-target="#mscModal" style="outline: none;">
-            <div class="proj_container">
-                <div class="project-image">
-                    <img src="/assets/images/msc_thesis.png" width="300" height="300"/>
-                </div>
-                <h2 class="titleProject">MSc. Thesis</h2>
-            </div>
-        </button>
-        <button type="button" class="reveal" data-toggle="modal" data-target="#dogModal" style="outline: none;">
-            <div class="proj_container">
-                <div class="project-image">
-                    <img src="/assets/images/unitree_a1.jpg" width="300" height="300"/>
-                </div>
-                <h2 class="titleProject">Robodog</h2>
-            </div>
-        </button>
-        <button type="button" class="reveal" data-toggle="modal" data-target="#txtimgModal" style="outline: none;">
-            <div class="proj_container">
-                <div class="project-image">
-                    <img src="/assets/images/speech_to_img.jpg" width="300" height="300"/>
-                </div>
-                <h2 class="titleProject">Speech-2-Image</h2>
-            </div>
-        </button>
-        <button type="button" class="reveal" data-toggle="modal" data-target="#alpineModal" style="outline: none;">
-            <div class="proj_container">
-                <div class="project-image">
-                    <img src="/assets/images/swiss_gpt.png" width="300" height="300"/>
-                </div>
-                <h2 class="titleProject">SwissGPT</h2>
-            </div>
-        </button>
-        <button type="button" class="reveal" data-toggle="modal" data-target="#autodidactModal" style="outline: none;">
-            <div class="proj_container">
-                <div class="project-image">
-                    <img src="/assets/images/ICU_Cockpit.png"/>
-                </div>
-                <h2 class="titleProject">Autodidact</h2>
-            </div>
-        </button>
-        <button type="button" class="reveal" data-toggle="modal" data-target="#vt2Modal" style="outline: none;">
-            <div class="proj_container">
-                <div class="project-image">
-                    <img src="/assets/images/bca.PNG"/>
-                </div>
-                <h2 class="titleProject">Sarcopenia Detection</h2>
-            </div>
-        </button>
-        <button type="button" class="reveal" data-toggle="modal" data-target="#realscoreModal" style="outline: none;">
-            <div class="proj_container">
-                <div class="project-image">
-                    <img src="/assets/images/realscore.png"/>
-                </div>
-                <h2 class="titleProject">Real Score</h2>
-            </div>
-        </button>
-        <button type="button" class="reveal" data-toggle="modal" data-target="#vt1Modal" style="outline: none;">
-            <div class="proj_container">
-                <div class="project-image">
-                    <img src="/assets/images/speech-prediction.PNG"/>
-                </div>
-                <h2 class="titleProject">Speech Prediction</h2>
-            </div>
-        </button>
-        <button type="button" class="reveal" data-toggle="modal" data-target="#fwaModal" style="outline: none;">
-            <div class="proj_container">
-                <div class="project-image">
-                    <img src="https://www.zhaw.ch/typo3temp/assets/_processed_/2/3/csm_kitro1a_a8073e487c.png"
-                         style="width: 300px; height: 300px;"/>
-                </div>
-                <h2 class="titleProject">Food Waste Analysis</h2>
-            </div>
-        </button>
-        <button type="button" class="reveal" data-toggle="modal" data-target="#hackathonModal" style="outline: none;">
-            <div class="proj_container">
-                <div class="project-image">
-                    <img src="/assets/images/Lunar.PNG"/>
-                </div>
-                <h2 class="titleProject">ZHAW Hackathon</h2>
-            </div>
-        </button>
-        <button type="button" class="reveal" data-toggle="modal" data-target="#bscModal" style="outline: none;">
-            <div class="proj_container">
-                <div class="project-image">
-                    <img src="/assets/images/BA.PNG"/>
-                </div>
-                <h2 class="titleProject">Bachelor Thesis</h2>
-            </div>
-        </button>
-        <button type="button" class="reveal" data-toggle="modal" data-target="#hatespeechModal" style="outline: none;">
-            <div class="proj_container">
-                <div class="project-image">
-                    <img src="/assets/images/hate-speech.PNG"/>
-                </div>
-                <h2 class="titleProject">Hate Speech Detection</h2>
-            </div>
-        </button>
-        <button type="button" class="reveal" data-toggle="modal" data-target="#paModal" style="outline: none;">
-            <div class="proj_container">
-                <div class="project-image">
-                    <img src="/assets/images/PA.png"/>
-                </div>
-                <h2 class="titleProject">Industrial IoT</h2>
-            </div>
-        </button>
+        {% include project.html modalId="#gibModal" imagePath="/assets/images/GIB.png" title="Sustainable GPU-Cluster"
+        %}
+
+        {% include project.html modalId="#mlbcaModal" imagePath="/assets/images/ml-bca.jpeg" title="ML-BCA" %}
+
+        {% include project.html modalId="#mscModal" imagePath="/assets/images/msc_thesis.png" title="MSc. Thesis" %}
+
+        {% include project.html modalId="#dogModal" imagePath="/assets/images/unitree_a1.jpg" title="Robodog" %}
+
+        {% include project.html modalId="#txtimgModal" imagePath="/assets/images/speech_to_img.jpg"
+        title="Speech-2-Image" %}
+
+        {% include project.html modalId="#alpineModal" imagePath="/assets/images/swiss_gpt.png" title="SwissGPT" %}
+
+        {% include project.html modalId="#autodidactModal" imagePath="/assets/images/ICU_Cockpit.png" title="AutoDidact"
+        %}
+
+        {% include project.html modalId="#vt2Modal" imagePath="/assets/images/bca.PNG" title="Sarcopenia Detection" %}
+
+        {% include project.html modalId="#realscoreModal" imagePath="/assets/images/realscore.png" title="Real Score" %}
+
+        {% include project.html modalId="#vt1Modal" imagePath="/assets/images/speech-prediction.PNG" title="Speech
+        Prediction" %}
+
+        {% include project.html modalId="#fwaModal"
+        imagePath="https://www.zhaw.ch/typo3temp/assets/_processed_/2/3/csm_kitro1a_a8073e487c.png" title="Food Waste
+        Analysis" %}
+
+        {% include project.html modalId="#hackathonModal" imagePath="/assets/images/Lunar.PNG" title="ZHAW Hackathon" %}
+
+        {% include project.html modalId="#bscModal" imagePath="/assets/images/BA.PNG" title="Bachelor Thesis" %}
+
+        {% include project.html modalId="#hatespeechModal" imagePath="/assets/images/hate-speech.PNG" title="Hate Speech
+        Detection" %}
+
+        {% include project.html modalId="#paModal" imagePath="/assets/images/PA.png" title="Industrial IoT" %}
+
     </div>
 </div>
 
-<div id="skills">
-    <h2 class="heading reveal2">Skills</h2>
-    <ul>
-        <li class="reveal2">Python</li>
-        <li class="reveal2">Deep Learning</li>
-        <li class="reveal2">Computer Vision</li>
-        <li class="reveal2">Neuroscience</li>
-        <li class="reveal2">NLP</li>
-        <li class="reveal2">Docker</li>
-        <li class="reveal2">Java</li>
-        <li class="reveal2">HTML</li>
-        <li class="reveal2">CSS</li>
-        <li class="reveal2">React</li>
-        <li class="reveal2">Vue</li>
-    </ul>
-</div>
+{% include skills.html %}
 
-<div id="contact">
-    <h2 class="reveal2">Get in Touch</h2>
-    <div id="contact-form" class="reveal2">
-        <form method="POST" action="https://formspree.io/paes.sager@gmail.com">
-            <input type="hidden" name="_subject" value="Contact request from personal website"/>
-            <input type="email" name="_replyto" placeholder="Your email" required>
-            <textarea name="message" placeholder="Your message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </div>
-</div>
-
+{% include contact.html %}
 
 {% include footer.html %}
 
