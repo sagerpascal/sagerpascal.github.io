@@ -23,6 +23,28 @@ id: index
 
 {% include about-me.html %}
 
+{% include publication-details.html modalId="morModal" modalLabel="morModalLabel" title="Real World Music Object Recognition"
+url="https://transactions.ismir.net/articles/10.5334/tismir.157" imagePath="/assets/images/mor.png"
+abstract="We present solutions to two of the most pressing issues in contemporary optical
+music recognition (OMR). We improve recognition accuracy on low-quality, real-
+world (i.e. containing ageing, lighting, or dirt artefacts among others) input data
+and provide confidence-rated model outputs to enable efficient human post-
+processing. Specifically, we present (i) a sophisticated input augmentation scheme
+that can reduce the gap between sanitised benchmarks and realistic tasks through
+a combination of synthetic data and noisy perturbations of real-world documents;
+(ii) an adversarial discriminative domain adaptation method that can be employed
+to improve the performance of OMR systems on low-quality data; (iii) a combination
+of model ensembles and prediction fusion, which generates trustworthy confidence
+ratings for each prediction. We evaluate our contributions on a newly created test
+set consisting of manually annotated pages of varying real-world quality, sourced
+from the International Music Score Library Project (IMSLP)/Petrucci Music Library.
+With the presented data augmentation scheme, we achieve a doubling in detection
+performance from 36.0% to 73.3% on noisy real-world data compared to state-of-
+the-art training. This result is then combined with robust confidence ratings paving
+the way for OMR to be deployed in the real world. Additionally, we show the merits
+of unsupervised adversarial domain adaptation for OMR raising the 36.0% baseline to
+48.9%."%}
+
 {% include publication-details.html modalId="udaModal" modalLabel="udaModalLabel" title="Unsupervised Domain Adaptation for Vertebrae Detection and Identification in 3D CT Volumes Using a Domain Sanity Loss"
 url="https://www.mdpi.com/2313-433X/8/8/222" imagePath="/assets/images/uda.png" abstract="A variety of medical computer vision applications analyze 2D slices of computed tomography (CT)
 scans, whereas axial slices from the body trunk region are usually identified based on their
@@ -59,14 +81,19 @@ to resolve these challenges by embracing them."%}
 <div id="publications">
     <h2 class="heading reveal2">Publications</h2>
     <div>
+        {% include publication.html modalName="#morModal" title="Real World Music Object Recognition"
+        author="L. Tuggener, R. Emberger, A. Ghosh, P. Sager" useEtAl=true journal="Transactions of the International
+        Society for Music Information Retrieval" year="2024" pages="pp. 1-14"
+        doi_link="https://transactions.ismir.net/articles/10.5334/tismir.157/" doi="10.5334/tismir.157" %}
+
         {% include publication.html modalName="#udaModal" title="Unsupervised Domain Adaptation for Vertebrae Detection
-        and Identification in 3D CT Volumes Using a Domain Sanity Loss" citation="Cte"
-        author="P. Sager" useEtAl=true journal="Journal of Imaging" year="2022" pages="8(8):222"
-        doi_link="https://www.mdpi.com/2313-433X/8/8/222" doi="10.3390/jimaging8080222" %}
+        and Identification in 3D CT Volumes Using a Domain Sanity Loss" author="P. Sager" useEtAl=true journal="Journal
+        of Imaging" year="2022" pages="8(8):222" doi_link="https://www.mdpi.com/2313-433X/8/8/222"
+        doi="10.3390/jimaging8080222" %}
 
         {% include publication.html modalName="#sdsModal" title="A Survey of Un-, Weakly-, and Semi-Supervised Learning
-        Methods for Noisy, Missing and Partial Labels
-        in Industrial Vision Applications" author="N. Simmler" useEtAl=true journal="2021 8th Swiss Conference on Data
+        Methods for Noisy, Missing and Partial Labels in Industrial Vision Applications" author="N. Simmler, P. Sager"
+        useEtAl=true journal="2021 8th Swiss Conference on Data
         Science (SDS)" year="2021" pages="pp. 26-31" doi_link="https://ieeexplore.ieee.org/document/9474624"
         doi="10.1109/SDS51136.2021.00012" %}
     </div>
