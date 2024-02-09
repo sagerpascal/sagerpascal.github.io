@@ -94,7 +94,17 @@
         });
     });
 
-
+    $(window).scroll(function() {
+    if ($(this).scrollTop() > 0 || window.location.pathname !== '/') {
+        $('header').addClass('scrolled');
+        $('#menu').addClass('shadow');
+        $('#sage_logo').attr('src', 'assets/favicons/logo-blue.svg');
+    } else {
+        $('header').removeClass('scrolled');
+        $('#menu').removeClass('shadow');
+        $('#sage_logo').attr('src', 'assets/favicons/logo-white.svg');
+    }
+});
 
 })(jQuery);
 
