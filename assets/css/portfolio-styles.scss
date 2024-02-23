@@ -267,13 +267,13 @@
   }
 
   svg {
-      height: 50%;
-      margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+    height: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
 }
 
@@ -347,6 +347,15 @@
     -------------------------------
 */
 
+.modal-content {
+  background-color: $background;
+
+  .close {
+    text-shadow: 0 1px 0 $background;
+  }
+
+}
+
 #publications {
   padding: 50px 15px 20px 15px;
   border-bottom: 1px solid $border;
@@ -356,6 +365,7 @@
     color: $heading;
     margin-bottom: 50px;
   }
+
 }
 
 
@@ -388,6 +398,7 @@
   .citation {
     font-size: small;
     margin: 10px auto;
+    color: $background-inverse;
   }
 
   span {
@@ -506,7 +517,7 @@
     .proj_container {
       position: relative;
       text-align: center;
-      color: white;
+      color: $background;
       width: 300px;
       height: 300px;
     }
@@ -532,7 +543,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       animation: fadeIn 1500ms;
-      text-shadow: 0px 0px 15px white;
+      text-shadow: 0px 0px 15px $background;
     }
 
     .project-image:hover + .titleProject {
