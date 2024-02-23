@@ -146,6 +146,19 @@
     position: relative;
     text-align: left;
     padding: 10px 20px;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $base-color;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+
   }
 
   #disquis {
