@@ -179,6 +179,7 @@ After pre-training, a query encoder is tuned so that the correct action is selec
 ### Impression
 
 Would require vast amount of resources to pre-train the agent.
+We would have to restrict ourselves to a smaller subset. However, it is questionable if this is publishable.
 
 
 ## Idea 3: Human observations
@@ -193,7 +194,23 @@ For example, for simple web-tasks, most SOTA approaches use more than 25k demons
 Even though our approach would be more sample efficient, we would probably still require thousands of demonstrations per task.
 Since we want to control the entire computer, the number of samples required would be enormous (while probably having only a few persons allowing to observe their screen).
 
+## Idea 4: Workflow Detection
 
+One issue we face is that we have to align a large trajectory of agent's actions with a natural instruction.
+When using LLMs, the natural instruction can be broken down into smaller sub-instructions, eventually leading to one
+instruction per action.
+However, training such an agent requires action-language pairs, which are not available.
+Creating such a dataset is a huge engineering effort and less like a research effort.
+
+Furthermore, many data must be labeled. For example, it is unlikely for an agent what learn what buttons like "wifi off",
+"bluetooth off", "volume down", etc. mean without any labels.
+Also, it will be extremely hard to learn what bold, changing, font, etc. means without any labels (as these buttons can
+also be pressed without having any text written to observe their effect).
+
+Therefore, we might even focus on a different approach.
+It will become essential to learn entire workflows from single user observation and to generalize to other users.
+Thus, detecting concepts and common action patterns will become essential.
+For solving this problem, we might need to focus on a smaller subset of applications.
 
 
 
