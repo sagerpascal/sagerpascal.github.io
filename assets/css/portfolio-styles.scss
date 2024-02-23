@@ -265,6 +265,16 @@
     font-size: 2em;
     margin-top: 10px;
   }
+
+  svg {
+      height: 50%;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
 }
 
 .vtimeline-date {
@@ -665,7 +675,7 @@
     margin: 7px;
     padding: 5px 10px;
     color: $heading;
-    background: darken($background-alt, 5%);
+    background: darken($background-alt, 10%);
     list-style: none;
     cursor: default;
     font-size: 1.2em;
