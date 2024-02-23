@@ -73,7 +73,7 @@
     }
 
     .c1{
-      color: lighten($text, 5%);
+      color: $text-lighten-5;
     }
   }
 
@@ -84,7 +84,7 @@
     max-width: 90%;
     border-left: solid thick $border;
     padding-left: 10px;
-    background-color: darken($background, 2%);
+    background-color: $background-darken-2;
     font-style: italic;
 
     p {

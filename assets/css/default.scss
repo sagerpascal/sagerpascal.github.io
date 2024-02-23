@@ -29,7 +29,7 @@
   max-width: 900px;
   margin: 0 auto 30px auto;
   overflow: hidden;
-  background: #fff;
+  background: $background;
   border-radius: 4px;
 
   #blog-head {
@@ -41,7 +41,7 @@
       margin: 5px;
 
       a {
-        color: #fff;
+        color: $background;
       }
 
       a:hover {
@@ -71,7 +71,7 @@
   max-width: 900px;
   margin: 0 auto 30px auto;
   overflow: hidden;
-  background: #fff;
+  background: $background;
   border-radius: 4px;
   padding: 0 20px;
 
@@ -100,7 +100,7 @@
     margin: 5px;
     padding: 5px 10px;
     color: $heading;
-    background: darken($background-alt, 5%);
+    background: $background-alt-darken-5;
     list-style: none;
     cursor: default;
     font-size: 0.8em;
@@ -124,17 +124,17 @@
   max-width: 900px;
   margin: 0 auto 30px auto;
   overflow: hidden;
-  background: #fff;
+  background: $background;
   border-radius: 4px;
 
   #post-head {
     width: 100%;
     background: $base-color;
-    color: #fff;
+    color: $background;
     padding: 5px 20px 30px;
 
     h2 {
-      color: #fff;
+      color: $background;
 
       a:hover {
         text-decoration: none;

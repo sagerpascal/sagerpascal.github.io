@@ -1,0 +1,26 @@
+// Define base and accent colors
+$base-color: #3498db;
+$base-color-lighten-25: lighten($base-color, 25%);
+$base-color-darken-15: darken($base-color, 15%);
+$base-color-darken-25: darken($base-color, 25%);
+$base-color-hover: darken($base-color, 10%);
+
+// Define background colors
+$background: #fff;
+$background-darken-2: darken($background, 2%);
+$background-hover: #eee;
+$background-transparent: rgba(255, 255, 255, .0);
+$background-alt: #f2f2f5;
+$background-alt-darken-5: darken($background-alt, 5%);
+$background-alt-darken-10: darken($background-alt, 10%);
+
+// Define border colors
+$border: #dcd9d9;
+
+// Define text colors
+$heading: #374054;
+$heading-light: #7e8890;
+$text: #74808a;
+$text-lighten-5: lighten($text, 5%);
+
+//
