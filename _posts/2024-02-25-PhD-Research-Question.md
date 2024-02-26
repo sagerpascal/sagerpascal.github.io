@@ -75,7 +75,7 @@ Approaches that directly work with pixel-based observations are still in their i
 I argue that the missing ingredient for the success of computer control agents is the ability to understand UI elements and that it is key to derive actionable representations.
 
 >
-> Being able to derive actionable representations from pixel-based UI observations in a unsupervised manner is fundamental for controlling computers.
+> "Being able to derive actionable representations from pixel-based UI observations in a unsupervised manner is fundamental for controlling computers."
 > 
 > -- <cite>Me</cite>
 
@@ -185,7 +185,12 @@ We would have to restrict ourselves to a smaller subset. However, it is question
 ## Idea 3: Human observations
 
 The agent observes a human interacting with the computer and tries to predict what the human will do next.
+However, this required some higher level representations of screens (see other ideas) as
 
+>
+> "If your goal is to train a world model for recognition or planning, using pixel-level prediction is a terrible idea."
+> 
+> -- <cite>Yann LeCun</cite> *![Twitter](https://twitter.com/ylecun/status/1759486703696318935)*
 
 ### Impression
 

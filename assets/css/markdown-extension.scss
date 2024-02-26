@@ -6,7 +6,7 @@
 #entry {
 
   h1, h2, h3, h4, h5, h6 {
-    color: $heading;
+    color: var(--heading);
   }
 
   h1, h2, h3, h4 {
@@ -37,31 +37,31 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background-color: $background-alt;
+    background-color: var(--background-alt);
   }
 
   code {
-    background-color: $background-alt;
+    background-color: var(--background-alt);
 
     .k {
       font-weight: bold;
     }
 
     .nf {
-      color: $base-color;
+      color: var(--base-color);
       font-weight: bold;
     }
 
     .s {
-      color: $base-color;
+      color: var(--base-color);
     }
 
     .mi {
-      color: $base-color;
+      color: var(--base-color);
     }
 
     //.mi {
-    //  color: $text;
+    //  color: var(--text;
     //}
 
     //.n {
@@ -73,7 +73,7 @@
     }
 
     .c1{
-      color: $text-lighten-5;
+      color: var(--text-lighten-5);
     }
   }
 
@@ -82,9 +82,9 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 90%;
-    border-left: solid thick $border;
+    border-left: solid thick var(--border);
     padding-left: 10px;
-    background-color: $background-darken-2;
+    background-color: var(--background-darken-2);
     font-style: italic;
 
     p {
@@ -113,20 +113,20 @@
     margin-right: auto;
 
     td, th {
-      border: 1px solid $border;
+      border: 1px solid var(--border);
       padding: 4px;
     }
 
     tr:nth-child(even) {
-      background-color: $background-alt;
+      background-color: var(--background-alt);
     }
 
     th {
       padding-top: 8px;
       padding-bottom: 8px;
       text-align: left;
-      background-color: $base-color;
-      color: $background;
+      background-color: var(--base-color);
+      color: var(--background);
     }
 
   }

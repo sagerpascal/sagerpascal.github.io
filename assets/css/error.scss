@@ -21,7 +21,7 @@ body {
 }
 
 .text h1{
-    color: darken($base-color, 40%);
+    color: darken(#3498db, 40%);
     margin-top: -200px;
     font-size: 15em;
     text-align: center;
@@ -69,7 +69,7 @@ body {
 }
 
 #menu, #mobile-menu-close, #mobile-menu-open{
-  background: darken($background, 70%);
-  color: lighten($base-color, 40%);
+  background: darken(#fff, 70%);
+  color: lighten(#3498db, 40%);
 }
 

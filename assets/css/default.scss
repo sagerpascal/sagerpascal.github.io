@@ -11,11 +11,11 @@
 */
 #blog {
   padding: 100px 15px;
-  border-bottom: 1px solid $border;
+  border-bottom: 1px solid var(--border);
   text-align: center;
 
   h2 {
-    color: $heading;
+    color: var(--heading);
     margin-bottom: 20px;
 
     a:hover {
@@ -29,19 +29,19 @@
   max-width: 900px;
   margin: 0 auto 30px auto;
   overflow: hidden;
-  background: $background;
+  background: var(--background);
   border-radius: 4px;
 
   #blog-head {
     width: 100%;
     padding: 1px 0;
-    background: $base-color;
+    background: var(--base-color);
 
     h2 {
       margin: 5px;
 
       a {
-        color: $background;
+        color: var(--background);
       }
 
       a:hover {
@@ -53,7 +53,7 @@
   #date {
     position: relative;
     margin: 20px;
-    color: $text;
+    color: var(--text);
   }
 
   #entry {
@@ -71,7 +71,7 @@
   max-width: 900px;
   margin: 0 auto 30px auto;
   overflow: hidden;
-  background: $background;
+  background: var(--background);
   border-radius: 4px;
   padding: 0 20px;
 
@@ -99,8 +99,8 @@
     display: inline-block;
     margin: 5px;
     padding: 5px 10px;
-    color: $heading;
-    background: $background-alt-darken-5;
+    color: var(--heading);
+    background: var(--background-alt-darken-5);
     list-style: none;
     cursor: default;
     font-size: 0.8em;
@@ -115,7 +115,7 @@
 
 #post {
   padding: 100px 15px 30px;
-  border-bottom: 1px solid $border;
+  border-bottom: 1px solid var(--border);
   text-align: center;
 }
 
@@ -124,17 +124,17 @@
   max-width: 900px;
   margin: 0 auto 30px auto;
   overflow: hidden;
-  background: $background;
+  background: var(--background);
   border-radius: 4px;
 
   #post-head {
     width: 100%;
-    background: $base-color;
-    color: $background;
+    background: var(--base-color);
+    color: var(--background);
     padding: 5px 20px 30px;
 
     h2 {
-      color: $background;
+      color: var(--background);
 
       a:hover {
         text-decoration: none;
@@ -148,7 +148,7 @@
     padding: 10px 20px;
 
     h1, h2, h3, h4, h5, h6 {
-      color: $base-color;
+      color: var(--base-color);
     }
 
     h1 {

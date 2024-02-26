@@ -1,27 +1,117 @@
 // Define base and accent colors
-$base-color: #3498db;
-$base-color-lighten-25: lighten($base-color, 25%);
-$base-color-darken-15: darken($base-color, 15%);
-$base-color-darken-25: darken($base-color, 25%);
-$base-color-hover: darken($base-color, 10%);
+$light-base-color: #3498db;
+$light-base-color-lighten-25: lighten($light-base-color, 25%);
+$light-base-color-darken-15: darken($light-base-color, 15%);
+$light-base-color-darken-25: darken($light-base-color, 25%);
+$light-base-color-hover: darken($light-base-color, 10%);
 
 // Define background colors
-$background: #fff;
-$background-darken-2: darken($background, 2%);
-$background-hover: #eee;
-$background-transparent: rgba(255, 255, 255, .0);
-$background-alt: #f2f2f5;
-$background-alt-darken-5: darken($background-alt, 5%);
-$background-alt-darken-10: darken($background-alt, 10%);
-$background-inverse: #000;
+$light-background: #fff;
+$light-background-darken-2: darken($light-background, 2%);
+$light-background-hover: #eee;
+$light-background-transparent: rgba(255, 255, 255, .0);
+$light-background-alt: #f2f2f5;
+$light-background-alt-darken-5: darken($light-background-alt, 5%);
+$light-background-alt-darken-10: darken($light-background-alt, 10%);
+$light-background-inverse: #000;
 
 // Define border colors
-$border: #dcd9d9;
+$light-border: #dcd9d9;
 
 // Define text colors
-$heading: #374054;
-$heading-light: #7e8890;
-$text: #74808a;
-$text-lighten-5: lighten($text, 5%);
+$light-heading: #374054;
+$light-heading-light: #7e8890;
+$light-text: #74808a;
+$light-text-lighten-5: lighten($light-text, 5%);
 
-//
+
+
+// Define base and accent colors
+$dark-base-color: #096398;
+$dark-base-color-lighten-25: darken($dark-base-color, 25%);
+$dark-base-color-darken-15: lighten($dark-base-color, 15%);
+$dark-base-color-darken-25: lighten($dark-base-color, 25%);
+$dark-base-color-hover: lighten($dark-base-color, 10%);
+
+// Define background colors
+$dark-background: #212121;
+$dark-background-darken-2: lighten($dark-background, 2%);
+$dark-background-hover: #2f2f2f;
+$dark-background-transparent: rgba(1, 1, 1, .0);
+$dark-background-alt: #131313;
+$dark-background-alt-darken-5: lighten($dark-background-alt, 5%);
+$dark-background-alt-darken-10: lighten($dark-background-alt, 10%);
+$dark-background-inverse: #d7d7d7;
+
+// Define border colors
+$dark-border: #7f8686;
+
+// Define text colors
+$dark-heading: #c7c5c1;
+$dark-heading-light: #807d7b;
+$dark-text: #74808a;
+$dark-text-lighten-5: lighten($dark-text, 5%);
+
+
+
+:root {
+  // Define base and accent colors
+  --base-color: #{$light-base-color};
+  --base-color-lighten-25: #{$light-base-color-lighten-25};
+  --base-color-darken-15: #{$light-base-color-darken-15};
+  --base-color-darken-25: #{$light-base-color-darken-25};
+  --base-color-hover: #{$light-base-color-hover};
+  --base-color-hover-trans-08: rgba(33,125,187,0.8);
+
+  // Define background colors
+  --background: #{$light-background};
+  --background-darken-2: #{$light-background-darken-2};
+  --background-hover: #{$light-background-hover};
+  --background-transparent: #{$light-background-transparent};
+  --background-alt: #{$light-background-alt};
+  --background-alt-darken-5: #{$light-background-alt-darken-5};
+  --background-alt-darken-10: #{$light-background-alt-darken-10};
+  --background-inverse: #{$light-background-inverse};
+
+  // Define border colors
+  --border: #{$light-border};
+
+  // Define text colors
+  --heading: #{$light-heading};
+  --heading-light: #{$light-heading-light};
+  --text: #{$light-text};
+  --text-lighten-5: #{$light-text-lighten-5};
+}
+
+
+
+
+
+[data-theme="dark"] {
+  // Define base and accent colors
+  --base-color: #{$dark-base-color};
+  --base-color-lighten-25: #{$dark-base-color-lighten-25};
+  --base-color-darken-15: #{$dark-base-color-darken-15};
+  --base-color-darken-25: #{$dark-base-color-darken-25};
+  --base-color-hover: #{$dark-base-color-hover};
+  --base-color-hover-trans-08: rgba(9,99,152,0.8);
+
+  // Define background colors
+  --background: #{$dark-background};
+  --background-darken-2: #{$dark-background-darken-2};
+  --background-hover: #{$dark-background-hover};
+  --background-transparent: #{$dark-background-transparent};
+  --background-alt: #{$dark-background-alt};
+  --background-alt-darken-5: #{$dark-background-alt-darken-5};
+  --background-alt-darken-10: #{$dark-background-alt-darken-10};
+  --background-inverse: #{$dark-background-inverse};
+
+  // Define border colors
+  --border: #{$dark-border};
+
+  // Define text colors
+  --heading: #{$dark-heading};
+  --heading-light: #{$dark-heading-light};
+  --text: #{$dark-text};
+  --text-lighten-5: #{$dark-text-lighten-5};
+}
