@@ -248,7 +248,7 @@ Thus, with pre-training, we can obtain a model to map pixel-based UI observation
 
 I think having these two binding problems solved is fundamental for controlling computers.
 It allows to act on a higher-level description and is the foundation for the following chapters.
-However, it is questionable if this is the approach I should focus on during my PhD as I just don't have enough resources (e.g. some models pre-trained on HTML-screenshots require more than 500 CPU days just to pre-process 7TB of web data and use about 100 high-end GPUs for training).
+However, it is questionable if this is the approach I should focus on during my PhD as I just don't have enough resources (e.g. some models pre-trained on HTML-screenshots require more than 500 CPU days just to pre-process 7TB of web data and use 128+ high-end GPUs for training).
 
 
 ## The Agent: V1
