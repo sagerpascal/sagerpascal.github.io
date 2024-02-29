@@ -249,7 +249,9 @@ Thus, with pre-training, we can obtain a model to map pixel-based UI observation
 I think having these two binding problems solved is fundamental for controlling computers.
 It allows to act on a higher-level description and is the foundation for the following chapters.
 However, it is questionable if this is the approach I should focus on during my PhD as I just don't have enough resources (e.g. some models pre-trained on HTML-screenshots require more than 500 CPU days just to pre-process 7TB of web data and use 128+ high-end GPUs for training).
-
+There exist smaller models but these are limited to predict elements and their bounding boxes for web pages only.
+My evaluation shows that they can predict things like "text; +" for a button. However, this information is quite useless when not encoding that there is a text besides it saying "quantity" and another text above describing the product.
+This specific smaller model was trained using 8 A-100 GPUs.
 
 ## The Agent: V1
 
