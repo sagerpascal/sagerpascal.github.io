@@ -291,6 +291,10 @@ When a task cannot be solved, there exist different reasons:
 
 <img src="/assets/images/posts/2024-02-25-PhD/Hierarchical%20Decomposition.png" alt="Decomposition of instruction in actions" style="zoom:100%;" />
 
+# Planning
+
+Another angle could be to focus on the planning aspect. However, this is rather hard since 1. many researchers are working on planning action sequences for computer control and 2. the developed algorithm might not fit to the representation of the UI (e.g. we would need to train on HTML which later requires coverting all UIs to HTML).
+
 
 # Other Research Questions
 
