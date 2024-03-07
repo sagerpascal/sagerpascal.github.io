@@ -99,7 +99,7 @@ Furthermore, encoding a screenshot to a hierarchical description and predicting 
 This approach is closely related to the homomorphic autoencoder described by (Keurti et al. 2023) who learns to perform action in a latent space.
 Furthermore, having a hierarchical description of the UI allows to align the elements with language instructions.
 
-#### Two Binding Problems
+### Two Binding Problems
 
 I identify two types of binding problems that have to be solved: First, the binding between UI elements. Second,
 the binding of pixels to UI elements.
@@ -120,7 +120,7 @@ Therefore, I argue that we should not only predict hierarchical descriptions of 
 This allows to automatically convert humans actions conducted on pixel level into descriptive actions that can be linked to the hierarchical description of the UI.
 So far, I am not aware of any work that predicts the bounding boxes of UI elements from pixel-based observations.
 
-#### (Weak) Evidence
+### (Weak) Evidence
 
 It is evident that LLMs perform much better than RL agents for computer control.
 Especially providing them HTML descriptions of the UI and actions allows LLMs to understand the structure of the UI.
@@ -130,7 +130,7 @@ The same goes if they are provided with action detailed action trajectories inst
 This is weak evidence as it is only based on my observations and not on a systematic study.
 However, it shows the importance of not just knowing the UI elements but also their relations.
 
-#### Current Models
+### Current Models
 
 There exist some research mapping screenshots to structured text.
 However, these model perform surprisingly bad and completely fail to describe UIs on a meaningful level or to generalize.
@@ -165,7 +165,7 @@ And since we humans almost always ask back to our superiors, showing that we are
 Furthermore, it would allow agents to learn much more about us, providing them additional knowledge that could be used in future tasks.
 
 
-## Research Question
+# Research Question
 
 Based on these insights and the current state of the art, I believe that the following questions will be answered by others:
 
