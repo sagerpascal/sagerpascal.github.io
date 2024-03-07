@@ -239,7 +239,7 @@ I plan in the following steps:
 3. Develop a simple generator that can produce such UI's in a pre-defined style
 4. Train a model to predict the UI elements and their relations -> Publication 1
 5. Combine the generator with a "style-model", a model that is trained in a GAN-style to make the rendered UI look like a real UI from a business application -> Publication 2 (most GANs focus on UI generation and not on code that is rendered to generate a UI)
-
+6. After having a generator that can produce UIs matching the style of business applications, we can train a model to work on various applications -> Publication 3 (due to limited resources, we might not get it to scale to a production-level application but we should be able to show that it works in principle)
 
 ### Question 3: Human in the Loop
 
