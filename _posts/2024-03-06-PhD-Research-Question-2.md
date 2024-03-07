@@ -134,7 +134,9 @@ However, it shows the importance of not just knowing the UI elements but also th
 
 There exist some research mapping screenshots to structured text.
 However, these model perform surprisingly bad and completely fail to describe UIs on a meaningful level or to generalize.
-It could be worth to investigate why these models fail and how they can be improved.
+OCR models seem to work ok to detect text in screenshots, but sometime struggle with the diverse text arrangements and styles.
+Models for layout recognition do not work at all when optimized for documents as computer UIs are completely different structured.
+It could be worth to investigate why these models fail and how they can be improved (or if exactly the same models can be used but must be tweaked on different datasets).
 
 
 ## Long-Sequence Planning
