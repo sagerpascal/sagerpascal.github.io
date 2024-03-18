@@ -24,6 +24,10 @@ id: index
 
 {% include about-me.html %}
 
+{% include publication-details.html modalId="gptModal" modalLabel="gptModalLabel" title="So you want your private LLM at home? a survey and benchmark of methods for efficient GPTs"
+url="https://doi.org/10.21256/zhaw-30279" imagePath="/assets/images/gpt.png"
+abstract="At least since the introduction of ChatGPT, the abilities of generative large language models (LLMs), sometimes called GPTs, are at the center of the attention of AI researchers, entrepreneurs, and others. However, for many applications, it is not possible to call an existing LLM service via an API due to data protection concerns or when no task-appropriate LLM exists. On the other hand, deploying or training a private LLM is often prohibitively computationally expensive. In this paper, we give an overview of the most important recent methodologies that help reduce the computational footprint of LLMs. We further present extensive benchmarks for seven methods from two of the most important areas of recent progress: model quantization and low-rank adapters, showcasing how it is possible to leverage state-of-the-art LLMs with limited resources. Our benchmarks include resource consumption metrics (e.g. GPU memory usage), a state-of-the-art quantitative performance evaluation as well as a qualitative performance study conducted by eight individual human raters. Our evaluations show that quantization has a profound effect on GPU memory requirements. However, we also show that these quantization methods, contrary to how they are advertised, cause a noticeable loss in text quality. We further show that low-rank adapters allow effective model fine-tuning with moderate compute resources. For methods that require less than 16 GB of GPU memory, we provide easy-to-use Jupyter notebooks that allow anyone to deploy and fine-tune state-of-the- art LLMs on the Google Colab free tier within minutes without any prior experience or infrastructure."%}
+
 {% include publication-details.html modalId="morModal" modalLabel="morModalLabel" title="Real World Music Object Recognition"
 url="https://transactions.ismir.net/articles/10.5334/tismir.157" imagePath="/assets/images/mor.png"
 abstract="We present solutions to two of the most pressing issues in contemporary optical
@@ -82,6 +86,13 @@ to resolve these challenges by embracing them."%}
 <div id="publications">
     <h2 class="heading reveal2">Publications</h2>
     <div>
+        {% include publication.html modalName="#gptModal" title="So you want your private LLM at home? a survey and
+        benchmark of methods for efficient GPTs"
+        author="L. Tuggener, P. Sager" useEtAl=true journal="11th IEEE Swiss Conference on Data Science (SDS)"
+        year="2024" pages="pp. ??"
+        doi_link="https://doi.org/10.21256/zhaw-30279" doi="10.21256/zhaw-30279
+        " %}
+
         {% include publication.html modalName="#morModal" title="Real World Music Object Recognition"
         author="L. Tuggener, R. Emberger, A. Ghosh, P. Sager" useEtAl=true journal="Transactions of the International
         Society for Music Information Retrieval" year="2024" pages="pp. 1-14"
@@ -94,7 +105,7 @@ to resolve these challenges by embracing them."%}
 
         {% include publication.html modalName="#sdsModal" title="A Survey of Un-, Weakly-, and Semi-Supervised Learning
         Methods for Noisy, Missing and Partial Labels in Industrial Vision Applications" author="N. Simmler, P. Sager"
-        useEtAl=true journal="2021 8th Swiss Conference on Data
+        useEtAl=true journal="8th Swiss Conference on Data
         Science (SDS)" year="2021" pages="pp. 26-31" doi_link="https://ieeexplore.ieee.org/document/9474624"
         doi="10.1109/SDS51136.2021.00012" %}
     </div>
@@ -108,7 +119,8 @@ to resolve these challenges by embracing them."%}
             {% include experience-detail.html
             employer="Institute of Neuroinformatics, University of Zurich and ETH Zurich"
             jobtitle="Visiting Researcher"
-            description="I am a visiting PhD student in the 'Neural Learning and Intelligent System' group of Prof. Dr. Benjamin Grewe. I focus on biologically inspired algorithms to build actionable object representations."
+            description="I am a visiting PhD student in the 'Neural Learning and Intelligent System' group of Prof. Dr.
+            Benjamin Grewe. I focus on biologically inspired algorithms to build actionable object representations."
             %}
         </div>
 
