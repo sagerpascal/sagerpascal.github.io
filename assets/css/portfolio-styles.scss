@@ -347,6 +347,27 @@
     -------------------------------
 */
 
+.carousel-indicators {
+  bottom: -20px;
+
+  li {
+    background-color: var(--base-color);
+  }
+}
+
+#carouselExampleIndicators {
+  height: 800px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    color: var(--base-color-darken-25);
+
+    &:hover {
+      color: var(--base-color-hover);
+    }
+
+}
+
 .modal-content {
   background-color: var(--background);
 
@@ -373,14 +394,15 @@
 .publication {
   cursor: pointer;
   position: relative;
-  max-width: 700px;
+  width: 90%;
   margin: 0 auto 30px auto;
   overflow: hidden;
   text-align: left;
-  padding: 25px;
+  padding: 15px;
   background: var(--background);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15);
   border: 0 solid var(--background);
+  height: 220px;
 
   a {
     text-align: center;
@@ -396,10 +418,18 @@
     margin: 0 0 15px 0;
   }
 
-  .citation {
+  .citation .citation-small {
     font-size: small;
     margin: 10px auto;
     color: var(--background-inverse);
+  }
+
+  .citation-small {
+    display: block;
+  }
+
+  .citation {
+    display: none;
   }
 
   span {
@@ -434,6 +464,7 @@
     box-shadow: none;
     border: 0 solid var(--background);
     transition: all 1s;
+    max-width: 700px;
 
     &:after, &:before {
       content: " ";
@@ -470,6 +501,20 @@
         // border-color:white;
       }
     }
+
+    .citation .citation-small {
+      font-size: small;
+      margin: 10px auto;
+    }
+
+    .citation-small {
+    display: none;
+    }
+
+    .citation {
+    display: block;
+  }
+
   }
 }
 

@@ -24,9 +24,21 @@ id: index
 
 {% include about-me.html %}
 
-{% include publication-details.html modalId="gptModal" modalLabel="gptModalLabel" title="So you want your private LLM at home? a survey and benchmark of methods for efficient GPTs"
+{% include publication-details.html modalId="dnaModal" modalLabel="dnaModalLabel" title="The Dynamic Net Architecture: Learning Robust and Holistic Visual Representations Through Self-Organizing Networks"
+url="https://doi.org/10.48550/arXiv.2407.05650" imagePath="/assets/images/dna.png"
+abstract="We present a novel intelligent-system architecture called 'Dynamic Net Architecture' (DNA) that relies on recurrence-stabilized networks and discuss it in application to vision. Our architecture models a (cerebral cortical) area wherein elementary feature neurons encode details of visual structures, and coherent nets of such neurons model holistic object structures. By interpreting smaller or larger coherent pieces of an area network as complex features, our model encodes hierarchical feature representations essentially different than artificial neural networks (ANNs). DNA models operate on a dynamic connectionism principle, wherein neural activations stemming from initial afferent signals undergo stabilization through a self-organizing mechanism facilitated by Hebbian plasticity alongside periodically tightening inhibition. In contrast to ANNs, which rely on feed-forward connections and backpropagation of error, we posit that this processing paradigm leads to highly robust representations, as by employing dynamic lateral connections, irrelevant details in neural activations are filtered out, freeing further processing steps from distracting noise and premature decisions. We empirically demonstrate the viability of the DNA by composing line fragments into longer lines and show that the construction of nets representing lines remains robust even with the introduction of up to 59% noise at each spatial location. Furthermore, we demonstrate the model's capability to reconstruct anticipated features from partially obscured inputs and that it can generalize to patterns not observed during training. In this work, we limit the DNA to one cortical area and focus on its internals while providing insights into a standalone area's strengths and shortcomings. Additionally, we provide an outlook on how future work can implement invariant object recognition by combining multiple areas."
+%}
+
+{% include publication-details.html modalId="consensusModal" modalLabel="consensusModalLabel" title="Consensus Task Interaction Trace Recommender to Guide Developers’ Software Navigation"
+url="??" imagePath="/assets/images/consensus.png"
+abstract="Developers must complete change tasks on large software systems for maintenance and development purposes. Having a custom software system with numerous instances that meet the growing client demand for features and functionalities increases the software complexity. Developers, especially newcomers, must spend a significant amount of time navigating through the source code and switching back and forth between files in order to understand such a system and find the parts relevant for performing current tasks. This navigation can be difficult, time-consuming and affect developers' productivity. To help guide developers' navigation towards successfully resolving tasks with minimal time and effort, we present a task-based recommendation approach that exploits aggregated developers' interaction traces. Our novel approach, Consensus Task Interaction Trace Recommender (CITR), recommends file(s)-to-edit that help perform a set of tasks based on a tasks-related set of interaction traces obtained from developers who performed similar change tasks on the same or different custom instances of the same system. Our approach uses a consensus algorithm, which takes as input task-related interaction traces and recommends a consensus task interaction trace that developers can use to complete given similar change tasks that require editing (a) common file(s). To evaluate the efficiency of our approach, we perform three different evaluations. The first evaluation measures the  accuracy of CITR recommendations. In the second evaluation, we assess to what extent CITR can help developers by conducting an observational controlled experiment in which two groups of developers performed evaluation tasks with and without the recommendations of CITR. In the third and last evaluation, we compare CITR to a state-of-the-art recommendation approach, MI. Results report with statistical significance that CITR can correctly recommend on average 73% of the files to be edited. Furthermore, they show that CITR can increase developers' successful task completion rate. CITR outperforms MI by an average of 31% higher recommendation accuracy."
+%}
+
+
+{% include publication-details.html modalId="gptModal" modalLabel="gptModalLabel" title="So You Want Your Private LLM at Home? A Survey and Benchmark of Methods for Efficient GPTs"
 url="https://doi.org/10.21256/zhaw-30279" imagePath="/assets/images/gpt.png"
-abstract="At least since the introduction of ChatGPT, the abilities of generative large language models (LLMs), sometimes called GPTs, are at the center of the attention of AI researchers, entrepreneurs, and others. However, for many applications, it is not possible to call an existing LLM service via an API due to data protection concerns or when no task-appropriate LLM exists. On the other hand, deploying or training a private LLM is often prohibitively computationally expensive. In this paper, we give an overview of the most important recent methodologies that help reduce the computational footprint of LLMs. We further present extensive benchmarks for seven methods from two of the most important areas of recent progress: model quantization and low-rank adapters, showcasing how it is possible to leverage state-of-the-art LLMs with limited resources. Our benchmarks include resource consumption metrics (e.g. GPU memory usage), a state-of-the-art quantitative performance evaluation as well as a qualitative performance study conducted by eight individual human raters. Our evaluations show that quantization has a profound effect on GPU memory requirements. However, we also show that these quantization methods, contrary to how they are advertised, cause a noticeable loss in text quality. We further show that low-rank adapters allow effective model fine-tuning with moderate compute resources. For methods that require less than 16 GB of GPU memory, we provide easy-to-use Jupyter notebooks that allow anyone to deploy and fine-tune state-of-the- art LLMs on the Google Colab free tier within minutes without any prior experience or infrastructure."%}
+abstract="At least since the introduction of ChatGPT, the abilities of generative large language models (LLMs), sometimes called GPTs, are at the center of the attention of AI researchers, entrepreneurs, and others. However, for many applications, it is not possible to call an existing LLM service via an API due to data protection concerns or when no task-appropriate LLM exists. On the other hand, deploying or training a private LLM is often prohibitively computationally expensive. In this paper, we give an overview of the most important recent methodologies that help reduce the computational footprint of LLMs. We further present extensive benchmarks for seven methods from two of the most important areas of recent progress: model quantization and low-rank adapters, showcasing how it is possible to leverage state-of-the-art LLMs with limited resources. Our benchmarks include resource consumption metrics (e.g. GPU memory usage), a state-of-the-art quantitative performance evaluation as well as a qualitative performance study conducted by eight individual human raters. Our evaluations show that quantization has a profound effect on GPU memory requirements. However, we also show that these quantization methods, contrary to how they are advertised, cause a noticeable loss in text quality. We further show that low-rank adapters allow effective model fine-tuning with moderate compute resources. For methods that require less than 16 GB of GPU memory, we provide easy-to-use Jupyter notebooks that allow anyone to deploy and fine-tune state-of-the- art LLMs on the Google Colab free tier within minutes without any prior experience or infrastructure."
+%}
 
 {% include publication-details.html modalId="morModal" modalLabel="morModalLabel" title="Real World Music Object Recognition"
 url="https://transactions.ismir.net/articles/10.5334/tismir.157" imagePath="/assets/images/mor.png"
@@ -86,28 +98,79 @@ to resolve these challenges by embracing them."%}
 <div id="publications">
     <h2 class="heading reveal2">Publications</h2>
     <div>
-        {% include publication.html modalName="#gptModal" title="So you want your private LLM at home? a survey and
-        benchmark of methods for efficient GPTs"
-        author="L. Tuggener, P. Sager" useEtAl=true journal="11th IEEE Swiss Conference on Data Science (SDS)"
-        year="2024" pages="pp. ??"
-        doi_link="https://doi.org/10.21256/zhaw-30279" doi="10.21256/zhaw-30279
-        " %}
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner" style="padding: 10px">
+                <div class="container">
+                    <div class="carousel-item active">
+                        {% include publication.html modalName="#dnaModal" title="The Dynamic Net Architecture: Learning
+                        Robust and Holistic Visual Representations Through Self-Organizing Networks"
+                        title_short="The Dynamic Net Architecture"
+                        author="P. Sager" useEtAl=true journal="preprint arXiv:2407.05650"
+                        year="2024" pages=""
+                        doi_link="https://doi.org/10.48550/arXiv.2407.05650" doi="10.48550/arXiv.2407.05650" %}
 
-        {% include publication.html modalName="#morModal" title="Real World Music Object Recognition"
-        author="L. Tuggener, R. Emberger, A. Ghosh, P. Sager" useEtAl=true journal="Transactions of the International
-        Society for Music Information Retrieval" year="2024" pages="pp. 1-14"
-        doi_link="https://transactions.ismir.net/articles/10.5334/tismir.157/" doi="10.5334/tismir.157" %}
+                        {% include publication.html modalName="#consensusModal" title="Consensus Task Interaction Trace
+                        Recommender to Guide Developers’ Software Navigation"
+                        title_short="Consensus Task Interaction Trace Recommender to Guide Developers’ Software
+                        Navigation"
+                        author="L. Etaiwi, P. Sager" useEtAl=true journal="Empirical Software Engineering"
+                        year="2024" pages=""
+                        doi_link="" doi="??" %}
 
-        {% include publication.html modalName="#udaModal" title="Unsupervised Domain Adaptation for Vertebrae Detection
-        and Identification in 3D CT Volumes Using a Domain Sanity Loss" author="P. Sager" useEtAl=true journal="Journal
-        of Imaging" year="2022" pages="8(8):222" doi_link="https://www.mdpi.com/2313-433X/8/8/222"
-        doi="10.3390/jimaging8080222" %}
-
-        {% include publication.html modalName="#sdsModal" title="A Survey of Un-, Weakly-, and Semi-Supervised Learning
-        Methods for Noisy, Missing and Partial Labels in Industrial Vision Applications" author="N. Simmler, P. Sager"
-        useEtAl=true journal="8th Swiss Conference on Data
-        Science (SDS)" year="2021" pages="pp. 26-31" doi_link="https://ieeexplore.ieee.org/document/9474624"
-        doi="10.1109/SDS51136.2021.00012" %}
+                        {% include publication.html modalName="#gptModal" title="So You Want Your Private LLM at
+                        Home? A Survey and Benchmark of Methods for Efficient GPTs"
+                        title_short="So You Want Your Private LLM at
+                        Home? A Survey and Benchmark of Methods for Efficient GPTs"
+                        author="L. Tuggener, P. Sager" useEtAl=true journal="11th IEEE Swiss Conference on Data
+                        Science (SDS)"
+                        year="2024" pages=""
+                        doi_link="https://doi.org/10.21256/zhaw-30279"
+                        doi="10.21256/zhaw-30279" %}
+                    </div>
+                    <div class="carousel-item">
+                        {% include publication.html modalName="#morModal" title="Real World Music Object
+                        Recognition"
+                        title_short="Real World Music Object Recognition"
+                        author="L. Tuggener, R. Emberger, A. Ghosh, P. Sager" useEtAl=true journal="Transactions of
+                        the
+                        International
+                        Society for Music Information Retrieval" year="2024" pages="pp. 1-14"
+                        doi_link="https://transactions.ismir.net/articles/10.5334/tismir.157/"
+                        doi="10.5334/tismir.157" %}
+                        {% include publication.html modalName="#udaModal" title="Unsupervised Domain Adaptation for
+                        Vertebrae Detection and Identification in 3D CT Volumes Using a Domain Sanity Loss"
+                        title_short="Unsupervised Domain Adaptation for Vertebrae Detection
+                        and Identification in 3D CT Volumes Using a Domain Sanity Loss"
+                        author="P. Sager" useEtAl=true
+                        journal="Journal
+                        of Imaging" year="2022" pages="8(8):222" doi_link="https://www.mdpi.com/2313-433X/8/8/222"
+                        doi="10.3390/jimaging8080222" %}
+                        {% include publication.html modalName="#sdsModal" title="A Survey of Un-, Weakly-, and
+                        Semi-Supervised Learning Methods for Noisy, Missing and Partial Labels in Industrial Vision
+                        Applications"
+                        title_short="A Survey of Un-, Weakly-, and
+                        Semi-Supervised Learning Methods for Noisy, Missing and Partial Labels"
+                        author="N. Simmler, P. Sager"
+                        useEtAl=true journal="8th Swiss Conference on Data
+                        Science (SDS)" year="2021" pages="pp. 26-31"
+                        doi_link="https://ieeexplore.ieee.org/document/9474624"
+                        doi="10.1109/SDS51136.2021.00012" %}
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+               data-slide="prev">
+                <i class="fa-solid fa-chevron-left fa-2xl"></i>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+               data-slide="next">
+                <i class="fa-solid fa-chevron-right fa-2xl"></i>
+            </a>
+        </div>
     </div>
 </div>
 

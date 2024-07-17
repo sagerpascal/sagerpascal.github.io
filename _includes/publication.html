@@ -3,10 +3,13 @@
     <div class="publication-info">
         <h3>{{ include.title }}</h3>
         <div class="citation">
-            {{ include.author }}{% if include.useEtAl %}<i>et al.</i>{% endif %}, "{{ include.title }}", <i>{{
+            {{ include.author }}{% if include.useEtAl %}<i>et al.</i>{% endif %}, "{{ include.title_short }}", <i>{{
             include.journal }}</i>. {{ include.year }}; {{ include.pages }}. <a
                 href={{ include.doi_link }} target="_blank">doi: {{ include.doi }}.</a>
 
+        </div>
+        <div class="citation-small">
+            {{ include.author }}{% if include.useEtAl %}<i>et al.</i>{% endif %}
         </div>
         <p>
             <strong>Show more...</strong>
