@@ -35,6 +35,22 @@
 }
 
 
+h1 {
+      font-size: 2em;
+    }
+
+    h2 {
+      font-size: 1.8em;
+    }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  h4 {
+    font-size: 1.2em;
+  }
+
 /*
     --------------------------
     ------- Lead Styles ------
@@ -221,7 +237,6 @@
   text-align: left;
 
   h3 {
-    font-size: 1.5em;
     font-weight: 300;
     color: var(--heading);
     display: inline-block;
@@ -412,7 +427,6 @@
 .publication-info {
 
   h3 {
-    font-size: 1.5em;
     font-weight: 300;
     color: var(--heading);
     margin: 0 0 15px 0;
@@ -455,11 +469,20 @@
   }
 }
 
+#disclaimer {
+  display: none;
+}
+
 
 /* Publications hover on big screen */
 
 // see https://www.proglobalbusinesssolutions.com/css-hover-effects/
 @media only screen and (min-width: 768px) {
+
+  #disclaimer {
+    display: block;
+  }
+
   .publication {
     box-shadow: none;
     border: 0 solid var(--background);
@@ -660,7 +683,6 @@
   padding: 15px;
 
   h3 {
-    font-size: 1.5em;
     font-weight: 300;
     color: var(--heading);
     margin: 0 0 15px 0;
@@ -974,10 +996,28 @@
 // Extra Small Devices
 @media only screen and (max-width: 480px) {
 
-  #lead-content {
-    h1 {
-      font-size: 1.5em;
+  h1 {
+      font-size: 1.6em;
     }
+
+    h2 {
+      font-size: 1.4em;
+    }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  h4 {
+    font-size: 1.1em;
+  }
+
+  .citation-small {
+    font-weight: normal;
+    font-size: 0.8em;
+  }
+
+  #lead-content {
 
     h2 {
       font-size: 1em;
