@@ -432,7 +432,7 @@ h1 {
     margin: 0 0 15px 0;
   }
 
-  .citation .citation-small {
+  .citation, .citation-small {
     font-size: small;
     margin: 10px auto;
     color: var(--background-inverse);
@@ -525,9 +525,10 @@ h1 {
       }
     }
 
-    .citation .citation-small {
+    .citation, .citation-small {
       font-size: small;
       margin: 10px auto;
+      color: var(--background-inverse);
     }
 
     .citation-small {
