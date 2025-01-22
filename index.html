@@ -24,19 +24,19 @@ id: index
 
 {% include about-me.html %}
 
-{% include publication-details.html modalId="dnaModal" modalLabel="dnaModalLabel" title="The Dynamic Net Architecture: Learning Robust and Holistic Visual Representations Through Self-Organizing Networks"
+{% include publication-details.html modalId="dnaModal" modalLabel="dnaModalLabel" title="The Cooperative Network Architecture: Learning Structured Networks as Representation of Sensory Patterns"
 url="https://doi.org/10.48550/arXiv.2407.05650" imagePath="/assets/images/dna.png"
-abstract="We present a novel intelligent-system architecture called 'Dynamic Net Architecture' (DNA) that relies on recurrence-stabilized networks and discuss it in application to vision. Our architecture models a (cerebral cortical) area wherein elementary feature neurons encode details of visual structures, and coherent nets of such neurons model holistic object structures. By interpreting smaller or larger coherent pieces of an area network as complex features, our model encodes hierarchical feature representations essentially different than artificial neural networks (ANNs). DNA models operate on a dynamic connectionism principle, wherein neural activations stemming from initial afferent signals undergo stabilization through a self-organizing mechanism facilitated by Hebbian plasticity alongside periodically tightening inhibition. In contrast to ANNs, which rely on feed-forward connections and backpropagation of error, we posit that this processing paradigm leads to highly robust representations, as by employing dynamic lateral connections, irrelevant details in neural activations are filtered out, freeing further processing steps from distracting noise and premature decisions. We empirically demonstrate the viability of the DNA by composing line fragments into longer lines and show that the construction of nets representing lines remains robust even with the introduction of up to 59% noise at each spatial location. Furthermore, we demonstrate the model's capability to reconstruct anticipated features from partially obscured inputs and that it can generalize to patterns not observed during training. In this work, we limit the DNA to one cortical area and focus on its internals while providing insights into a standalone area's strengths and shortcomings. Additionally, we provide an outlook on how future work can implement invariant object recognition by combining multiple areas."
+abstract="Nets, cooperative networks of neurons, have been proposed as format for the representation of sensory signals, as physical implementation of the Gestalt phenomenon and as solution to the neural binding problem, while the direct interaction between nets by structure-sensitive matching has been proposed as basis for object-global operations such as object detection. The nets are flexibly composed of overlapping net fragments, which are learned from statistical regularities of sensory input. We here present the cooperative network architecture (CNA), a concrete model that learns such net structure to represent input patterns and deals robustly with noise, deformation, and out-of-distribution data, thus laying the groundwork for a novel neural architecture."
 %}
 
 {% include publication-details.html modalId="consensusModal" modalLabel="consensusModalLabel" title="Consensus Task Interaction Trace Recommender to Guide Developers’ Software Navigation"
-url="??" imagePath="/assets/images/consensus.png"
+url="https://doi.org/10.1007/s10664-024-10528-7" imagePath="/assets/images/consensus.png"
 abstract="Developers must complete change tasks on large software systems for maintenance and development purposes. Having a custom software system with numerous instances that meet the growing client demand for features and functionalities increases the software complexity. Developers, especially newcomers, must spend a significant amount of time navigating through the source code and switching back and forth between files in order to understand such a system and find the parts relevant for performing current tasks. This navigation can be difficult, time-consuming and affect developers' productivity. To help guide developers' navigation towards successfully resolving tasks with minimal time and effort, we present a task-based recommendation approach that exploits aggregated developers' interaction traces. Our novel approach, Consensus Task Interaction Trace Recommender (CITR), recommends file(s)-to-edit that help perform a set of tasks based on a tasks-related set of interaction traces obtained from developers who performed similar change tasks on the same or different custom instances of the same system. Our approach uses a consensus algorithm, which takes as input task-related interaction traces and recommends a consensus task interaction trace that developers can use to complete given similar change tasks that require editing (a) common file(s). To evaluate the efficiency of our approach, we perform three different evaluations. The first evaluation measures the  accuracy of CITR recommendations. In the second evaluation, we assess to what extent CITR can help developers by conducting an observational controlled experiment in which two groups of developers performed evaluation tasks with and without the recommendations of CITR. In the third and last evaluation, we compare CITR to a state-of-the-art recommendation approach, MI. Results report with statistical significance that CITR can correctly recommend on average 73% of the files to be edited. Furthermore, they show that CITR can increase developers' successful task completion rate. CITR outperforms MI by an average of 31% higher recommendation accuracy."
 %}
 
 
 {% include publication-details.html modalId="gptModal" modalLabel="gptModalLabel" title="So You Want Your Private LLM at Home? A Survey and Benchmark of Methods for Efficient GPTs"
-url="https://doi.org/10.21256/zhaw-30279" imagePath="/assets/images/gpt.png"
+url="https://doi.org/10.1109/SDS60720.2024.00036" imagePath="/assets/images/gpt.png"
 abstract="At least since the introduction of ChatGPT, the abilities of generative large language models (LLMs), sometimes called GPTs, are at the center of the attention of AI researchers, entrepreneurs, and others. However, for many applications, it is not possible to call an existing LLM service via an API due to data protection concerns or when no task-appropriate LLM exists. On the other hand, deploying or training a private LLM is often prohibitively computationally expensive. In this paper, we give an overview of the most important recent methodologies that help reduce the computational footprint of LLMs. We further present extensive benchmarks for seven methods from two of the most important areas of recent progress: model quantization and low-rank adapters, showcasing how it is possible to leverage state-of-the-art LLMs with limited resources. Our benchmarks include resource consumption metrics (e.g. GPU memory usage), a state-of-the-art quantitative performance evaluation as well as a qualitative performance study conducted by eight individual human raters. Our evaluations show that quantization has a profound effect on GPU memory requirements. However, we also show that these quantization methods, contrary to how they are advertised, cause a noticeable loss in text quality. We further show that low-rank adapters allow effective model fine-tuning with moderate compute resources. For methods that require less than 16 GB of GPU memory, we provide easy-to-use Jupyter notebooks that allow anyone to deploy and fine-tune state-of-the- art LLMs on the Google Colab free tier within minutes without any prior experience or infrastructure."
 %}
 
@@ -106,9 +106,8 @@ to resolve these challenges by embracing them."%}
             <div class="carousel-inner" style="padding: 10px">
                 <div class="container">
                     <div class="carousel-item active">
-                        {% include publication.html modalName="#dnaModal" title="The Dynamic Net Architecture: Learning
-                        Robust and Holistic Visual Representations Through Self-Organizing Networks"
-                        title_short="The Dynamic Net Architecture"
+                        {% include publication.html modalName="#dnaModal" title="The Cooperative Network Architecture: Learning Structured Networks as Representation of Sensory Patterns"
+                        title_short="The Cooperative Network Architecture"
                         author="P. Sager" useEtAl=true journal="preprint arXiv:2407.05650"
                         year="2024" pages=""
                         doi_link="https://doi.org/10.48550/arXiv.2407.05650" doi="10.48550/arXiv.2407.05650" %}
@@ -118,8 +117,8 @@ to resolve these challenges by embracing them."%}
                         title_short="Consensus Task Interaction Trace Recommender to Guide Developers’ Software
                         Navigation"
                         author="L. Etaiwi, P. Sager" useEtAl=true journal="Empirical Software Engineering"
-                        year="2024" pages=""
-                        doi_link="" doi="??" %}
+                        year="2024" pages="vol. 29, no. 6, p. 147"
+                        doi_link="https://doi.org/10.1007/s10664-024-10528-7" doi="s10664-024-10528-7" %}
 
                         {% include publication.html modalName="#gptModal" title="So You Want Your Private LLM at
                         Home? A Survey and Benchmark of Methods for Efficient GPTs"
@@ -127,9 +126,9 @@ to resolve these challenges by embracing them."%}
                         Home? A Survey and Benchmark of Methods for Efficient GPTs"
                         author="L. Tuggener, P. Sager" useEtAl=true journal="11th IEEE Swiss Conference on Data
                         Science (SDS)"
-                        year="2024" pages=""
-                        doi_link="https://doi.org/10.21256/zhaw-30279"
-                        doi="10.21256/zhaw-30279" %}
+                        year="2024" pages="pp. 205-212"
+                        doi_link="https://doi.org/10.1109/SDS60720.2024.00036"
+                        doi="10.1109/SDS60720.2024.00036" %}
                     </div>
                     <div class="carousel-item">
                         {% include publication.html modalName="#morModal" title="Real World Music Object
@@ -183,7 +182,7 @@ to resolve these challenges by embracing them."%}
             employer="Institute of Neuroinformatics, University of Zurich and ETH Zurich"
             jobtitle="Visiting Researcher"
             description="I am a visiting PhD student in the 'Neural Learning and Intelligent System' group of Prof. Dr.
-            Benjamin Grewe. I focus on biologically inspired algorithms to build actionable object representations."
+            Benjamin Grewe. I focus on building world models through agent-object interactions."
             %}
         </div>
 
@@ -193,14 +192,14 @@ to resolve these challenges by embracing them."%}
             <h4>PhD Student, Head of AI Demonstrators, Board Member of Sustainable Impact Program</h4>
             <p>
                 I started at the Center for AI as research assistant in computer vision. After one and a half year, I
-                became head of GPU infrastructure and demonstrators. In October 2023, I started my PhD in the field of
+                became the head of GPU infrastructure and demonstrators. In October 2023, I started my PhD in the field of
                 biologically inspired learning algorithms and stepped down as head of GPU infrastructure to focus more
                 on my PhD research and leading the demo projects. Besides these activities, I am also a board member of
                 the University's Sustainable Impact Program, shaping various sustainability initiatives.
             </p>
         </div>
 
-        <div data-date="August 2023 – Today" class="reveal">
+        <div data-date="August 2023 – December 2024" class="reveal">
             <h3>AlpineAI AG</h3>
             <h4>Senior Data Scientist</h4>
             <p>
