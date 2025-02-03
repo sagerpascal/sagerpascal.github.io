@@ -24,6 +24,11 @@ id: index
 
 {% include about-me.html %}
 
+{% include publication-details.html modalId="ccaModal" modalLabel="ccaModalLabel" title="AI Agents for Computer Use: A Review of Instruction-based Computer Control, GUI Automation, and Operator Assistants"
+url="https://doi.org/10.48550/arXiv.2501.16150" imagePath="/assets/images/cca.png"
+abstract="Instruction-based computer control agents (CCAs) execute complex action sequences on personal computers or mobile devices to fulfill tasks using the same graphical user interfaces as a human user would, provided instructions in natural language. This review offers a comprehensive overview of the emerging field of instruction-based computer control, examining available agents -- their taxonomy, development, and respective resources -- and emphasizing the shift from manually designed, specialized agents to leveraging foundation models such as large language models (LLMs) and vision-language models (VLMs). We formalize the problem and establish a taxonomy of the field to analyze agents from three perspectives: (a) the environment perspective, analyzing computer environments; (b) the interaction perspective, describing observations spaces (e.g., screenshots, HTML) and action spaces (e.g., mouse and keyboard actions, executable code); and (c) the agent perspective, focusing on the core principle of how an agent acts and learns to act. Our framework encompasses both specialized and foundation agents, facilitating their comparative analysis and revealing how prior solutions in specialized agents, such as an environment learning step, can guide the development of more capable foundation agents. Additionally, we review current CCA datasets and CCA evaluation methods and outline the challenges to deploying such agents in a productive setting. In total, we review and classify 86 CCAs and 33 related datasets. By highlighting trends, limitations, and future research directions, this work presents a comprehensive foundation to obtain a broad understanding of the field and push its future development."
+%}
+
 {% include publication-details.html modalId="dnaModal" modalLabel="dnaModalLabel" title="The Cooperative Network Architecture: Learning Structured Networks as Representation of Sensory Patterns"
 url="https://doi.org/10.48550/arXiv.2407.05650" imagePath="/assets/images/dna.png"
 abstract="Nets, cooperative networks of neurons, have been proposed as format for the representation of sensory signals, as physical implementation of the Gestalt phenomenon and as solution to the neural binding problem, while the direct interaction between nets by structure-sensitive matching has been proposed as basis for object-global operations such as object detection. The nets are flexibly composed of overlapping net fragments, which are learned from statistical regularities of sensory input. We here present the cooperative network architecture (CNA), a concrete model that learns such net structure to represent input patterns and deals robustly with noise, deformation, and out-of-distribution data, thus laying the groundwork for a novel neural architecture."
@@ -102,13 +107,24 @@ to resolve these challenges by embracing them."%}
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner" style="padding: 10px">
                 <div class="container">
                     <div class="carousel-item active">
-                        {% include publication.html modalName="#dnaModal" title="The Cooperative Network Architecture: Learning Structured Networks as Representation of Sensory Patterns"
+                        {% include publication.html modalName="#ccaModal"
+                        title="AI Agents for Computer Use: A Review of Instruction-based Computer Control, GUI Automation, and Operator Assistants"
+                        title_short="AI Agents for Computer Use"
+                        author_note="First Author"
+                        author="<b>P. Sager</b>, B. Meyer, P. Yan, R. Wartburg-Kottler" useEtAl=true journal="preprint arXiv:2501.16150"
+                        year="2025" pages=""
+                        doi_link="https://doi.org/10.48550/arXiv.2501.16150" doi="10.48550/arXiv.2501.16150" %}
+
+                        {% include publication.html modalName="#dnaModal"
+                        title="The Cooperative Network Architecture: Learning Structured Networks as Representation of Sensory Patterns"
                         title_short="The Cooperative Network Architecture"
-                        author="P. Sager" useEtAl=true journal="preprint arXiv:2407.05650"
+                        author_note="First Author"
+                        author="<b>P. Sager</b>, J.Deriu, B. Grewe, T. Stadelmann" useEtAl=true journal="preprint arXiv:2407.05650"
                         year="2024" pages=""
                         doi_link="https://doi.org/10.48550/arXiv.2407.05650" doi="10.48550/arXiv.2407.05650" %}
 
@@ -116,44 +132,49 @@ to resolve these challenges by embracing them."%}
                         Recommender to Guide Developers’ Software Navigation"
                         title_short="Consensus Task Interaction Trace Recommender to Guide Developers’ Software
                         Navigation"
-                        author="L. Etaiwi, P. Sager" useEtAl=true journal="Empirical Software Engineering"
+                        author="L. Etaiwi, <b>P. Sager</b>, Y.-G. Guéhéneuc, S. Hamel" useEtAl=false journal="Empirical Software Engineering"
                         year="2024" pages="vol. 29, no. 6, p. 147"
                         doi_link="https://doi.org/10.1007/s10664-024-10528-7" doi="s10664-024-10528-7" %}
-
+                    </div>
+                    <div class="carousel-item">
                         {% include publication.html modalName="#gptModal" title="So You Want Your Private LLM at
                         Home? A Survey and Benchmark of Methods for Efficient GPTs"
                         title_short="So You Want Your Private LLM at
                         Home? A Survey and Benchmark of Methods for Efficient GPTs"
-                        author="L. Tuggener, P. Sager" useEtAl=true journal="11th IEEE Swiss Conference on Data
+                        author="L. Tuggener, <b>P. Sager</b>, Y. Taoudi-Benchekroun, B. Grewe" useEtAl=true journal="11th IEEE Swiss Conference on Data
                         Science (SDS)"
                         year="2024" pages="pp. 205-212"
                         doi_link="https://doi.org/10.1109/SDS60720.2024.00036"
                         doi="10.1109/SDS60720.2024.00036" %}
-                    </div>
-                    <div class="carousel-item">
+
                         {% include publication.html modalName="#morModal" title="Real World Music Object
                         Recognition"
                         title_short="Real World Music Object Recognition"
-                        author="L. Tuggener, R. Emberger, A. Ghosh, P. Sager" useEtAl=true journal="Transactions of
+                        author_note="Shared First Author"
+                        author="L. Tuggener*, R. Emberger*, A. Ghosh*, <b>P. Sager</b>*" useEtAl=true journal="Transactions of
                         the
                         International
                         Society for Music Information Retrieval" year="2024" pages="pp. 1-14"
                         doi_link="https://transactions.ismir.net/articles/10.5334/tismir.157/"
                         doi="10.5334/tismir.157" %}
+
                         {% include publication.html modalName="#udaModal" title="Unsupervised Domain Adaptation for
                         Vertebrae Detection and Identification in 3D CT Volumes Using a Domain Sanity Loss"
                         title_short="Unsupervised Domain Adaptation for Vertebrae Detection
                         and Identification in 3D CT Volumes Using a Domain Sanity Loss"
-                        author="P. Sager" useEtAl=true
+                        author_note="First Author"
+                        author="<b>P. Sager</b>, S. Salzmann, F. Burn, T. Stadelmann" useEtAl=false
                         journal="Journal
                         of Imaging" year="2022" pages="8(8):222" doi_link="https://www.mdpi.com/2313-433X/8/8/222"
                         doi="10.3390/jimaging8080222" %}
+                    </div>
+                    <div class="carousel-item">
                         {% include publication.html modalName="#sdsModal" title="A Survey of Un-, Weakly-, and
                         Semi-Supervised Learning Methods for Noisy, Missing and Partial Labels in Industrial Vision
                         Applications"
                         title_short="A Survey of Un-, Weakly-, and
                         Semi-Supervised Learning Methods for Noisy, Missing and Partial Labels"
-                        author="N. Simmler, P. Sager"
+                        author="N. Simmler, <b>P. Sager</b>, P. Andermatt, R. Chavarriaga"
                         useEtAl=true journal="8th Swiss Conference on Data
                         Science (SDS)" year="2021" pages="pp. 26-31"
                         doi_link="https://ieeexplore.ieee.org/document/9474624"

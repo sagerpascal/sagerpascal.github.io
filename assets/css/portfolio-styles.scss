@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "main";
+@use "main";
 
 
 /*
@@ -413,7 +413,7 @@ h1 {
   margin: 0 auto 30px auto;
   overflow: hidden;
   text-align: left;
-  padding: 15px;
+  padding: 0 15px;
   background: var(--background);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15);
   border: 0 solid var(--background);
@@ -422,6 +422,11 @@ h1 {
   a {
     text-align: center;
   }
+}
+
+.first-author-note {
+  color: var(--base-color-darken-15);
+  font-size: small;
 }
 
 .publication-info {
