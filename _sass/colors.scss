@@ -1,20 +1,18 @@
-@use "sass:color";
-
 // Define base and accent colors
 $light-base-color: #3498db;
-$light-base-color-lighten-25: color.scale($light-base-color, $lightness: 25%);
-$light-base-color-darken-15: color.scale($light-base-color,  $lightness: -15%);
-$light-base-color-darken-25: color.scale($light-base-color,  $lightness: -25%);
-$light-base-color-hover: color.scale($light-base-color,  $lightness: -10%);
+$light-base-color-lighten-25: lighten($light-base-color, 25%);
+$light-base-color-darken-15: darken($light-base-color, 15%);
+$light-base-color-darken-25: darken($light-base-color, 25%);
+$light-base-color-hover: darken($light-base-color, 10%);
 
 // Define background colors
 $light-background: #fff;
-$light-background-darken-2: color.scale($light-background,  $lightness: -2%);
+$light-background-darken-2: darken($light-background, 2%);
 $light-background-hover: #eee;
 $light-background-transparent: rgba(255, 255, 255, .0);
 $light-background-alt: #f2f2f5;
-$light-background-alt-darken-5: color.scale($light-background-alt,  $lightness: -5%);
-$light-background-alt-darken-10: color.scale($light-background-alt,  $lightness: -10%);
+$light-background-alt-darken-5: darken($light-background-alt, 5%);
+$light-background-alt-darken-10: darken($light-background-alt, 10%);
 $light-background-inverse: #000;
 
 // Define border colors
@@ -24,25 +22,25 @@ $light-border: #dcd9d9;
 $light-heading: #374054;
 $light-heading-light: #7e8890;
 $light-text: #74808a;
-$light-text-lighten-5: color.scale($light-text, $lightness: 5%);
+$light-text-lighten-5: lighten($light-text, 5%);
 
 
 
 // Define base and accent colors
 $dark-base-color: #096398;
-$dark-base-color-lighten-25: color.scale($dark-base-color, $lightness: -25%);
-$dark-base-color-darken-15: color.scale($dark-base-color, $lightness: 15%);
-$dark-base-color-darken-25: color.scale($dark-base-color, $lightness: 25%);
-$dark-base-color-hover: color.scale($dark-base-color, $lightness: 10%);
+$dark-base-color-lighten-25: darken($dark-base-color, 25%);
+$dark-base-color-darken-15: lighten($dark-base-color, 15%);
+$dark-base-color-darken-25: lighten($dark-base-color, 25%);
+$dark-base-color-hover: lighten($dark-base-color, 10%);
 
 // Define background colors
 $dark-background: #212121;
-$dark-background-darken-2: color.scale($dark-background, $lightness: 2%);
+$dark-background-darken-2: lighten($dark-background, 2%);
 $dark-background-hover: #2f2f2f;
 $dark-background-transparent: rgba(1, 1, 1, .0);
 $dark-background-alt: #131313;
-$dark-background-alt-darken-5: color.scale($dark-background-alt, $lightness: 5%);
-$dark-background-alt-darken-10: color.scale($dark-background-alt, $lightness: 10%);
+$dark-background-alt-darken-5: lighten($dark-background-alt, 5%);
+$dark-background-alt-darken-10: lighten($dark-background-alt, 10%);
 $dark-background-inverse: #d7d7d7;
 
 // Define border colors
@@ -52,7 +50,7 @@ $dark-border: #7f8686;
 $dark-heading: #c7c5c1;
 $dark-heading-light: #807d7b;
 $dark-text: #74808a;
-$dark-text-lighten-5: color.scale($dark-text, $lightness: 5%);
+$dark-text-lighten-5: lighten($dark-text, 5%);
 
 
 
