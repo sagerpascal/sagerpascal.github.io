@@ -12,3 +12,6 @@ baseurl: ''
 title: 'Pascal Sager'
 description: 'My thoughts, my ideas, my projects - or at least a few of them'
 permalink: pretty
+
+sass:
+    sass_dir: _sass
