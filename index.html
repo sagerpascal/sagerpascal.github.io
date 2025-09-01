@@ -24,6 +24,9 @@ id: index
 
 {% include about-me.html %}
 
+{% include publication-details.html modalId="sds3Modal" modalLabel="sds3ModalLabel" title="Hounsfield Unit Ranges as Inductive Bias for Intra-Clinical Learning of Data-Efficient CT Segmentation Models"
+url="https://ieeexplore.ieee.org/document/11081481" imagePath="/assets/images/sds3.png" abstract="Automated tissue segmentation in medical imaging plays a critical role in clinical AI-assisted decision-making, and particularly in the assessment of body composition from CT scans. However, acquiring data and annotations of sufficient quality to train deep-learning models is expensive and time-consuming. In this work, we propose a novel approach to improve data efficiency and model accuracy by leveraging domain knowledge about biologically relevant tissue-specific Hounsfield unit (HU) ranges as an inductive bias for learning. Specifically, we extend the input representation of deep learning-based segmentation models with binary masks indicating potential tissue types, where each binary mask is created from thresholds derived from medical literature. Our method not only enhances segmentation performance by up to 5% for intramuscular adipose tissue but surpasses the performance of the baseline model with 50% of the training data. Our easy-to-apply method thus improves data efficiency and facilitates the development and use of segmentation models in resource-constrained clinical settings."%}
+
 {% include publication-details.html modalId="clefModal" modalLabel="clefModalLabel" title="Deep Retrieval at CheckThat! 2025: Identifying Scientific Papers from Implicit Social Media Mentions via Hybrid Retrieval and Re-Ranking"
 url="https://doi.org/10.48550/arXiv.2505.23250" imagePath="/assets/images/clef.png"
 abstract="We present the methodology and results of the Deep Retrieval team for subtask 4b of the CLEF CheckThat! 2025 competition, which focuses on retrieving relevant scientific literature for given social media posts. To address this task, we propose a hybrid retrieval pipeline that combines lexical precision, semantic generalization, and deep contextual re-ranking, enabling robust retrieval that bridges the informal-to-formal language gap. Specifically, we combine BM25-based keyword matching with a FAISS vector store using a fine-tuned INF-Retriever-v1 model for dense semantic retrieval. BM25 returns the top 30 candidates, and semantic search yields 100 candidates, which are then merged and re-ranked via a large language model (LLM)-based cross-encoder.
@@ -158,7 +161,7 @@ to resolve these challenges by embracing them."%}
                         title="Deep Retrieval at CheckThat! 2025: Identifying Scientific Papers from Implicit Social Media Mentions via Hybrid Retrieval and Re-Ranking"
                         title_short="Deep Retrieval at CheckThat! 2025"
                         author_note="First Author"
-                        author="<b>P. Sager</b>, A. Kamaraj, B. Grewe, T. Stadelmann" useEtAl=false journal="preprint arXiv.2505.23250"
+                        author="<b>P. Sager</b>, A. Kamaraj, B. Grewe, T. Stadelmann" useEtAl=false journal="16th Conference and Labs of the Evaluation Forum (CLEF), Madrid, Spain"
                         year="2025" pages=""
                         doi_link="https://doi.org/10.48550/arXiv.2505.23250" doi="10.48550/arXiv.2505.23250" %}
 
@@ -187,6 +190,7 @@ to resolve these challenges by embracing them."%}
 
                         {% include publication.html modalName="#gptModal" title="So You Want Your Private LLM at
                         Home? A Survey and Benchmark of Methods for Efficient GPTs"
+                        author_note="Honorable Mention Best Paper Award"
                         title_short="So You Want Your Private LLM at
                         Home? A Survey and Benchmark of Methods for Efficient GPTs"
                         author="L. Tuggener, <b>P. Sager</b>, Y. Taoudi-Benchekroun, B. Grewe" useEtAl=true journal="11th IEEE Swiss Conference on Data
@@ -194,6 +198,15 @@ to resolve these challenges by embracing them."%}
                         year="2024" pages="pp. 205-212"
                         doi_link="https://doi.org/10.1109/SDS60720.2024.00036"
                         doi="10.1109/SDS60720.2024.00036" %}
+
+                        {% include publication.html modalName="#sds3Modal" title="Hounsfield Unit Ranges as Inductive Bias for Intra-Clinical Learning of Data-Efficient CT Segmentation Models"
+                        title_short="Hounsfield Unit Ranges as Inductive Bias for Intra-Clinical Learning of Data-Efficient CT Segmentation Models"
+                        author_note="Shared First Author | Best Paper Award"
+                        author="B. Meyer*, <b>P. Sager</b>, A. Abdulkadir B. Grewe"
+                        useEtAl=true journal="12th IEEE Swiss Conference on Data
+                        Science (SDS)" year="2025" pages="pp. 1-7"
+                        doi_link="https://ieeexplore.ieee.org/document/11081481"
+                        doi="10.1109/SDS66131.2025.00008" %}
 
                         {% include publication.html modalName="#sdsModal" title="A Survey of Un-, Weakly-, and
                         Semi-Supervised Learning Methods for Noisy, Missing and Partial Labels in Industrial Vision
@@ -205,6 +218,10 @@ to resolve these challenges by embracing them."%}
                         Science (SDS)" year="2021" pages="pp. 26-31"
                         doi_link="https://ieeexplore.ieee.org/document/9474624"
                         doi="10.1109/SDS51136.2021.00012" %}
+
+                    </div>
+
+                    <div class="carousel-item">
 
                         {% include publication.html modalName="#consensusModal" title="Consensus Task Interaction Trace
                         Recommender to Guide Developers’ Software Navigation"
