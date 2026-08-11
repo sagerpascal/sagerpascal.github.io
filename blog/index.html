@@ -1,0 +1,23 @@
+---
+permalink: /blog/
+layout: null
+sitemap: false
+---
+{%- comment -%}
+The blog index is retired but the three posts stay online, so anything linking
+to /blog gets pointed at the homepage rather than a 404. GitHub Pages serves
+static files only, so this is a meta refresh plus a canonical rather than a 301.
+{%- endcomment -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Moved, Pascal Sager</title>
+    <link rel="canonical" href="{{ '/' | absolute_url }}">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="refresh" content="0; url=/">
+</head>
+<body>
+    <p>The blog has been retired. <a href="/">Go to the homepage</a>.</p>
+</body>
+</html>

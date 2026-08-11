@@ -1,0 +1,62 @@
+# Roles, newest first. `icon` picks a glyph from _data/icons.yml.
+# House style: no em dashes, no semicolons.
+
+- when: 2026 to now
+  org: Binabik AI
+  title: Co-founder & Chief Technology Officer
+  icon: robot
+  current: true
+  url: https://binabik.ai
+  description: >-
+    Binabik builds physical AI for industrial machine tending. Mobile bimanual
+    robots that load, unload and supervise the machines a person currently
+    stands next to. I lead the technology, which means the learning
+    architecture, the data strategy and the engineering team. Based at
+    Technopark Winterthur.
+
+- when: 2025 to now
+  org: ETH AI Center, ETH Zurich
+  title: Associated PhD Student
+  icon: sparkles
+  current: true
+  description: >-
+    Affiliated with the ETH AI Center, supporting interdisciplinary research at
+    the interface of robotics and artificial intelligence.
+
+- when: 2024 to now
+  org: Institute of Neuroinformatics, UZH & ETH Zurich
+  title: Visiting Researcher
+  icon: brain
+  current: true
+  description: >-
+    Visiting PhD student in the Neural Learning and Intelligent Systems group of
+    Prof. Dr. Benjamin Grewe, working on biologically inspired mechanisms for
+    building structured internal models.
+
+- when: 2020 to now
+  org: Centre for AI, ZHAW
+  title: PhD Student, Head of AI Demonstrators, Board Member of the Sustainable Impact Program
+  icon: flask
+  current: true
+  description: >-
+    Joined as a research assistant in computer vision, then took over GPU
+    infrastructure and the AI demonstrator programme. Started my PhD on advanced
+    learning algorithms in 2023, supervised by Prof. Dr. Thilo Stadelmann. Also
+    serves on the board of ZHAW's Sustainable Impact Program.
+
+- when: 2023 to 2024
+  org: AlpineAI AG
+  title: Senior Data Scientist
+  icon: shield
+  description: >-
+    Privacy preserving AI for regulated industries. I worked on SwissGPT and on
+    enterprise assistive agents, deploying large language models under strict
+    data protection guarantees.
+
+- when: 2013 to 2020
+  org: Various employers
+  title: Hardware & Software Engineer
+  icon: chip
+  description: >-
+    Before moving into AI I worked on embedded systems, IoT and full stack
+    engineering across several companies.

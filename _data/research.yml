@@ -1,0 +1,69 @@
+# The four chapters of the PhD, in plain language.
+# House style: no em dashes, no semicolons.
+
+- title: Where today's AI actually breaks
+  summary: >-
+    Deep learning fails in the same three ways whenever it leaves the lab. It
+    breaks under distribution shift, it cannot recombine what it has learned
+    into something new, and its errors compound over long horizons. I mapped
+    this across 87 papers and 33 benchmarks on agents that operate computers,
+    and found six gaps that scale alone does not close. Two further studies back
+    the diagnosis from other directions. The compression methods that make large
+    language models affordable measurably damage the reasoning they are meant to
+    preserve, and even architectures built for compositionality fail on rule
+    combinations they have not seen.
+  refs:
+    - label: JAIR 2026, ACU survey
+      url: https://www.jair.org/index.php/jair/article/view/19490
+    - label: Efficient GPTs benchmark
+      url: https://doi.org/10.1109/SDS60720.2024.00036
+
+- title: Why they break, and what the weights reveal
+  summary: >-
+    If the failures are structural then the structure should be visible in the
+    weights. I derived a mathematical framework for the self-attention matrices
+    at the heart of every Transformer and proved that the training objective
+    dictates their shape. Bidirectional training forces symmetry. Autoregressive
+    training forces directionality and column dominance. The result holds across
+    ModernBERT, GPT, LLaMA 3 and Mistral, on text, vision and audio. The
+    conclusion is uncomfortable and useful in equal measure. These models do not
+    discover the structure of the world. They embed the statistical structure of
+    their loss function.
+  refs:
+    - label: ICML 2025
+      url: https://openreview.net/forum?id=gpizm0I3lp
+
+- title: Constraining what a model may learn
+  summary: >-
+    Given that diagnosis, can hard constraints fix specific failure modes rather
+    than papering over them? The pattern that keeps working is to build what we
+    already know into the architecture instead of hoping the optimiser
+    rediscovers it. Encoding tissue density ranges as an input constraint beat a
+    baseline trained on twice the clinical CT data. Grounding a retrieval model
+    in external structure took first place on the CLEF CheckThat! 2025
+    development leaderboard with no external training data at all. The same
+    principle carries into world models, where imposing stable dynamics on the
+    latent space bounds the error growth that otherwise makes long horizon
+    prediction useless.
+  refs:
+    - label: Hounsfield units as inductive bias
+      url: https://ieeexplore.ieee.org/document/11081481/
+    - label: CLEF CheckThat! 2025
+      url: https://ceur-ws.org/Vol-4038/paper_89.pdf
+
+- title: Changing the substrate itself
+  summary: >-
+    Constraints treat the symptom. The deeper question is whether the
+    representation has to change. The Cooperative Network Architecture replaces
+    the distributed activation patterns that deep networks rely on with
+    structured, recurrently connected assemblies of neurons called nets, built
+    from overlapping fragments learned without supervision from regularities in
+    the input. Because those fragments compose by construction, the architecture
+    completes occluded figures, tolerates noise and handles out of distribution
+    patterns without being retrained. Those properties fall out of the
+    representational principle rather than being engineered into a loss.
+  refs:
+    - label: Neural Computation 38(4), cover
+      url: https://direct.mit.edu/neco/article/38/4/538/135632/The-Cooperative-Network-Architecture-Learning
+    - label: Preprint
+      url: https://doi.org/10.48550/arXiv.2407.05650

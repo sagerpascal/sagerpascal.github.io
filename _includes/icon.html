@@ -1,0 +1,17 @@
+{%- comment -%}
+Renders an inline SVG icon from _data/icons.yml.
+
+  {% include icon.html name="github" label="GitHub" %}
+  {% include icon.html name="chevron-right" class="icon-xl" %}
+
+name   key in _data/icons.yml (required)
+label  accessible name; omit for icons that only decorate adjacent text
+class  extra classes, e.g. icon-lg / icon-xl / icon-2xl for sizing
+{%- endcomment -%}
+{%- assign i = site.data.icons[include.name] -%}
+<svg class="icon {{ include.class }}" viewBox="{{ i.box }}" xmlns="http://www.w3.org/2000/svg"
+     {%- if i.stroke %} fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+     {%- else %} fill="currentColor"
+     {%- endif %}
+     {%- if include.label %} role="img" aria-label="{{ include.label }}"{% else %} aria-hidden="true" focusable="false"{% endif -%}
+>{{ i.body }}</svg>

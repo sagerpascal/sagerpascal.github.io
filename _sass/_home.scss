@@ -1,0 +1,888 @@
+// ---------------------------------------------------------------------------
+// The landing page, section by section.
+// ---------------------------------------------------------------------------
+
+/*
+    ----------------------------
+    ---------- Hero ------------
+    ----------------------------
+*/
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: min(94svh, 940px);
+  padding-block: clamp(7rem, 14vw, 10rem) var(--section-gap);
+  overflow: clip;
+}
+
+// The canvas behind the hero draws a field of fragments that assemble into
+// small networks near the cursor — a quiet nod to the Cooperative Network
+// Architecture. Purely decorative; site.js skips it under reduced motion.
+#hero-net {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+.hero h1 {
+  margin-top: 1.25rem;
+  font-size: var(--step-5);
+  font-weight: 800;
+}
+
+.hero-sub {
+  margin-top: 1.5rem;
+  font-size: var(--step-1);
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--ink-soft);
+  max-width: 30ch;
+
+  a {
+    color: var(--ink);
+    font-weight: 500;
+    box-shadow: inset 0 -1px 0 var(--accent);
+    transition: color 0.25s var(--ease), background 0.25s var(--ease);
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 2.25rem;
+}
+
+.hero-portrait {
+  position: relative;
+  justify-self: end;
+  width: min(100%, 360px);
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--sunken);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 58% 30%;
+    filter: grayscale(1) contrast(1.04);
+    transition: filter 0.7s var(--ease), scale 0.9s var(--ease);
+  }
+
+  &:hover img {
+    filter: grayscale(0) contrast(1);
+    scale: 1.04;
+  }
+}
+
+.hero-scroll {
+  position: absolute;
+  left: var(--gutter);
+  bottom: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--ink-muted);
+
+  .icon {
+    animation: nudge 2.4s var(--ease) infinite;
+  }
+
+  &:hover {
+    color: var(--ink);
+  }
+}
+
+@keyframes nudge {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 5px; }
+}
+
+@media (max-width: 880px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-portrait {
+    order: -1;
+    justify-self: start;
+    width: min(56%, 210px);
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+}
+
+/*
+    ----------------------------
+    ------- Stat strip ---------
+    ----------------------------
+*/
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr));
+  border-top: 1px solid var(--hairline);
+}
+
+.stat {
+  padding: clamp(1.25rem, 3vw, 2rem) clamp(1rem, 2vw, 1.75rem);
+  border-left: 1px solid var(--hairline);
+
+  &:first-child {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+
+.stat dt {
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.stat dd {
+  margin: 0.5rem 0 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--step-3);
+  line-height: 1;
+  letter-spacing: var(--tracking-display);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat .unit {
+  color: var(--accent-deep);
+}
+
+/*
+    ----------------------------
+    --------- Research ---------
+    ----------------------------
+*/
+
+.thread {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: clamp(1rem, 4vw, 3rem);
+  align-items: start;
+  padding-block: clamp(1.75rem, 4vw, 2.75rem);
+  border-top: 1px solid var(--hairline);
+  transition: background 0.4s var(--ease);
+
+  &:last-child {
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  // A hairline that draws itself across the row on hover.
+  &::after {
+    content: '';
+    grid-column: 1 / -1;
+    height: 1px;
+    margin-top: -1px;
+  }
+
+  &:hover {
+    background: color-mix(in srgb, var(--surface) 60%, transparent);
+  }
+}
+
+.thread-num {
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  letter-spacing: 0.05em;
+  color: var(--accent-deep);
+  padding-top: 0.55rem;
+}
+
+.thread h3 {
+  font-size: var(--step-2);
+}
+
+.thread-body p {
+  color: var(--ink-soft);
+}
+
+.thread-refs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1.15rem;
+}
+
+.thread-refs a:hover .tag {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (max-width: 800px) {
+  .thread {
+    grid-template-columns: 3rem minmax(0, 1fr);
+  }
+
+  .thread-body {
+    grid-column: 2;
+  }
+}
+
+/*
+    ----------------------------
+    -------- Publications ------
+    ----------------------------
+*/
+
+.pub {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: clamp(0.75rem, 3vw, 2.5rem);
+  align-items: baseline;
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--hairline);
+  transition: background 0.35s var(--ease);
+
+  &:last-of-type {
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  &:hover {
+    background: color-mix(in srgb, var(--surface) 60%, transparent);
+  }
+}
+
+.pub-year {
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  color: var(--ink-muted);
+}
+
+.pub-title {
+  font-size: var(--step-1);
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+
+  a:hover {
+    color: var(--accent);
+  }
+}
+
+.pub-authors {
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+
+  b {
+    font-weight: 500;
+    color: var(--ink);
+  }
+}
+
+.pub-venue {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 1.25rem;
+  margin-top: 0.85rem;
+}
+
+// Text, not buttons. Underlined on hover so they behave like the links they are.
+.pub-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: inset 0 -1px 0 transparent;
+  transition: color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+
+  &:hover {
+    color: var(--ink);
+    box-shadow: inset 0 -1px 0 currentColor;
+  }
+}
+
+.pub-link.is-primary {
+  color: var(--accent-deep);
+
+  &:hover {
+    color: var(--accent-deep);
+    box-shadow: inset 0 -1px 0 var(--accent);
+  }
+}
+
+.pub-link.is-copied {
+  color: var(--accent-deep);
+}
+
+@media (max-width: 720px) {
+  .pub {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+}
+
+/*
+    ----------------------------
+    -------- Experience --------
+    ----------------------------
+*/
+
+// Was a vertical spine with circular icon markers, which read as decoration
+// nobody could interpret. Now it is the same scannable three-column row the
+// publications use: when, who, what.
+.role-row {
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: clamp(1rem, 3vw, 3rem);
+  align-items: start;
+  padding-block: clamp(1.5rem, 3vw, 2.25rem);
+  border-top: 1px solid var(--hairline);
+  transition: background 0.35s var(--ease);
+
+  &:last-child {
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  &:hover {
+    background: color-mix(in srgb, var(--surface) 60%, transparent);
+  }
+}
+
+.role-when {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  letter-spacing: 0.03em;
+  color: var(--ink-muted);
+  padding-top: 0.35rem;
+}
+
+// A live role gets a small accent pill instead of a coloured ring on a line.
+.role-now {
+  padding: 0.15em 0.55em;
+  border: 1px solid var(--accent);
+  border-radius: 100px;
+  color: var(--accent-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.role-org {
+  font-size: var(--step-1);
+
+  a:hover {
+    color: var(--accent-deep);
+  }
+}
+
+.role-title {
+  margin-top: 0.3rem;
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+}
+
+.role-desc {
+  color: var(--ink-soft);
+  font-size: var(--step--1);
+}
+
+@media (max-width: 860px) {
+  .role-row {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+}
+
+/*
+    ----------------------------
+    --------- Projects ---------
+    ----------------------------
+*/
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(330px, 100%), 1fr));
+  gap: clamp(1rem, 2.2vw, 1.5rem);
+}
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface);
+  transition: translate 0.45s var(--ease), box-shadow 0.45s var(--ease);
+
+  &:hover {
+    translate: 0 -5px;
+    box-shadow: 0 18px 40px -22px rgb(47 38 37 / 35%);
+  }
+}
+
+.project-thumb {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--sunken);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.9);
+    transition: filter 0.6s var(--ease), scale 0.7s var(--ease);
+  }
+}
+
+.project-card:hover .project-thumb img {
+  filter: grayscale(0);
+  scale: 1.06;
+}
+
+// Typographic stand-in for projects whose only artwork would be a screenshot
+// of a paper.
+.project-thumb.is-type {
+  display: grid;
+  align-items: end;
+  padding: 1.4rem;
+  background-color: var(--sunken);
+  background-image:
+    linear-gradient(to right, var(--hairline) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--hairline) 1px, transparent 1px);
+  background-size: 32px 32px;
+
+  span {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--step-2);
+    line-height: 1.05;
+    letter-spacing: var(--tracking-display);
+    color: var(--ink-soft);
+    text-wrap: balance;
+    transition: color 0.4s var(--ease);
+  }
+}
+
+.project-card:hover .project-thumb.is-type span {
+  color: var(--ink);
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.55rem;
+  padding: 1.4rem;
+}
+
+.project-body h3 {
+  font-size: var(--step-1);
+}
+
+// Stretched link: the whole card is clickable, one link in the a11y tree.
+.project-body h3 a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.project-body p {
+  font-size: var(--step--1);
+  color: var(--ink-muted);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+/*
+    ----------------------------
+    ----- Speaking & press -----
+    ----------------------------
+*/
+
+.speaking {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+// Full-bleed scrolling ticker of outlets. Duplicated in the markup so the
+// translation can loop seamlessly at -50%.
+.marquee {
+  --speed: 42s;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-track {
+  display: flex;
+  flex: none;
+  gap: 0;
+  min-width: 100%;
+  animation: marquee var(--speed) linear infinite;
+}
+
+@keyframes marquee {
+  to { translate: -50% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    overflow-x: auto;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding-inline: 1.6rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2.4vw, 1.9rem);
+  letter-spacing: var(--tracking-display);
+  color: var(--ink-muted);
+  white-space: nowrap;
+  transition: color 0.3s var(--ease);
+
+  &::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.55;
+  }
+
+  &:hover {
+    color: var(--ink);
+  }
+}
+
+/*
+    ----------------------------
+    --------- Contact ----------
+    ----------------------------
+*/
+
+// Inverted block to close the page, with the address itself as the headline.
+// Was a solid black block, which slammed against the white page above it and
+// the colour band below. A tinted surface with the same glows keeps it distinct
+// without the hard edge.
+.contact {
+  position: relative;
+  padding-block: clamp(5rem, 11vw, 9rem);
+  overflow: clip;
+  background: var(--surface);
+  border-top: 1px solid var(--hairline);
+}
+
+.contact-mail {
+  display: block;
+  margin-top: 1.25rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.75rem, 5vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+  transition: color 0.3s var(--ease);
+
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: clamp(2rem, 5vw, 4rem);
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  padding-top: clamp(2rem, 4vw, 3rem);
+  border-top: 1px solid var(--hairline);
+}
+
+.contact-blurb {
+  font-size: var(--step-1);
+  line-height: 1.45;
+  letter-spacing: -0.018em;
+  color: var(--ink-soft);
+  max-width: 40ch;
+}
+
+.contact-meta {
+  display: grid;
+  gap: 1.25rem;
+  align-content: start;
+}
+
+.contact-meta dt {
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.contact-meta dd {
+  margin: 0.3rem 0 0;
+  font-size: var(--step--1);
+  color: var(--ink);
+}
+
+.contact-meta .contact-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+
+  a {
+    color: var(--ink);
+    box-shadow: inset 0 -1px 0 color-mix(in srgb, var(--accent) 50%, transparent);
+    transition: color 0.25s var(--ease);
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+#clock-contact {
+  font-variant-numeric: tabular-nums;
+}
+
+/*
+    ----------------------------
+    ------ Project meta --------
+    ----------------------------
+*/
+
+// Role and dates above a project title.
+.project-role {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.role-badge {
+  color: var(--ink-soft);
+}
+
+// Lead roles carry the accent, contributor roles stay quiet. That distinction
+// is the point of the section.
+.role-badge.is-lead {
+  color: var(--accent-deep);
+  font-weight: 500;
+}
+
+.project-role .sep {
+  color: var(--hairline-strong);
+}
+
+/*
+    ----------------------------
+    --------- Teaching ---------
+    ----------------------------
+*/
+
+.theses-head {
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  margin-bottom: 1.25rem;
+  font-size: var(--step-1);
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+// Cards rather than bare cells in a bordered grid, which left the four courses
+// looking like an unfinished table.
+.course {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.35rem;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: border-color 0.3s var(--ease), translate 0.3s var(--ease);
+
+  &:hover {
+    border-color: var(--hairline-strong);
+    translate: 0 -3px;
+  }
+}
+
+// Role above the course name, so it is immediately clear these are taught and
+// not attended.
+.course-role {
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.course-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--step-1);
+  letter-spacing: var(--tracking-display);
+}
+
+// Pushed to the bottom of the card so the meta lines still align when a course
+// name wraps to two lines.
+.course-meta {
+  margin-top: auto;
+  padding-top: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.thesis {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr) auto;
+  gap: clamp(0.75rem, 2vw, 1.75rem);
+  align-items: baseline;
+  padding: 1.1rem 1rem 1.1rem 0;
+  border-top: 1px solid var(--hairline);
+  transition: background 0.3s var(--ease), padding-left 0.3s var(--ease);
+
+  &:last-child {
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  &:hover {
+    background: color-mix(in srgb, var(--surface) 75%, transparent);
+    padding-left: 0.75rem;
+  }
+}
+
+// Degree, in mono and accented. Reads as a column you can scan down rather than
+// a row of pills competing with the titles. Cased deliberately: BSc, MSc, MAS.
+.thesis-level {
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  letter-spacing: 0.04em;
+  color: var(--accent-deep);
+}
+
+.thesis-title {
+  font-size: var(--step-0);
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+// The students did the work, so they get their own line.
+.thesis-students {
+  margin-top: 0.25rem;
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+}
+
+.thesis-where {
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+
+@media (max-width: 680px) {
+  .thesis {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .thesis-where {
+    order: -1;
+  }
+}
+
+.pubs-note {
+  margin-bottom: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+}

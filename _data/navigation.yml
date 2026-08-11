@@ -1,0 +1,14 @@
+- name: Research
+  url: "/#research"
+
+- name: Work
+  url: "/#work"
+
+- name: Publications
+  url: "/#publications"
+
+- name: Teaching
+  url: "/#teaching"
+
+- name: About
+  url: "/#about"

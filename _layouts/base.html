@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    {% include base-head.html %}
+</head>
+
+<body>
+
+<div class="backdrop" aria-hidden="true"></div>
+
+{% include navbar.html %}
+
+<main id="main">
+    {{ content }}
+</main>
+
+{% include footer.html %}
+
+<script src="/assets/js/site.js" defer></script>
+</body>
+
+</html>

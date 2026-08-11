@@ -1,0 +1,11 @@
+- name: GitHub
+  icon: github
+  url: https://github.com/sagerpascal
+
+- name: LinkedIn
+  icon: linkedin
+  url: https://linkedin.com/in/sagerpascal
+
+- name: Google Scholar
+  icon: google-scholar
+  url: https://scholar.google.com/citations?user=yVLJtv0AAAAJ

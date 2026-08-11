@@ -1,0 +1,25 @@
+---
+permalink: /sitemap.xml
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- comment -%}
+site.pages also carries the stylesheet, its source map, robots.txt and the .bib.
+Every real page has a trailing slash (permalink: pretty), so that is the filter;
+`sitemap: false` in front matter opts a page out on top of it.
+{%- endcomment -%}
+{%- assign items = site.pages | concat: site.projects | concat: site.posts -%}
+{%- for item in items -%}
+{%- assign tail = item.url | slice: -1 -%}
+{%- if tail == '/' and item.sitemap != false %}
+  <url>
+    <loc>{{ item.url | absolute_url }}</loc>
+    {%- if item.date %}
+    <lastmod>{{ item.date | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+  </url>
+{%- endif -%}
+{%- endfor %}
+</urlset>

@@ -1,0 +1,42 @@
+---
+layout: base
+---
+<article class="article shell">
+    <header class="article-head">
+        <p class="label">{{ page.role }} &middot; {{ page.years }}</p>
+        <h1>{{ page.title }}</h1>
+        <div class="article-meta">
+            {% for tag in page.tags %}<span>{{ tag }}</span>{% endfor %}
+        </div>
+    </header>
+
+    {% if page.image %}
+    <div class="article-hero">
+        <img src="{{ page.image }}" alt="{{ page.title }}">
+    </div>
+    {% endif %}
+
+    <div class="article-body">
+        {{ content }}
+    </div>
+
+    {%- comment -%}
+    Key data, straight from the ZHAW project record.
+    {%- endcomment %}
+    <dl class="keydata">
+        <div><dt>Role</dt><dd>{{ page.role }}</dd></div>
+        <div><dt>Duration</dt><dd>{{ page.years }}</dd></div>
+        {% if page.funder %}<div><dt>Funding</dt><dd>{{ page.funder }}</dd></div>{% endif %}
+        {% if page.budget %}<div><dt>Budget</dt><dd>{{ page.budget }}</dd></div>{% endif %}
+        {% if page.partner %}<div><dt>Partners</dt><dd>{{ page.partner }}</dd></div>{% endif %}
+    </dl>
+
+    <nav class="article-nav">
+        <a class="btn btn-ghost" href="/#work">All projects</a>
+        {% for link in page.links %}
+        <a class="btn btn-primary" href="{{ link.url }}" target="_blank" rel="noopener">
+            {{ link.label }} {% include icon.html name="arrow-up-right" %}
+        </a>
+        {% endfor %}
+    </nav>
+</article>

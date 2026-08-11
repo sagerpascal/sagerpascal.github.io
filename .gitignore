@@ -1,5 +1,5 @@
 ######################
-# Project Specific
+# Jekyll
 ######################
 _site/
 .sass-cache/
@@ -7,13 +7,13 @@ _site/
 .jekyll-metadata
 
 ######################
-# Intellij
+# Editors / OS
 ######################
 .idea/
+.claude/
+.DS_Store
 *.iml
 *.iws
 *.ipr
 *.ids
 *.orig
-classes/
-out/

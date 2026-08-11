@@ -1,0 +1,24 @@
+# Speaking is deliberately not exhaustive. A handful of named venues in prose
+# reads better than a short list pretending to be a long one.
+speaking_venues:
+  - Machine Cluster Winterthur
+  - IT Department, Canton of Zurich
+  - START Hack, St. Gallen
+  - Scientifica
+  - Digital Night Winterthur
+  - Roche
+
+# Rendered as a scrolling ticker; `url` optional.
+media:
+  - outlet: Tages-Anzeiger
+    url: https://www.tagesanzeiger.ch/winterthur-start-up-entwickelt-ai-roboter-fuer-supermaerkte-613028827754
+  - outlet: ZHAW
+    url: https://www.zhaw.ch/de/engineering/studium/masterstudium/karriere/neugier-als-treiber-der-ki-die-welt-zu-erklaeren
+  - outlet: House of Winterthur
+    url: https://en.winterthur.com/aktuelles/detail/erfolgreiche-ansiedlung-ki-robotik-startup-binabik-ai-waehlt-winterthur-als-neuen-standort.html
+  - outlet: Der Landbote
+  - outlet: TeleBielingue
+    url: https://web.telebielingue.ch/de/sendungen/info/2026-02-19
+  - outlet: TeleTop
+  - outlet: OBA Journal
+  - outlet: Founded Journal

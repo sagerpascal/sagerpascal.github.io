@@ -1,33 +1,18 @@
-<footer  class="reveal2">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-5 copyright">
-                <p>
-                    Copyright &copy; 2025 Pascal Sager
-                </p>
+<footer class="footer">
+    <div class="shell">
+        <div class="footer-grid">
+            <div class="footer-note">
+                <div>{{ site.author.name }}</div>
+                <div>&copy; {{ 'now' | date: '%Y' }} &middot; Zurich &amp; Winterthur</div>
+                <div><a href="{{ site.repo }}">Source on GitHub</a></div>
             </div>
-            <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <div>
-                        <i class="fa fa-circle-chevron-up fa-2xl" aria-hidden="true"></i>
-                        </div>
-                    </span>
-            </div>
-            <div class="col-sm-5 social">
-                <ul>
-                    <li>
-                        <a href="https://github.com/sagerpascal" target="_blank"><i class="fa-brands fa-github fa-xl"
-                                                                                    aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://linkedin.com/in/sagerpascal" target="_blank"><i
-                                class="fa-brands fa-linkedin fa-xl" aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://scholar.google.com/citations?user=yVLJtv0AAAAJ" target="_blank"><i
-                                class="fa-brands fa-google-scholar fa-xl" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
+
+            <div class="social">
+                {% for link in site.data.social %}
+                <a href="{{ link.url }}" target="_blank" rel="noopener" title="{{ link.name }}">
+                    {% include icon.html name=link.icon label=link.name %}
+                </a>
+                {% endfor %}
             </div>
         </div>
     </div>

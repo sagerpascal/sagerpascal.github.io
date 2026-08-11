@@ -1,0 +1,62 @@
+# Courses taught and theses supervised.
+# No years on the theses. Left off rather than guessed.
+
+courses:
+  - name: Artificial Intelligence
+    where: ZHAW
+    level: BSc and MSE
+    role: Lecturer
+  - name: Data Mining and Machine Learning
+    where: ZHAW
+    level: BSc and MSE
+    role: Lecturer
+  - name: Intelligent Systems
+    where: ZHAW
+    level: BSc and MSE
+    role: Lecturer
+  - name: Neuroinformatics
+    where: ETH and UZH
+    level: MSc
+    role: Teaching assistant
+
+# Ordered by level, master's first.
+theses:
+  - title: "Accelerating Discrete Text Diffusion via Symmetric Initialization and Curriculum Learning"
+    students: Jeremias Baur
+    level: MSc
+    where: ETH Zurich
+
+  - title: "COGITAO: A Procedural and Object-Centric Framework to Evaluate Compositional and Systematic Generalization"
+    students: Klim Trojan
+    level: MSc
+    where: ETH Zurich
+
+  - title: "Confidence-Rated Predictions with Deep Learning for Music Object Detection"
+    students: Urs Gut
+    level: MAS
+    where: ZHAW
+
+  - title: "World Models for Long-Horizon Planning: Discrete Subgoal Generation for Maze Navigation"
+    students: Simon Brand, Laura Leiser
+    level: BSc
+    where: ZHAW
+
+  - title: "Shaping Latent Space by Architecture for Improved World Model Planning"
+    students: Daniel Bucher, Björn Wagner
+    level: BSc
+    where: ZHAW
+
+  - title: "Natural Language-Instructed Autonomous Agent for Computer Control"
+    students: Rebekka von Wartburg-Kottler, Gabriel Nobel
+    level: BSc
+    where: ZHAW
+
+  - title: "RoboDog III: Building a Vision and/or Sound-Based AI Demonstrator on a Robotic Platform"
+    students: Juri Pfammatter, Daniel Schweizer
+    level: BSc
+    where: ZHAW
+
+  - title: "RoboDog II: Building a Vision and/or Sound-Based AI Demonstrator on a Robotic Platform"
+    students: Tenzin Samdrup Langdun, Martin Oswald
+    level: BSc
+    where: ZHAW

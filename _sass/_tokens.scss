@@ -1,0 +1,120 @@
+// ---------------------------------------------------------------------------
+// Design tokens — Swiss deep-tech, light first.
+//
+// Reference points: flexion.ai (warm bone canvas #F3F2EF, warm near-black ink,
+// Fragment Mono for technical labels), 1x.tech (tight grotesk, uppercase
+// footer and nav), figure.ai (near-monochrome with black inverted sections).
+//
+// The palette is deliberately almost monochrome. One accent, used at small
+// sizes only — pips, rules, hover states, never a large field. That restraint
+// is what makes those references read as expensive rather than loud.
+// ---------------------------------------------------------------------------
+
+:root {
+  color-scheme: light;
+
+  --canvas: #fff;         // white page
+  --surface: #f7f6f4;     // cards and wells lifted off it
+  --sunken: #edebe7;
+  --inverted: #0c0c0c;    // full-bleed dark sections
+
+  --ink: #1a1613;         // warm near-black — pure #000 reads cheap
+  --ink-soft: #514a44;
+  --ink-muted: #857d76;
+
+  --accent: #ff4d00;      // signal orange
+  --accent-deep: #d33f00; // for small text, where the bright orange dips below AA
+  --on-accent: #fff;
+
+  // Background field: three hues that fade to nothing.
+  --dot-a: 255 77 0;      // orange
+  --dot-b: 255 176 32;    // amber
+  --dot-c: 255 92 122;    // rose
+  --dot-d: 0 186 148;     // teal
+  --dot-e: 150 116 255;   // violet
+
+  --hairline: rgb(26 22 19 / 12%);
+  --hairline-strong: rgb(26 22 19 / 28%);
+
+  // Fluid scale. Display sizes run large and tight; body stays calm.
+  --step--2: clamp(0.7rem, 0.68rem + 0.1vw, 0.76rem);
+  --step--1: clamp(0.82rem, 0.79rem + 0.14vw, 0.9rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.08rem);
+  --step-1: clamp(1.15rem, 1.07rem + 0.4vw, 1.4rem);
+  --step-2: clamp(1.4rem, 1.2rem + 1vw, 2rem);
+  --step-3: clamp(1.8rem, 1.4rem + 2vw, 2.9rem);
+  --step-4: clamp(2.3rem, 1.6rem + 3.4vw, 4.2rem);
+  --step-5: clamp(2.8rem, 1.4rem + 6.4vw, 7rem);
+
+  --font-display: 'Syne', 'Switzer', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Switzer', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Fragment Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  // Display type is set tight; body is not.
+  --tracking-display: -0.022em;
+  --tracking-label: 0.09em;
+
+  --measure: 64ch;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --shell: 1240px;
+  --section-gap: clamp(4.5rem, 10vw, 9rem);
+
+  --radius: 10px;
+  --radius-lg: 18px;
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --canvas: #0c0c0c;
+  --surface: #161514;
+  --sunken: #080807;
+  --inverted: #fff;
+
+  --ink: #f0ede8;
+  --ink-soft: #a8a29a;
+  --ink-muted: #7a736c;
+
+  --accent: #ff6a2b;      // the orange lifted so it still reads on near-black
+  --accent-deep: #ff6a2b;
+  --on-accent: #0c0c0c;
+
+  --hairline: rgb(240 237 232 / 15%);
+  --hairline-strong: rgb(240 237 232 / 32%);
+}
+
+// Any block that flips to the opposite ground mid-page. Re-declares the same
+// variable names so every component inside just works.
+.invert {
+  color-scheme: dark;
+  --canvas: #0c0c0c;
+  --surface: #161514;
+  --sunken: #080807;
+  --ink: #f0ede8;
+  --ink-soft: #a8a29a;
+  --ink-muted: #7a736c;
+  --accent: #ff6a2b;
+  --accent-deep: #ff6a2b;
+  --on-accent: #0c0c0c;
+  --hairline: rgb(243 242 239 / 15%);
+  --hairline-strong: rgb(243 242 239 / 32%);
+
+  background: var(--canvas);
+  color: var(--ink);
+}
+
+[data-theme="dark"] .invert {
+  --canvas: #fff;
+  --surface: #f7f6f4;
+  --sunken: #edebe7;
+  --ink: #1a1613;
+  --ink-soft: #514a44;
+  --ink-muted: #857d76;
+  --accent: #ff4d00;
+  --accent-deep: #d33f00;
+  --on-accent: #fff;
+  --hairline: rgb(26 22 19 / 12%);
+  --hairline-strong: rgb(26 22 19 / 28%);
+}

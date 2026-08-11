@@ -1,16 +1,38 @@
+# Site settings
+title: 'Pascal Sager'
+description: 'Co-founder and CTO at Binabik AI, PhD candidate in artificial intelligence at ZHAW and the ETH AI Center.'
+url: 'https://sagerpascal.github.io'
+permalink: pretty
+lang: en
+
+author:
+  name: Pascal Sager
+  email: pascal@binabik.ai
+
+repo: https://github.com/sagerpascal/sagerpascal.github.io
+
 markdown: kramdown
 
-# File exclusions
-exclude:
-- README.md
-- Gemfile
-- Gemfile.lock
-
-# Site settings
-url: 'https://sagerpascal.github.io'
-title: 'Pascal Sager'
-description: 'My thoughts, my ideas, my projects - or at least a few of them'
-permalink: pretty
-
 sass:
-    sass_dir: _sass
+  sass_dir: _sass
+  style: compressed
+
+# Keep the build output lean.
+exclude:
+  - .claude/
+  - .idea/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - TODO.md
+  # Draft archive: not published, kept for reference.
+  - _old_posts/
+
+collections:
+  projects:
+    output: true
+    permalink: /work/:name/
+
+defaults:
+  - scope: { path: "", type: projects }
+    values: { layout: project }
