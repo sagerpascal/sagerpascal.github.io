@@ -7,22 +7,40 @@
   inset: 0 0 auto;
   z-index: 100;
   padding-block: 1.1rem;
-  border-bottom: 1px solid transparent;
-  transition: background 0.4s var(--ease), border-color 0.4s var(--ease),
-              padding 0.4s var(--ease);
+  transition: padding 0.4s var(--ease);
 }
 
-// Frosted glass once the page scrolls under it.
-.nav.is-stuck {
-  padding-block: 0.7rem;
+// The frosted glass lives on a pseudo-element, not on .nav itself.
+//
+// An element with a backdrop-filter becomes the containing block for every
+// position: fixed descendant it has. With the filter on .nav, the off-canvas
+// menu stopped being sized against the viewport the moment the page was
+// scrolled and the glass switched on, collapsing to the height of the bar. A
+// pseudo-element is a child rather than an ancestor of the menu, so it can
+// carry the effect without capturing it.
+.nav::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
   background: color-mix(in srgb, var(--canvas) 68%, transparent);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom-color: var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+  transition: opacity 0.4s var(--ease);
+}
+
+.nav.is-stuck {
+  padding-block: 0.7rem;
+}
+
+.nav.is-stuck::before {
+  opacity: 1;
 }
 
 @supports not (backdrop-filter: blur(1px)) {
-  .nav.is-stuck {
+  .nav::before {
     background: var(--canvas);
   }
 }
@@ -169,7 +187,8 @@
     translate: 0 0;
   }
 
-  .nav.is-open .nav-toggle {
+  .nav.is-open .nav-brand,
+  .nav.is-open .nav-actions {
     position: relative;
     z-index: 1;
   }
