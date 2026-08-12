@@ -397,6 +397,61 @@ layout: home
     </div>
 </section>
 
+<section class="section" id="personal">
+    <span class="glow glow-md glow-amber" style="top: 14%; right: -6%" aria-hidden="true"></span>
+
+    <div class="shell">
+        <div class="section-marker">
+            <span><span class="num">/007</span><span class="name">Personal</span></span>
+            <span class="fact">Off the clock</span>
+        </div>
+
+        <div class="speaking">
+            <div class="sticky-rail">
+                <p class="label reveal">Personal</p>
+                <h2 class="section-title reveal-lines">Away from the screen.</h2>
+            </div>
+
+            <div>
+                <div class="prose reveal" style="--delay: .12s">
+                    <p>
+                        I grew up in <span class="hl">Waldkirch</span>, a small village in eastern
+                        Switzerland, and today I live in <span class="hl">Flawil</span> with my wife
+                        and our three children.
+                    </p>
+                    <p>
+                        Most weeks are a balancing act between being a father, finishing a PhD and
+                        building a company. It works because of the people around me, and I know
+                        that not everyone gets that kind of support. The other thing that keeps it
+                        steady is my <span class="hl">bike</span>. On a long ride the noise settles
+                        and problems either solve themselves or stop mattering.
+                    </p>
+                    <p>
+                        Work is not something I endure. It is a real passion and I start to miss it
+                        when I am away from it for too long. Family time is exactly the same, which
+                        is why I keep <span class="hl">specific slots</span> for the people I love
+                        rather than letting one side quietly eat the other.
+                    </p>
+                    <p>
+                        Otherwise you will find me outdoors. Hiking, camping, a fire and something
+                        on the grill. I am also, by every available measure, hopeless at anything
+                        musical.
+                    </p>
+                </div>
+
+                <dl class="facts reveal" style="--delay: .18s">
+                    {% for fact in site.data.personal %}
+                    <div>
+                        <dt>{{ fact.label }}</dt>
+                        <dd>{{ fact.value }}</dd>
+                    </div>
+                    {% endfor %}
+                </dl>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="contact" id="contact">
     <div class="shell">
         <p class="label reveal">Contact</p>
