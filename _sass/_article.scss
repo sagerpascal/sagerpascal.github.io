@@ -277,3 +277,65 @@
   font-size: var(--step--1);
   color: var(--ink);
 }
+
+/*
+    ----------------------------
+    ---------- Essay -----------
+    ----------------------------
+*/
+
+.essay .article-head h1 {
+  max-width: 14em;
+}
+
+.essay-standfirst {
+  margin-top: 1.25rem;
+  max-width: 52ch;
+}
+
+// Long-form argument, so the measure is a touch wider than a project page and
+// the section breaks carry more air.
+.essay-body {
+  max-width: 68ch;
+
+  h2 {
+    margin-top: 2.75em;
+    padding-top: 0.4em;
+    border-top: 1px solid var(--hairline);
+  }
+
+  hr {
+    margin-block: 3rem 2rem;
+    border: 0;
+    border-top: 1px solid var(--hairline);
+  }
+
+  // The reference list. Numbers stay aligned and the anchors are invisible
+  // targets rather than links.
+  ol {
+    padding-left: 1.5em;
+    font-size: var(--step--1);
+    color: var(--ink-soft);
+  }
+
+  ol li {
+    margin-top: 0.6em;
+  }
+
+  ol li::marker {
+    color: var(--ink-muted);
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+  }
+
+  // Inline citation markers.
+  p a[href^="#r"] {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    box-shadow: none;
+  }
+
+  :target {
+    scroll-margin-top: 6rem;
+  }
+}

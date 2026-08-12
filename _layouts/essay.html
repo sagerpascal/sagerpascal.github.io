@@ -1,0 +1,22 @@
+---
+layout: base
+---
+<article class="article shell essay">
+    <header class="article-head">
+        <p class="label">Notes &middot; unlisted</p>
+        <h1>{{ page.title }}</h1>
+        {% if page.standfirst %}<p class="lede essay-standfirst">{{ page.standfirst }}</p>{% endif %}
+        <div class="article-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %Y' }}</time>
+            <span>Pascal Sager</span>
+        </div>
+    </header>
+
+    <div class="article-body essay-body">
+        {{ content }}
+    </div>
+
+    <nav class="article-nav">
+        <a class="btn btn-ghost" href="/">Back to the homepage</a>
+    </nav>
+</article>

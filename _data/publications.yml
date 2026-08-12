@@ -59,7 +59,7 @@
   title: "COGITAO: A Procedural Object-Centric Framework to Study Compositional Generalization"
   authors: "Y. Taoudi-Benchekroun, K. Troyan, P. J. Sager, S. Gerber, L. Tuggener, T. Stadelmann, B. F. Grewe"
   me: "P. J. Sager"
-  venue: OpenReview
+  venue: ICML Workshop
   links:
     - label: OpenReview
       url: https://openreview.net/forum?id=4XBaqkreEP
