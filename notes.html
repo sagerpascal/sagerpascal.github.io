@@ -1,0 +1,73 @@
+---
+layout: base
+title: Notes — Pascal Sager
+description: Unlisted long-form writing on machine learning, robotics and how the work gets done.
+permalink: /notes/
+sitemap: false
+noindex: true
+---
+
+<section class="article shell notes-index">
+    <header class="article-head">
+        <p class="label">Notes &middot; unlisted</p>
+        <h1>Notes</h1>
+        <p class="lede essay-standfirst">
+            Longer arguments that do not belong on the front page. Opinionated, occasionally
+            wrong, and not linked from anywhere else on the site.
+        </p>
+    </header>
+
+    {%- comment -%}
+    Search runs entirely in the browser against the index below. With a handful
+    of notes there is no reason to ship a search library or an extra request.
+    {%- endcomment %}
+    <div class="notes-controls">
+        <div class="notes-search">
+            {% include icon.html name="search" %}
+            <input type="search" id="notes-q" placeholder="Search titles, tags and full text" autocomplete="off" aria-label="Search notes">
+            <button type="button" id="notes-clear" aria-label="Clear search" hidden>{% include icon.html name="close" %}</button>
+        </div>
+
+        {%- assign all_tags = site.notes | map: 'tags' | join: ',' | split: ',' | uniq | sort -%}
+        <div class="notes-tags" role="group" aria-label="Filter by tag">
+            <button type="button" class="tag notes-tag is-on" data-tag="">All</button>
+            {% for tag in all_tags %}
+            <button type="button" class="tag notes-tag" data-tag="{{ tag }}">{{ tag }}</button>
+            {% endfor %}
+        </div>
+    </div>
+
+    <p class="notes-count" id="notes-count" aria-live="polite"></p>
+
+    <ol class="notes-list" id="notes-list">
+        {% assign sorted = site.notes | sort: 'date' | reverse %}
+        {% for note in sorted %}
+        <li class="note-row"
+            data-title="{{ note.title | downcase | escape }}"
+            data-tags="{{ note.tags | join: ',' | downcase | escape }}"
+            {%- comment -%}
+            Full body text, not a truncated excerpt. A 6000 character cap looked
+            harmless and silently made the back half of every long note
+            unsearchable.
+            {%- endcomment -%}
+            data-text="{{ note.content | strip_html | strip_newlines | downcase | escape }}">
+            <a class="note-link" href="{{ note.url }}">
+                <span class="note-date">{{ note.date | date: '%b %Y' }}</span>
+                <span class="note-main">
+                    <span class="note-title">{{ note.title }}</span>
+                    <span class="note-standfirst">{{ note.standfirst | strip_newlines }}</span>
+                    <span class="note-tags">
+                        {% for tag in note.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+                        <span class="note-time">{{ note.content | strip_html | number_of_words | divided_by: 220 | plus: 1 }} min read</span>
+                    </span>
+                </span>
+                {% include icon.html name="arrow-right" %}
+            </a>
+        </li>
+        {% endfor %}
+    </ol>
+
+    <p class="notes-empty" id="notes-empty" hidden>Nothing matches that. Try a shorter query.</p>
+</section>
+
+<script src="/assets/js/notes.js" defer></script>

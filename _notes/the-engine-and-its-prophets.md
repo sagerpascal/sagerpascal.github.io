@@ -1,11 +1,8 @@
 ---
-layout: essay
 title: The engine and its prophets
 description: An opinionated read of where machine learning actually stands, who called it right, and what is missing before robots become useful.
-permalink: /notes/the-engine-and-its-prophets/
-sitemap: false
-noindex: true
 date: 2026-08-11
+tags: [Machine learning, Robotics, Opinion]
 standfirst: >-
   Generative learning at scale is the engine. The field's most decorated voices
   have each bet against it and lost. What stands between us and useful robots is

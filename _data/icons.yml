@@ -126,3 +126,9 @@ copy:
   stroke: true
   body: >-
     <rect x="9" y="9" width="11.5" height="11.5" rx="2.5"/><path d="M15 5.8A2.5 2.5 0 0 0 12.6 4H6a2.5 2.5 0 0 0-2.5 2.5v6.6A2.5 2.5 0 0 0 5.2 15.5"/>
+
+search:
+  box: "0 0 24 24"
+  stroke: true
+  body: >-
+    <circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.4 15.4L21 21"/>

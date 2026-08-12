@@ -32,7 +32,17 @@ collections:
   projects:
     output: true
     permalink: /work/:name/
+  # Unlisted long-form writing. Reachable by URL, absent from search engines,
+  # the sitemap and every link on the public site.
+  notes:
+    output: true
+    permalink: /notes/:name/
 
 defaults:
   - scope: { path: "", type: projects }
     values: { layout: project }
+  - scope: { path: "", type: notes }
+    values:
+      layout: essay
+      sitemap: false
+      noindex: true
