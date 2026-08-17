@@ -49,8 +49,14 @@ noindex: true
             Full body text, not a truncated excerpt. A 6000 character cap looked
             harmless and silently made the back half of every long note
             unsearchable.
+
+            The newline_to_br detour is what keeps a space where the source had a
+            line break. strip_newlines on its own deletes the break rather than
+            replacing it, which glued the words either side of every wrapped line
+            together ("this isnot discipline") and made any term that happened to
+            sit at a line end unfindable.
             {%- endcomment -%}
-            data-text="{{ note.content | strip_html | strip_newlines | downcase | escape }}">
+            data-text="{{ note.content | strip_html | newline_to_br | strip_newlines | replace: '<br />', ' ' | downcase | escape }}">
             <a class="note-link" href="{{ note.url }}">
                 <span class="note-date">{{ note.date | date: '%b %Y' }}</span>
                 <span class="note-main">

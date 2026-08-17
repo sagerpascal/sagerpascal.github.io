@@ -1,117 +1,110 @@
 ---
 title: Three things
-description: On finishing a PhD, building a company and raising three children at the same time, and why the usual advice about it is wrong.
+description: On doing a doctorate, building a company and raising three children in the same years, and what that actually costs.
 date: 2026-08-12
 tags: [Work, PhD, Opinion]
 standfirst: >-
-  People ask how a doctorate, a company and three children fit into one week.
-  They do not. What follows is what I do instead of pretending otherwise.
+  Notes on doing a doctorate, building a company and raising three children in
+  the same years. Mostly about time.
 ---
 
+It is a quarter past five on a Tuesday in Flawil and I am the only one awake. This is
+not discipline. The youngest was up twice in the night and the second time I came too
+far out of sleep to get back into it, so I went down, made coffee and opened the thesis.
+I have about two hours before the house starts. They are good hours. I would not call
+them a method.
+
 I grew up in Waldkirch, a village in the canton of St. Gallen where the bus comes once
-an hour and everybody knows whose dog that is. I live in Flawil now, which is twenty
-minutes away, so I have not gone far. My wife and I have three children. I am finishing
-a doctorate and building a company at the same time.
+an hour, and I now live twenty minutes from there, which says most of what needs saying
+about my appetite for moving. My wife and I have three children. I am at the end of a
+doctorate in machine learning and I am building a company called Binabik.
 
-People hear that last part and ask how it fits. There is usually something in the
-question that suggests they have already decided it does not, and that if they looked
-closely enough they would find the part I am quietly neglecting. It is a reasonable
-suspicion and I have had it about myself.
+When that comes up, people ask how it fits together. There is often a small pause in the
+question, as though I am being given room to admit that it does not. It does not. A
+doctorate is a full-time job if it is going to be worth anything. A company is more than
+one. The children are not a job, but they need hours, and the hours come out of the same
+day as everything else. There is no arrangement of a week in which all three get what
+they need, and I gave up looking for one some time ago.
 
-Here is the honest arithmetic. A doctorate is a full-time job if you want it to be any
-good. A company is more than one. Three children are not a job at all, they are the
-reason for the other two, but they need time out of exactly the same account. Add it up
-and you get more than a person has. Nobody has three hundred per cent of themselves to
-give, and anybody selling a method that closes that gap is selling you the method.
+What made me think about time properly was not my own week. It was the people around me
+at the lab. I know researchers who work more hours than I do and get less out of them,
+and they are neither lazy nor out of their depth. One of them has slept in the office
+more than once. Two years in, the thesis had barely moved. When I asked what they had
+done that week they could tell me how long they had been there. They could not always
+tell me what had changed.
 
-So I have not solved it. What I have is a set of opinions about where time actually
-goes, most of which I formed by watching other people spend theirs badly.
+Hours are a poor measure of research and I think most people half know it and keep using
+them anyway, because they are the only thing in the room that is easy to count. Past
+some point in the day more hours stop adding. After that they subtract, because work
+done tired tends to come back later and has to be done again.
 
-The thing that made me think about any of this was not my own schedule. It was
-noticing, over several years, how many researchers I know work far harder than I do and
-get less out of it. They are in the office late. Some of them have slept there. They
-are not lazy and they are certainly not stupid, and two years on the thesis has barely
-moved. When I ask what they did last week they can tell me how many hours. They cannot
-always tell me what changed.
+The clearest thing I know about attention I learned at home rather than at the desk. If
+I sit on the sofa with the children in the evening and we put something on, we have
+spent an hour in the same room and I could not tell you afterwards what any of us said.
+If I am on the floor with them and the phone is upstairs, twenty minutes is worth more
+than the whole evening was. The length of the evening matters much less than whether I
+was actually in it.
 
-Somewhere the culture decided that time in the building is evidence of seriousness. It
-is the worst signal we have. Past some threshold that most people cross by Tuesday,
-more hours stop adding anything, and tired hours actively subtract, because tired work
-comes back to you later wearing a different hat and has to be done again.
+I assume the work is no different, and everything I have watched myself do says it is
+not. An afternoon of writing code with a chat window open in the corner of the screen is
+not an afternoon of writing code. It is a slower afternoon that still costs a whole
+afternoon.
 
-The clearest version of the alternative I know comes from home rather than from work.
-If I sit on the sofa with my children and we watch something, we have spent an hour in
-the same room and almost none of it counts. If I am on the floor with them and my phone
-is in another room, twenty minutes is worth more than the whole evening was. The
-difference is not the duration. It is whether I am actually there. There is a research
-literature on this, on what psychologists call attention residue, and it says more or
-less what you would guess: when you move from one task to another, part of you stays
-behind, and the work you do in that state is measurably worse.
+So I keep the parts of the day apart, more strictly than most people find reasonable.
+There are hours that belong to the family and I do not answer anything in them. There
+are hours for the company and hours for the thesis. My wife can confirm that I am not
+relaxed about this. The rigidity is not a preference. It is the only thing I have found
+that makes hours worth more than their number, and it stops working the moment I let the
+edges go soft.
 
-I do not think work is different. An afternoon of coding with a Slack channel open in
-the corner of the screen is not an afternoon of coding. It is a slower afternoon that
-also feels like work, which is the worst combination available, because it costs the
-time and produces the fatigue without producing the result.
+Inside a block I try to do the one thing that moves the most and nothing else. Some
+weeks that is a paper. Some weeks it is a customer who is about to decide something.
+Some days it is being at home, because what is happening there outranks either desk. My
+week almost never resembles the week I planned, which I stopped reading as a failure of
+planning.
 
-This is why I am strict about time slots in a way that sounds rigid when I describe it.
-There are hours that belong to the family and I do not answer anything during them.
-There are hours that belong to Binabik and hours that belong to the thesis. The
-boundaries are not there because I like structure. They are there because presence is
-the only lever I have found that actually multiplies, and presence collapses the moment
-the boundaries get soft.
+None of this makes the work smaller. A doctorate worth having does not happen on four
+focused hours a day. Eight is closer to it, and there are stretches where it is more.
+The company is no gentler. Working better removes waste, and the waste is worth
+removing, but underneath it there is a real quantity of work that does not shrink
+because I have got clever about my calendar. What can be reduced is the amount I pay for
+things that were never going to count.
 
-Within those blocks the rule is simpler. I try to do the one thing that moves everything
-furthest right now, and only that. Some weeks that is a paper. Some weeks it is a
-customer who is about to decide something. Some days it is being at home because
-something there matters more than either desk. My week almost never looks like the week
-I planned, and I stopped treating that as a planning failure some time ago.
+People suggest, reasonably, that I drop one of the three and go faster at the other two.
+I do not want to, and the reason comes out of my own field. Train a model on one narrow
+slice of the world and it will fit that slice beautifully and fall over the moment
+anything shifts. People are not so different. Spend all your time in one subfield and
+you become fluent in its internal arguments and slowly lose the ability to tell whether
+they matter to anyone outside the room. The company keeps me impatient with research
+that cannot survive contact with a customer. The research keeps the company from
+building things that are merely clever. The children have no interest in either and take
+the whole apparatus apart every evening at half past five.
 
-None of which makes the work smaller, and this is where advice of this kind usually
-starts lying to you. A good PhD does not happen on much less than eight focused hours a
-day. A company does not either. Optimising how you work removes waste. It does not
-remove the work. You cannot reduce the requirement. You can only stop paying for things
-that were never going to count.
+I should also say that I like the work, which is a larger part of why this holds together
+than anything I have described so far. When I am away from it for a week I get restless
+and I am not especially pleasant to be around. My wife notices before I do.
 
-The obvious objection is that I should drop one of the three and go faster at the rest.
-I do not believe it, and the reason is professional deformation. A model trained on one
-narrow slice of the world fits that slice beautifully and falls over the moment
-anything moves. People do this too. Spend all your time inside one subfield and you get
-very good at its internal logic and lose the ability to tell whether any of it matters
-to anyone. Running a company makes me impatient with research questions that cannot
-survive contact with a customer. Research stops the company building things that are
-merely clever. The children do not care about either and reset the whole system every
-evening whether I am ready or not.
+The thing I would have wanted to hear, and did not, is about waiting. People told me it
+would get easier after the bachelor's. Then after the master's. Then once the thesis was
+submitted, or once the company had customers, or once this particular quarter was
+behind me. They were being kind and they were wrong every time. Doing something well
+costs time and attention, and the bill does not get smaller later. What changes is what
+you are buying, not what it costs. So I would not build a life on the idea that this is
+a sprint with a line at the end of it. You can work like that for a few years. You
+cannot do it for a life, and if the plan assumes otherwise, one of the three things gets
+dropped without anyone ever deciding to drop it.
 
-I should also say that I love this. Not in the way people say it in interviews. I
-notice when it is missing. If I am away from the work for a week I start to feel like
-something is wrong, and I have learned to treat that as information rather than as a
-character flaw. No method survives contact with work you are only enduring.
+It would also be dishonest to let this stand as a story about discipline. My wife
+carries more of it than I do. I have supervisors and colleagues who cover for me when
+one of the three spikes, which happens regularly and never on schedule. There are people
+doing these same three things with none of that behind them, and what separates us is
+not method.
 
-Now the part I actually wanted to write down, because it is the thing nobody said to me
-and I would have liked to hear it.
+The rest is unremarkable. I ride a bike, which is where most of my thinking happens
+without my having decided to think. I cook over fire, and I am now reasonably good at
+it. We go into the mountains when the calendar has a hole in it, sleep in a tent, and
+come back tired in the useful way. I am genuinely bad at music, singing and dancing, and
+I have no plan to do anything about it.
 
-People will tell you it gets easier later. After the bachelor's it settles down. After
-the master's you will have more room. After the doctorate, once the company is running,
-once this quarter is over. I have heard this at every stage from people who were being
-kind rather than dishonest, and it has not been true once.
-
-Performance costs time and attention, and the bill arrives every time, at the same
-size. What changes is what you are buying with it, not the price. The people I know who
-consistently do good work are not paying less than they used to. They have simply
-stopped expecting a discount. So I would not organise a life around the belief that
-this is a temporary sprint with a finish line somewhere after the next milestone. You
-can work flat out on one thing for years. You cannot do it for a life, and if you plan
-as though you can, you will find out which of the three things quietly gets dropped.
-
-It is also worth being clear about what makes it possible in my case, because leaving
-it out would turn this into a story about discipline. My wife carries a great deal of
-it. I have supervisors and colleagues who cover for me when one of the three spikes,
-which it does, regularly and without warning. Plenty of people doing the same three
-things have none of that, and the honest thing to say is that method is not what
-separates us.
-
-The rest of the time I ride a bike, which is where most of my thinking gets done
-without my noticing, and I cook over fire, and I take the family into the mountains
-whenever the calendar has a hole in it. I am also, by any measure anyone has ever
-applied, hopeless at music, singing and dancing, and I have made no attempt whatsoever
-to optimise that.
+It is now a little after seven. There is movement upstairs. The two hours were good
+ones.
